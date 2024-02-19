@@ -1,0 +1,32 @@
+[
+    {
+        "name": "describe",
+        "mean": "\u63cf\u8ff0",
+        "describe": ""
+    },
+    {
+        "name": "flow",
+        "mean": "\u6d41\u52d5",
+        "describe": ""
+    },
+    {
+        "name": "mean",
+        "mean": "\u610f\u601d",
+        "describe": ""
+    },
+    {
+        "name": "opacity",
+        "mean": "\u4e0d\u900f\u660e\u5ea6",
+        "describe": ""
+    },
+    {
+        "name": "options",
+        "mean": "\u9078\u9805",
+        "describe": ""
+    },
+    {
+        "name": "orders",
+        "mean": "\u547d\u4ee4",
+        "describe": ""
+    }
+]
