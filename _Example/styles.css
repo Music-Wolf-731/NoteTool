@@ -3,63 +3,25 @@ body{
     margin:0;
     background:black;
 }
-
-#TopBar{
-    display : flex;
-    justify-content: space-between;
-    color:white;
-    height:35px;
-    border-width: 0px 0px 2px 0;
-    border-style: solid;
-    border-color: #5e1c89;
-}
-#TopBar div{display:flex;}
-#TopBar h3{margin:5px 15px;}
-#TopBar select{
-    width:130px;
-    background:#5e1c89;
-    color:white;
-    height:100%;
-}
-#TopBar p{
-    color:white;
-    margin:5px;
-}
-
 #WordBoxList {
     display:flex;
     flex-wrap: wrap;
-    margin:5px 0;
 }
 #WordWindow {
-    height:calc(70vh - 35px);
-    width:100%;
-    overflow-y: auto; 
-}
-.display .desc p{
-    margin : 5px;
-    white-space: pre-wrap;
-}
-.display .desc {
-    width:100%;
-    height:100%;
-    overflow-y: auto; 
+    height:80vh;
+    width:100%
 }
 .WordBox{
     color:white;
     padding:5px 10px;
-    margin:6px 8px;
+    margin:2px 6px;
     border-radius: 10px;
-    background:#320742;
+    background:#1d0128;
     position: relative;
     transition: all 0.3s ease;
 }
-.SinBox{
-    color:rgb(242, 255, 0);
-    background:#0a0e2c;
-}
 .WordBox:hover{
-    background:#7116ae;
+    background:#5e1c89;
 }
 .WordBox .word{
     font-size: 1.3em;
@@ -86,7 +48,7 @@ body{
 
 .describe {
     width:100%;
-    height:calc(30vh - 4px);
+    height:calc(20vh - 4px);
     display:flex;
 }
 .discribe div{

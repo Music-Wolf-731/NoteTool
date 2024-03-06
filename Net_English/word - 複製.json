@@ -1,0 +1,29 @@
+[
+    {
+        "name": "opacity",
+        "mean": "不透明度",
+        "describe": "\u6c92\u4e8b\uff0c\u5c31\u662f\u5148\u505a\u500b\u6e2c\u8a66"
+    },
+    {
+        "name": "flow",
+        "mean": "流動",
+        "describe": "\u6c92\u4e8b\uff0c\u5c31\u662f\u5148\u505a\u500b\u6e2c\u8a66"
+    },
+    {   
+        "name":"orders",
+        "mean": "\u547d\u4ee4",
+        "describe": "\u6c92\u4e8b\uff0c\u5c31\u662f\u5148\u505a\u500b\u6e2c\u8a66"
+    },
+    {   "name":"describe",
+        "mean": "\u63cf\u8ff0",
+        "describe": "\u6c92\u4e8b\uff0c\u5c31\u662f\u5148\u505a\u500b\u6e2c\u8a66"
+    },
+    {   "name":"mean",
+        "mean": "\u610f\u601d",
+        "describe": "\u6c92\u4e8b\uff0c\u5c31\u662f\u5148\u505a\u500b\u6e2c\u8a66"
+    },
+    {   "name":"options",
+        "mean": "\u9078\u9805",
+        "describe": "\u6c92\u4e8b\uff0c\u5c31\u662f\u5148\u505a\u500b\u6e2c\u8a66"
+    }
+]

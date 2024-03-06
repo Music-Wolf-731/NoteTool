@@ -1,5 +1,10 @@
 [
     {
+        "name": ":child",
+        "mean": "\u5b50\u7d1a\u5e8f\u507d\u985e",
+        "describe": "\u7b26\u5408\u7be9\u9078\u689d\u4ef6\u6642\u540c\u6642\u7b26\u5408\u6240\u6709\u4efb\u610f\u540c\u7d1a\u9805\u76ee\u4e4b\u6307\u5b9a\u9806\u4f4d\u6642\u5957\u7528\uff1a\r\n\uff0d\uff0d\u8a3b\uff1a\u5b83\u662f\u7528\u65bc\u5b50\u7d1a\u7684css\uff0d\uff0d\r\n\u3000\/\/\u7b2c\u4e00\u9805\r\n:first-child\r\n\u3000\/\/\u6700\u5f8c\u9805\r\n:last-child\r\n\u3000\/\/\u7b2cint\u9805(\u53ef\u7528n\u904b\u7b97)\r\n:nth-child(int)\r\n\u3000\/\/\u5012\u6578int\u9805\r\n:nth-last-child(int)\r\n\r\n\u7be9\u9078\u51fa\u7b26\u5408\u689d\u4ef6\u7684\u5b50\u7d1a\uff0c\u518d\u6309\u7be9\u9078\u5b8c\u7684\u5b50\u7d1a\u6309\u6307\u5b9a\u9806\u4f4d\u5957\u7528\uff1a\r\n\u9806\u4f4d\u8acb\u53c3\u8003\u4e0a\u65b9\r\n:first-of-type\r\n:last-of-type\r\n:nth-of-type(int)\r\n:nth-last-of-type(int)"
+    },
+    {
         "name": "@media",
         "mean": "\u81ea\u9069\u61c9",
         "describe": "\u7bc4\u4f8b\r\n@media screen and (max-width: 768px) {\r\n    \/* \u5728\u5c4f\u5e55\u5bbd\u5ea6\u5c0f\u4e8e\u7b49\u4e8e 768px \u65f6\u5e94\u7528\u7684\u6837\u5f0f *\/\r\n}"
@@ -22,7 +27,7 @@
     {
         "name": "background",
         "mean": "\u80cc\u666f",
-        "describe": "\u7d14\u8272\r\nbackground: \u8272\u5f69;\r\n\r\n\u7dda\u6027\u6f38\u5c64\r\nbackground: linear-gradient(to right, red, yellow);\r\n\r\n\u5716\u7247\r\nbackground-image: url('your-image.jpg');\r\n\u5716\u7247\u4f86\u6e90\r\nbackground-position: 50% 50%;\r\n\u5716\u7247\u5ea7\u6a19"
+        "describe": "\u7d14\u8272\r\nbackground: \u8272\u5f69;\r\n\r\n\u7dda\u6027\u6f38\u5c64\r\nbackground: linear-gradient(45deg, black, transparent);\r\n\r\n\u5716\u7247\r\nbackground-image: url('your-image.jpg');\r\n\u5716\u7247\u4f86\u6e90\r\nbackground-position: 50% 50%;\r\n\u5716\u7247\u5ea7\u6a19\r\n\r\n\u80cc\u666f\u5927\u5c0f\r\nbackground-size: <\u5c6c\u6027>;\r\ncover\uff1a\u5716\u7247\u586b\u6eff\u5bb9\u5668\r\ncontain\uff1a\u5716\u7247\u5728\u5bb9\u5668\u4e2d\u5b8c\u6574\u5c55\u793a\r\n"
     },
     {
         "name": "border",
@@ -30,9 +35,19 @@
         "describe": "\u76f4\u63a5\u5beb\uff1a\r\nborder: 2px solid #000;\r\n\u5bbd\u5ea6\u4e3a 2px\uff0c\u5b9e\u7ebf\u6837\u5f0f\uff0c\u989c\u8272\u4e3a\u9ed1\u8272\r\n\r\n\u5206\u958b\u5beb\uff1a\r\nborder-width: 2px;\r\n\u8bbe\u7f6e\u8fb9\u6846\u5bbd\u5ea6\u4e3a 2px\r\n\r\nborder-style: solid;\r\n\u8bbe\u7f6e\u8fb9\u6846\u6837\u5f0f\u4e3a\u5b9e\u7ebf\r\n\r\nborder-color: #000;\r\n\u8bbe\u7f6e\u8fb9\u6846\u989c\u8272\u4e3a\u9ed1\u8272\r\n\r\n\u5be6\u7dda\uff1asolid | \u865b\u7dda\uff1adashed | \u9ede\u7dda\uff1adotted | \u96d9\u7dda\uff1adouble | \u51f9\u69fd\u908a\u6846\uff1agroove | \u51f8\u69fd\u908a\u6846\uff1aridge | \u5167\u51f9\u908a\u6846\uff1ainset | \u5916\u51f8\u908a\u6846\uff1aoutset | \u7121\u908a\u6846\uff1anone\r\n\r\n\u5713\u89d2\uff1a\r\nborder-radius: 10px;"
     },
     {
+        "name": "font",
+        "mean": "\u6587\u5b57",
+        "describe": "\u6c34\u5e73\u5c45\u4e2d\r\ntext-align: center;"
+    },
+    {
         "name": "opacity",
         "mean": "\u900f\u660e\u5ea6",
         "describe": "opacity: .5;\r\n\u900f\u660e\u5ea6\u4e00\u534a"
+    },
+    {
+        "name": "overflow",
+        "mean": "\u8d85\u51fa",
+        "describe": "\u8d85\u51fa\u96b1\u85cf\r\noverflow: hidden;"
     },
     {
         "name": "position",

@@ -1,21 +1,19 @@
 <?php
-$DisplayPage=(isset($_GET['Folder']))?$_GET['Folder']:'English';
-$DisplayPage .= DIRECTORY_SEPARATOR;
-require $DisplayPage.'ExterLink.php';
-//將網址變數取出串成變數
-$LinkVar='?';
-foreach ($_GET as $key => $value) {
-    $LinkVar.=($LinkVar=='?')?$key . '=' . $value:'&' . $key . '=' . $value;
-}
+
+$ExterLink=[
+    [
+        'img' => '//ssl.gstatic.com/translate/favicon.ico',
+        'link' => 'https://translate.google.com.tw/?sl=en&tl=zh-TW&text=${clickedWord}'
+    ],
+    [
+        'img' => 'https://dictionary.cambridge.org/zht/external/images/apple-touch-icon-precomposed.png?version=5.0.383',
+        'link' => 'https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/${clickedWord}'
+    ]
+];
 
 
 
-
-$CurrentAddress = getcwd();
-// 過濾出資料夾
-$folders = array_filter(scandir($CurrentAddress), function($item) use ($CurrentAddress) {
-    return is_dir($CurrentAddress . DIRECTORY_SEPARATOR . $item) && $item != '.' && $item != '..' && $item != '.git';
-});
+print_r(scandir(getcwd()));
 
 
 ?>
@@ -25,7 +23,7 @@ $folders = array_filter(scandir($CurrentAddress), function($item) use ($CurrentA
 <?php
 
 // 讀取JSON文件
-$jsonData = file_get_contents($DisplayPage.'word.json');
+$jsonData = file_get_contents('word.json');
 // 解析JSON數據
 $userData = json_decode($jsonData, true);
 
@@ -60,7 +58,7 @@ usort($userData, function($a, $b) {
 $jsonString = json_encode($userData, JSON_PRETTY_PRINT);
 
 // 保存回文件
-file_put_contents($DisplayPage.'word.json', $jsonString);
+file_put_contents('word.json', $jsonString);
 ?>
 
 
@@ -71,46 +69,21 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function ChangePage(value){
-            window.location.href = './?Folder=' + value;
-        }
-    </script>
 </head>
 <body>
-
-
-
-
     <?php
-    
-        $PageOption = '';
-        foreach ($folders as $key => $value) {
-            $PageOption .= '<option>'.$value.'</option>';
-        }
-        $PageOption = 
-        '<div><h3>'.$DisplayPage.'</h3><select id="countries" onchange="ChangePage(this.value)" name="country">
-            <option>換頁</option>'.
-            $PageOption
-        .'</select></div>';
-
-
-
-        echo '<div id="TopBar">'.$PageOption.'<a href=./'.$LinkVar.'><p>重整</p></a></div>';
 
 
 
 
 
-        //寫入文字流視框
+        
         $ForPrint='';
         foreach ($userData as $key => $value) {
             
-            $SingleWord=(mb_strlen($value["name"])<2)?" SinBox":"";
-
             $writeBox='';
             $writeBox = '
-            <div class="WordBox'.$SingleWord.'">
+            <div class="WordBox">
                 <p class="word">'.$value["name"].'</p>
                 <p class="mean">'.$value["mean"] .'</p>
                 <p class="inner">'.$value["describe"] .'</p>
@@ -125,17 +98,15 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
 
     ?>
 
-
-
     <div class="describe">
         <div class="page">
             <div class="clickable desc"><div class="ChangePageUse"></div><p>描述</p></div>
             <div class="clickable edit"><div class="ChangePageUse"></div><p>修改</p></div>
         </div>
         <div class="display"> 
-            <div style="display: block;" class="desc"><p></p></div>
+            <div style="display: none;" class="desc"><p></p></div>
             <div style="display: none;" class="edit">
-                <form  action="./<?php echo $LinkVar ?>" method="post">
+                <form  action="./" method="post">
                     <div>
                         <label for="keyword">單字：</label><input class="InputText" id="keyword" name="keyword" type="text" autocomplete="off">
                         <label for="mean">描述：</label><input class="InputText" id="mean" name="mean" type="text" autocomplete="off">
@@ -161,6 +132,12 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
                     ';
                 }
             ?>
+            <a class="google" href="./">
+                <img src="//ssl.gstatic.com/translate/favicon.ico">
+            </a>
+            <a class="Cambridge" href="./">
+                <img src="https://dictionary.cambridge.org/zht/external/images/apple-touch-icon-precomposed.png?version=5.0.383">
+            </a>
         </div>
     </div>
 
@@ -200,7 +177,9 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
                         echo 'JS_ExterLink_'.$key.'.href = `'.$value['link'].'`;';
                     }
                 ?>
-                
+                descriGLink.href = `https://translate.google.com.tw/?sl=en&tl=zh-TW&text=${clickedWord}`;
+                descriCLink.href = `https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/${clickedWord}`;
+
                 // 将文字替换到 describe 区域的链接 href 属性中
                 desc.textContent = clickedinner;
                 document.getElementById('keyword').value = clickedWord;
