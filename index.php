@@ -32,6 +32,7 @@ $userData = json_decode($jsonData, true);
 //在json陣列中，找到name項目符合目標的項目
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $OnSet = false;
+    //如果是已經有的內容，就更新目前的項目
     foreach ($userData as $key => $value) {
         if($value['name']==$_POST["keyword"]){
             $OnSet=true;
@@ -40,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $userData[$key]['describe']=$_POST['describe'];
         }
     }
+    //如果是新的內容，就新增在列表最後
     if(!$OnSet){
         $Set['name']=$_POST['keyword'];
         $Set['mean']=$_POST['mean'];
@@ -47,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $userData[]=$Set;
     }
 }
+
 
 // 使用 usort 函數進行排序
 usort($userData, function($a, $b) {
