@@ -31,6 +31,7 @@ $userData = json_decode($jsonData, true);
 
 //在json陣列中，找到name項目符合目標的項目
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    if(!isset($_POST['Star'])){$_POST['Star']=false;}
     $OnSet = false;
     //如果是已經有的內容，就更新目前的項目
     foreach ($userData as $key => $value) {
@@ -39,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             if(isset($_POST['Delete'])){unset($userData[$key]);continue;}
             $userData[$key]['mean']=$_POST['mean'];
             $userData[$key]['describe']=$_POST['describe'];
+            $userData[$key]['Star']=($_POST['Star']=='on')?true:false;
         }
     }
     //如果是新的內容，就新增在列表最後
@@ -46,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $Set['name']=$_POST['keyword'];
         $Set['mean']=$_POST['mean'];
         $Set['describe']=$_POST['describe'];
+        $Set['Star']=($_POST['Star']=='on')?true:false;
         $userData[]=$Set;
     }
 }
@@ -53,7 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 // 使用 usort 函數進行排序
 usort($userData, function($a, $b) {
-    return strcmp($a['name'], $b['name']);
+    // 首先根據 'Star' 進行排序
+    $starComparison = $b['Star'] - $a['Star'];
+    
+    // 如果 'Star' 相同，則根據 'name' 的字母順序進行排序
+    return ($starComparison === 0) ? strcmp($a['name'], $b['name']) : $starComparison;
 });
 
 
@@ -106,14 +113,19 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
 
 
         //寫入文字流視框
-        $ForPrint='';
+        $ForPrint='';$typeLine=true;
         foreach ($userData as $key => $value) {
             
-            $SingleWord=(mb_strlen($value["name"])<2)?" SinBox":"";
-
-            $writeBox='';
-            $writeBox = '
-            <div class="WordBox'.$SingleWord.'">
+            //預設class
+            $ExtraClass=' Default';
+            //類別class
+            $ExtraClass=(mb_strlen($value["name"])<2)?" SinBox":$ExtraClass;
+            //重要class
+            $ExtraClass=($value["Star"])?" KeyWord":$ExtraClass;
+            $writeBox=($typeLine==$value["Star"])?"":"<hr>";
+            $typeLine=($typeLine==$value["Star"])?$typeLine:$value["Star"];
+            $writeBox .= '
+            <div class="WordBox'.$ExtraClass.'">
                 <p class="word">'.$value["name"].'</p>
                 <p class="mean">'.$value["mean"] .'</p>
                 <p class="inner">'.$value["describe"] .'</p>
@@ -143,12 +155,13 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
                         <label for="keyword">單字：</label><input class="InputText" id="keyword" name="keyword" type="text" autocomplete="off">
                         <label for="mean">描述：</label><input class="InputText" id="mean" name="mean" type="text" autocomplete="off">
                     </div>
-                    <div style="display:flex;height:45%;">
-                        <textarea id="describe" name="describe"></textarea>
-                        <div style="display:flex;flex-wrap: wrap;justify-content: flex-end;align-items: center;">
-                            <label for="Delete">刪除：</label><input id="Delete" name="Delete" type="checkbox">
+                    <textarea id="describe" name="describe"></textarea>
+                    <div class="component">
+                        <div>
+                            <span><label for="Star">星號：</label><input id="Star" name="Star" type="checkbox"></span>
                             <input type="submit" value="Submit">
                         </div>
+                        <span><label for="Delete">刪除：</label><input id="Delete" name="Delete" type="checkbox"></span>
                     </div>
                 </form>
             </div>

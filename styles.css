@@ -31,6 +31,10 @@ body{
     flex-wrap: wrap;
     margin:5px 0;
 }
+#WordWindow hr {
+    border-color : #a860c9;
+    width:100%;
+}
 #WordWindow {
     height:calc(70vh - 35px);
     width:100%;
@@ -50,7 +54,6 @@ body{
     padding:5px 10px;
     margin:6px 8px;
     border-radius: 10px;
-    background:#320742;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -58,7 +61,22 @@ body{
     color:rgb(242, 255, 0);
     background:#0a0e2c;
 }
-.WordBox:hover{
+.KeyWord{
+    transition: all 0.3s ease;
+    background:linear-gradient(30deg, #bbb800 0%, #520496 40%, #12001f 90%);
+    background-size: 180%;
+    background-position: 100% 0%;
+}
+.KeyWord:hover{
+    background-position: 0% 100%;
+}
+.KeyWord>p:first-of-type{
+    color:rgb(226, 59, 255);
+}
+.Default{
+    background:#320742;
+}
+.Default:hover{
     background:#7116ae;
 }
 .WordBox .word{
@@ -121,6 +139,7 @@ body{
 
 
 .display>.edit,form{width:100%;height:100%;}
+.edit label{user-select: none;}
 form>div{
     padding:5px;
 }
@@ -129,6 +148,13 @@ form>div{
 }
 input,textarea{background:#1a141c;margin:5px;color:white;}
 textarea{
-    width:100%;
-    height:100%;
+    width:calc(100% - 15px);
+    height:45%;
+}
+form .component{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
