@@ -1,21 +1,19 @@
 <?php
-$DisplayPage=(isset($_GET['Folder']))?$_GET['Folder']:'English';
-$DisplayPage .= DIRECTORY_SEPARATOR;
-require $DisplayPage.'ExterLink.php';
-//將網址變數取出串成變數
-$LinkVar='?';
-foreach ($_GET as $key => $value) {
-    $LinkVar.=($LinkVar=='?')?$key . '=' . $value:'&' . $key . '=' . $value;
-}
+
+$ExterLink=[
+    [
+        'img' => '//ssl.gstatic.com/translate/favicon.ico',
+        'link' => 'https://translate.google.com.tw/?sl=en&tl=zh-TW&text=${clickedWord}'
+    ],
+    [
+        'img' => 'https://dictionary.cambridge.org/zht/external/images/apple-touch-icon-precomposed.png?version=5.0.383',
+        'link' => 'https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/${clickedWord}'
+    ]
+];
 
 
 
-
-$CurrentAddress = getcwd();
-// 過濾出資料夾
-$folders = array_filter(scandir($CurrentAddress), function($item) use ($CurrentAddress) {
-    return is_dir($CurrentAddress . DIRECTORY_SEPARATOR . $item) && $item != '.' && $item != '..' && $item != '.git';
-});
+print_r(scandir(getcwd()));
 
 
 ?>
@@ -25,42 +23,32 @@ $folders = array_filter(scandir($CurrentAddress), function($item) use ($CurrentA
 <?php
 
 // 讀取JSON文件
-$jsonData = file_get_contents($DisplayPage.'word.json');
+$jsonData = file_get_contents('word.json');
 // 解析JSON數據
 $userData = json_decode($jsonData, true);
 
 //在json陣列中，找到name項目符合目標的項目
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    if(!isset($_POST['Star'])){$_POST['Star']=false;}
     $OnSet = false;
-    //如果是已經有的內容，就更新目前的項目
     foreach ($userData as $key => $value) {
         if($value['name']==$_POST["keyword"]){
             $OnSet=true;
             if(isset($_POST['Delete'])){unset($userData[$key]);continue;}
             $userData[$key]['mean']=$_POST['mean'];
             $userData[$key]['describe']=$_POST['describe'];
-            $userData[$key]['Star']=($_POST['Star']=='on')?true:false;
         }
     }
-    //如果是新的內容，就新增在列表最後
     if(!$OnSet){
         $Set['name']=$_POST['keyword'];
         $Set['mean']=$_POST['mean'];
         $Set['describe']=$_POST['describe'];
-        $Set['Star']=($_POST['Star']=='on')?true:false;
         $userData[]=$Set;
     }
 }
 
-
 // 使用 usort 函數進行排序
 usort($userData, function($a, $b) {
-    // 首先根據 'Star' 進行排序
-    $starComparison = $b['Star'] - $a['Star'];
-    
-    // 如果 'Star' 相同，則根據 'name' 的字母順序進行排序
-    return ($starComparison === 0) ? strcmp($a['name'], $b['name']) : $starComparison;
+    return strcmp($a['name'], $b['name']);
 });
 
 
@@ -70,7 +58,7 @@ usort($userData, function($a, $b) {
 $jsonString = json_encode($userData, JSON_PRETTY_PRINT);
 
 // 保存回文件
-file_put_contents($DisplayPage.'word.json', $jsonString);
+file_put_contents('word.json', $jsonString);
 ?>
 
 
@@ -81,51 +69,21 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function ChangePage(value){
-            window.location.href = './?Folder=' + value;
-        }
-    </script>
 </head>
 <body>
-
-
-
-
     <?php
-    
-        $PageOption = '';
-        foreach ($folders as $key => $value) {
-            $PageOption .= '<option>'.$value.'</option>';
-        }
-        $PageOption = 
-        '<div><h3>'.$DisplayPage.'</h3><select id="countries" onchange="ChangePage(this.value)" name="country">
-            <option>換頁</option>'.
-            $PageOption
-        .'</select></div>';
-
-
-
-        echo '<div id="TopBar">'.$PageOption.'<a href=./'.$LinkVar.'><p>重整</p></a></div>';
 
 
 
 
 
-        //寫入文字流視框
-        $ForPrint='';$typeLine=true;
+        
+        $ForPrint='';
         foreach ($userData as $key => $value) {
             
-            //預設class
-            $ExtraClass=' Default';
-            //類別class
-            $ExtraClass=(mb_strlen($value["name"])<2)?" SinBox":$ExtraClass;
-            //重要class
-            $ExtraClass=($value["Star"])?" KeyWord":$ExtraClass;
-            $writeBox=($typeLine==$value["Star"])?"":"<hr>";
-            $typeLine=($typeLine==$value["Star"])?$typeLine:$value["Star"];
-            $writeBox .= '
-            <div class="WordBox'.$ExtraClass.'">
+            $writeBox='';
+            $writeBox = '
+            <div class="WordBox">
                 <p class="word">'.$value["name"].'</p>
                 <p class="mean">'.$value["mean"] .'</p>
                 <p class="inner">'.$value["describe"] .'</p>
@@ -140,28 +98,25 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
 
     ?>
 
-
-
     <div class="describe">
         <div class="page">
             <div class="clickable desc"><div class="ChangePageUse"></div><p>描述</p></div>
             <div class="clickable edit"><div class="ChangePageUse"></div><p>修改</p></div>
         </div>
         <div class="display"> 
-            <div style="display: block;" class="desc"><p></p></div>
+            <div style="display: none;" class="desc"><p></p></div>
             <div style="display: none;" class="edit">
-                <form  action="./<?php echo $LinkVar ?>" method="post">
+                <form  action="./" method="post">
                     <div>
                         <label for="keyword">單字：</label><input class="InputText" id="keyword" name="keyword" type="text" autocomplete="off">
                         <label for="mean">描述：</label><input class="InputText" id="mean" name="mean" type="text" autocomplete="off">
                     </div>
-                    <textarea id="describe" name="describe"></textarea>
-                    <div class="component">
-                        <div>
-                            <span><label for="Star">星號：</label><input id="Star" name="Star" type="checkbox"></span>
+                    <div style="display:flex;height:45%;">
+                        <textarea id="describe" name="describe"></textarea>
+                        <div style="display:flex;flex-wrap: wrap;justify-content: flex-end;align-items: center;">
+                            <label for="Delete">刪除：</label><input id="Delete" name="Delete" type="checkbox">
                             <input type="submit" value="Submit">
                         </div>
-                        <span><label for="Delete">刪除：</label><input id="Delete" name="Delete" type="checkbox"></span>
                     </div>
                 </form>
             </div>
@@ -177,6 +132,12 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
                     ';
                 }
             ?>
+            <a class="google" href="./">
+                <img src="//ssl.gstatic.com/translate/favicon.ico">
+            </a>
+            <a class="Cambridge" href="./">
+                <img src="https://dictionary.cambridge.org/zht/external/images/apple-touch-icon-precomposed.png?version=5.0.383">
+            </a>
         </div>
     </div>
 
@@ -216,7 +177,9 @@ file_put_contents($DisplayPage.'word.json', $jsonString);
                         echo 'JS_ExterLink_'.$key.'.href = `'.$value['link'].'`;';
                     }
                 ?>
-                
+                descriGLink.href = `https://translate.google.com.tw/?sl=en&tl=zh-TW&text=${clickedWord}`;
+                descriCLink.href = `https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/${clickedWord}`;
+
                 // 将文字替换到 describe 区域的链接 href 属性中
                 desc.textContent = clickedinner;
                 document.getElementById('keyword').value = clickedWord;

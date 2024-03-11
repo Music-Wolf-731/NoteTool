@@ -1,0 +1,12 @@
+#DataList{
+    width:100%;
+}
+#ChangeData{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#ChangeData select , #ChangeData input {
+    width:calc(50% - 5em);
+}

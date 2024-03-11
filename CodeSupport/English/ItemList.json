@@ -1,0 +1,692 @@
+[
+    {
+        "name": "_Special",
+        "mean": "\u5c08\u6709\u540d\u8a5e\u5eab",
+        "describe": "\uff0d\uff0dReact \u95dc\u806f\u6846\u67b6\uff1a\r\nReact Native\uff1afacebook\u958b\u767c\r\n\r\n\uff0d\uff0dReact \u914d\u5957\u6578\u64da\u5305\uff1a\r\nReact Router\uff1a\u8def\u7531\u7cfb\u7d71"
+    },
+    {
+        "name": "additional",
+        "mean": "\u984d\u5916\u7684",
+        "describe": ""
+    },
+    {
+        "name": "application",
+        "mean": "\u61c9\u7528\u7a0b\u5f0f",
+        "describe": "\u904b\u7528\u3001\u63a1\u53d6\u3001\u7533\u8acb\u7b49\u7b49"
+    },
+    {
+        "name": "browser",
+        "mean": "\u700f\u89bd\u5668",
+        "describe": ""
+    },
+    {
+        "name": "component",
+        "mean": "\u5143\u4ef6\u3001\u6210\u4efd",
+        "describe": "\u90e8\u4ef6\u3001\u5206\u652f\u3001\u69cb\u4ef6\u3001\u7d44\u6210\u7b49\r\n\u901a\u5e38\u6703\u662f\u4e00\u500b\u88dd\u5143\u4ef6\u7684\u8cc7\u6599\u593e\u540d\u7a31"
+    },
+    {
+        "name": "creat",
+        "mean": "\u5275\u5efa",
+        "describe": "created  \u5df2\u5275\u5efa"
+    },
+    {
+        "name": "element",
+        "mean": "\u5143\u7d20",
+        "describe": ""
+    },
+    {
+        "name": "feature",
+        "mean": "\u529f\u80fd\/\u7279\u8272",
+        "describe": "\u4e00\u822c\u662f\u6307\u7279\u9ede\u3001\u7279\u8272\r\n\r\n\u5728\u7de8\u78bc\u3001\u7a0b\u5f0f\u3001\u8edf\u9ad4\u4e2d\u6703\u6307\u300c\u529f\u80fd\u300d\r\n\r\n\u7528\u4f5c\u52d5\u8a5e\u7684\u8a71\u6703\u88ab\u89e3\u91cb\u70ba\u300c\u95dc\u9375\u884c\u70ba\u300d\u6216\u300c\u5177\u81f3\u95dc\u91cd\u8981\u610f\u7fa9\u7684\u300d"
+    },
+    {
+        "name": "hyphen",
+        "mean": "\u9023\u5b57\u865f\"-\"",
+        "describe": ""
+    },
+    {
+        "name": "loaders",
+        "mean": "\u52a0\u8f09\u5668",
+        "describe": ""
+    },
+    {
+        "name": "multiple",
+        "mean": "\u591a\u7a2e\u591a\u6a23\u7684",
+        "describe": ""
+    },
+    {
+        "name": "react",
+        "mean": "\u53cd\u61c9(\u4e3b\u984c\u540d)",
+        "describe": ""
+    },
+    {
+        "name": "series",
+        "mean": "\u7cfb\u5217",
+        "describe": ""
+    },
+    {
+        "name": "template",
+        "mean": "\u7bc4\u672c",
+        "describe": ""
+    },
+    {
+        "name": "a",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "action",
+        "mean": "\u884c\u52d5",
+        "describe": ""
+    },
+    {
+        "name": "actually",
+        "mean": "\u5be6\u969b\u4e0a",
+        "describe": ""
+    },
+    {
+        "name": "allows",
+        "mean": "\u5141\u8a31\/\u4f7f\u5f97",
+        "describe": ""
+    },
+    {
+        "name": "along with",
+        "mean": "\u96a8\u8457",
+        "describe": ""
+    },
+    {
+        "name": "anchor",
+        "mean": "\u9328",
+        "describe": ""
+    },
+    {
+        "name": "apply",
+        "mean": "\u7533\u8acb",
+        "describe": ""
+    },
+    {
+        "name": "approach",
+        "mean": "\u65b9\u6cd5",
+        "describe": ""
+    },
+    {
+        "name": "arguably",
+        "mean": "\u53ef\u4ee5\u8aaa",
+        "describe": ""
+    },
+    {
+        "name": "aside",
+        "mean": "\u5728\u65c1\u908a",
+        "describe": ""
+    },
+    {
+        "name": "b",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "brand",
+        "mean": "\u5b9a\u7fa9\/\u6a19\u8b58",
+        "describe": "\u5b83\u6709\u53ef\u80fd\u662f\u6307\u4ee3\u4e00\u500b\u7279\u5b9a\u7684\u7269\u4ef6\uff0c\u975e\u516c\u8a8d\u6216\u5927\u7bc4\u570d\u6240\u77e5\u7684\u6771\u897f\uff0c\u6709\u53ef\u80fd\u662f\u7de8\u7a0b\u4eba\u54e1\u81ea\u884c\u5b9a\u7fa9\uff0c\u6216\u67d0\u500b\u5c08\u6848\u5167\u7368\u6709\u7684\u67d0\u7a2e\u6a19\u7c64\u6216\u985e\u578b\r\n\r\n\u6709\u9ede\u985e\u4f3c\u5c08\u6709\u540d\u8a5e\uff0c\u5c31\u662f\u5b83\u6307\u4ee3\u7684\u9805\u76ee\u7121\u8ad6\u662f\u55ae\u4e00\u6216\u662f\u591a\u6578\uff0c\u90fd\u6bd4\u4e00\u822c\u610f\u7fa9\u4e0a\u7684\u66f4\u52a0\u72f9\u9698"
+    },
+    {
+        "name": "breadcrumbs",
+        "mean": "\u9eb5\u5305\u5c51",
+        "describe": "\u4e2d\u6587\u4e5f\u53ef\u7a31\u4f5c\u300c\u5c0e\u822a\u93c8\u300d\r\n\u662f\u67d0\u4e9b\u7db2\u9801\u4e2d\u53ef\u80fd\u6703\u5728\u9801\u9762\u504f\u4e0a\u7aef\u7684\u4f4d\u7f6e\u51fa\u73fe\u7684\u6771\u897f\uff0c\r\n\u4e00\u822c\u6703\u7528\u65bc\u5c07\u6bcf\u4e00\u500b\u968e\u5c64\u7684\u5167\u5bb9\u5beb\u4e0a\uff0c\u7bc4\u4f8b\u5982\u4e0b\uff1a\r\n\u9996\u9801 > \u5206\u985e1 > \u5b50\u5206\u985e > \u5177\u9ad4\u9805\u76ee"
+    },
+    {
+        "name": "c",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "completely",
+        "mean": "\u5b8c\u5168\u7684",
+        "describe": ""
+    },
+    {
+        "name": "consist",
+        "mean": "\u7d44\u6210\/\u5305\u542b",
+        "describe": ""
+    },
+    {
+        "name": "content",
+        "mean": "\u5167\u5bb9",
+        "describe": ""
+    },
+    {
+        "name": "couple",
+        "mean": "\u5169\u4e09\u500b",
+        "describe": "\u5b83\u4ee3\u8868\u7684\u662f\u96f6\u661f\u5e7e\u500b\r\n\u8d85\u904e\u4e00\u500b\uff0c\u4f46\u4e5f\u4e0d\u6703\u6bd4\u5169\u500b\u591a\u592a\u591a\r\n\u6b63\u5e38\u4f86\u8aaa\u90fd\u662f\u4ee3\u8868\u5169\u500b\uff0c\u4f46\u9019\u5c31\u662f\u500b\u4e0d\u592a\u78ba\u5b9a\u5be6\u969b\u6578\u91cf\u7684\u8aaa\u6cd5"
+    },
+    {
+        "name": "course",
+        "mean": "\u8ab2\u7a0b",
+        "describe": ""
+    },
+    {
+        "name": "cover",
+        "mean": "\u8986\u84cb\/\u63a9\u8b77",
+        "describe": ""
+    },
+    {
+        "name": "d",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "default",
+        "mean": "\u9810\u8a2d",
+        "describe": ""
+    },
+    {
+        "name": "definitely",
+        "mean": "\u5b9a\u7136",
+        "describe": ""
+    },
+    {
+        "name": "dependencies",
+        "mean": "\u4f9d\u8cf4\u3001\u4f9d\u5b58",
+        "describe": "\u53ef\u80fd\u6703\u7528\u65bc\u63cf\u8ff0\u4e00\u4e9b\u7db2\u9801\u9700\u8981\u7684\u80cc\u666f\u7cfb\u7d71\u7b49\u7b49\uff0c\u9700\u8981\u627e\u5230\u4e26\u5b89\u88dd"
+    },
+    {
+        "name": "derail",
+        "mean": "\u51fa\u8ecc",
+        "describe": ""
+    },
+    {
+        "name": "describe",
+        "mean": "\u63cf\u8ff0",
+        "describe": ""
+    },
+    {
+        "name": "design",
+        "mean": "\u8a2d\u8a08",
+        "describe": ""
+    },
+    {
+        "name": "detail",
+        "mean": "\u7d30\u7bc0",
+        "describe": ""
+    },
+    {
+        "name": "directory",
+        "mean": "\u76ee\u9304",
+        "describe": ""
+    },
+    {
+        "name": "e",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "each",
+        "mean": "\u5404\u500b",
+        "describe": ""
+    },
+    {
+        "name": "either",
+        "mean": "\u4efb\u4f55\u4e00\u500b",
+        "describe": ""
+    },
+    {
+        "name": "entire",
+        "mean": "\u5168\u90e8\u7684",
+        "describe": ""
+    },
+    {
+        "name": "equal",
+        "mean": "\u5e73\u7b49\u7684",
+        "describe": ""
+    },
+    {
+        "name": "essentially",
+        "mean": "\u672c\u8cea\u4e0a",
+        "describe": ""
+    },
+    {
+        "name": "extract",
+        "mean": "\u63a1\u7528\/\u63d0\u53d6",
+        "describe": ""
+    },
+    {
+        "name": "f",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "fetch",
+        "mean": "\u53d6\u5f97",
+        "describe": ""
+    },
+    {
+        "name": "flow",
+        "mean": "\u6d41\u52d5",
+        "describe": ""
+    },
+    {
+        "name": "for short",
+        "mean": "\u7c21\u800c\u8a00\u4e4b",
+        "describe": "\u7c21\u55ae\u4f86\u8aaa"
+    },
+    {
+        "name": "front-end",
+        "mean": "\u524d\u7aef",
+        "describe": ""
+    },
+    {
+        "name": "g",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "gang",
+        "mean": "\u5927\u5925",
+        "describe": ""
+    },
+    {
+        "name": "general",
+        "mean": "\u4e00\u822c\u7684",
+        "describe": ""
+    },
+    {
+        "name": "h",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "i",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "impact",
+        "mean": "\u5f71\u97ff",
+        "describe": ""
+    },
+    {
+        "name": "in general",
+        "mean": "\u4e00\u822c\u4f86\u8aaa",
+        "describe": ""
+    },
+    {
+        "name": "includes",
+        "mean": "\u5305\u62ec",
+        "describe": ""
+    },
+    {
+        "name": "install",
+        "mean": "\u5b89\u88dd",
+        "describe": ""
+    },
+    {
+        "name": "instead",
+        "mean": "\u53cd\u800c\/\u4ee3\u66ff",
+        "describe": "\u5927\u7565\u5c31\u662f\u300c\u4e0d\u662f\u539f\u672c\u7684\uff0c\u662f....\u300d\u7684\u610f\u601d\r\n\r\n\u300c\u4e0d\u662fA\uff0c\u800c\u662fB\u300d\r\n\u6216\u662f\r\n\u300c\u4ee5B\u4f5c\u70baA\u7684\u66ff\u4ee3\u300d"
+    },
+    {
+        "name": "j",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "k",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "kind",
+        "mean": "\u6eab\u548c",
+        "describe": "\u4e00\u822c\u5c31\u662f\u6307\u6eab\u67d4\u3001\u7de9\u6162\u3001\u8f15\u67d4\u7b49\u6bd4\u8f03\u6eab\u548c\u7684\u884c\u70ba\u548c\u6c7a\u5b9a\uff0c\u5177\u9ad4\u7522\u751f\u751a\u9ebc\u610f\u601d\u8981\u770b\u4f7f\u7528\u65b9\u5f0f\u800c\u5b9a"
+    },
+    {
+        "name": "l",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "latest",
+        "mean": "\u6700\u65b0\u7684",
+        "describe": ""
+    },
+    {
+        "name": "least",
+        "mean": "\u81f3\u5c11",
+        "describe": ""
+    },
+    {
+        "name": "load",
+        "mean": "\u8f09\u5165",
+        "describe": "\u5728\u7de8\u7a0b\u4e2d\u4e5f\u6709\u8ca0\u8377\u6216\u662f\u8cc7\u6599\u91cf\u7684\u610f\u601d\r\n\r\n\u53ef\u4ee5\u6307\u8cc7\u6599\u91cf\u5f88\u5927\r\n\u6216\u662f\u904e\u8f09\r\n"
+    },
+    {
+        "name": "m",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "mean",
+        "mean": "\u610f\u601d",
+        "describe": ""
+    },
+    {
+        "name": "mechanism",
+        "mean": "\u6a5f\u5236\u3001\u6a5f\u68b0",
+        "describe": ""
+    },
+    {
+        "name": "n",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "native",
+        "mean": "\u672c\u5730",
+        "describe": ""
+    },
+    {
+        "name": "nest",
+        "mean": "\u5de2",
+        "describe": ""
+    },
+    {
+        "name": "newer",
+        "mean": "\u8f03\u65b0\u7684",
+        "describe": ""
+    },
+    {
+        "name": "nicer",
+        "mean": "\u66f4\u597d\u7684",
+        "describe": ""
+    },
+    {
+        "name": "normally",
+        "mean": "\u6309\u7406\u4f86\u8aaa",
+        "describe": ""
+    },
+    {
+        "name": "o",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "offer",
+        "mean": "\u63d0\u4f9b\/\u767c\u653e\/\u7d66",
+        "describe": "\u4e5f\u6709\u512a\u60e0\u7b49\u610f\u601d"
+    },
+    {
+        "name": "opacity",
+        "mean": "\u4e0d\u900f\u660e\u5ea6",
+        "describe": ""
+    },
+    {
+        "name": "options",
+        "mean": "\u9078\u9805",
+        "describe": ""
+    },
+    {
+        "name": "orders",
+        "mean": "\u547d\u4ee4",
+        "describe": ""
+    },
+    {
+        "name": "p",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "package",
+        "mean": "\u5305\u3001\u5957\u4ef6",
+        "describe": "\u5728\u7db2\u9801\u4e2d\u53ef\u80fd\u6703\u662f\u6307\u6a94\u6848\u5305\u6216\u662f\u5957\u4ef6\u7b49"
+    },
+    {
+        "name": "path",
+        "mean": "\u9053\u8def",
+        "describe": ""
+    },
+    {
+        "name": "portal",
+        "mean": "\u50b3\u9001\u9580",
+        "describe": ""
+    },
+    {
+        "name": "position",
+        "mean": "\u4f4d\u7f6e",
+        "describe": ""
+    },
+    {
+        "name": "press",
+        "mean": "\u6309",
+        "describe": ""
+    },
+    {
+        "name": "previously",
+        "mean": "\u4e4b\u524d\/\u66fe\u7d93",
+        "describe": "previously of\uff1a\u66fe\u7d93\u7528\u7684"
+    },
+    {
+        "name": "price",
+        "mean": "\u50f9\u683c",
+        "describe": ""
+    },
+    {
+        "name": "probably",
+        "mean": "\u5927\u6982",
+        "describe": ""
+    },
+    {
+        "name": "property",
+        "mean": "\u9663\u5217\u5c6c\u6027",
+        "describe": "\u5c31\u662f\u9663\u5217\u4e2d\u7684\u7d22\u5f15\uff0c\u4f60\u8a18\u61b6\u4e2d\u7684key\r\n\r\n\u5b83\u4e5f\u6709\r\n\u8ca1\u7522\u3001\u6240\u6709\u6b0a\r\n\u4e0d\u52d5\u7522\u3001\u623f\u7522\r\n\u7269\u54c1\u7279\u9ede\u3001\u7279\u8272\r\n\u7b49\u7b49\u7684\u89e3\u5ef6\u4f38\u7528\u6cd5"
+    },
+    {
+        "name": "provider",
+        "mean": "\u63d0\u4f9b\u8005",
+        "describe": ""
+    },
+    {
+        "name": "q",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "r",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "rather",
+        "mean": "\u76f8\u5c0d\/\u6bd4\u8f03",
+        "describe": "\u901a\u5e38\u662f\u5c0d\u61c9\u7684\uff0c\u9700\u8981\u4e00\u500b\u57fa\u5e95\r\n\u76ee\u524d\u770b\u5230\u7684\u7bc4\u4f8b\u6709\uff1a\u76f8\u5c0d\u4f4d\u7f6e\r\nposition rather"
+    },
+    {
+        "name": "reacent",
+        "mean": "\u8fd1\u671f\u7684",
+        "describe": ""
+    },
+    {
+        "name": "record",
+        "mean": "\u8a18\u9304",
+        "describe": ""
+    },
+    {
+        "name": "released",
+        "mean": "\u91cb\u51fa\/\u653e",
+        "describe": ""
+    },
+    {
+        "name": "render",
+        "mean": "\u6e32\u67d3\u3001\u63d0\u4ea4",
+        "describe": ""
+    },
+    {
+        "name": "request",
+        "mean": "\u8981\u6c42",
+        "describe": "\u8981\u6c42\u3001\u8acb\u6c42\u7b49\uff0c\u5728\u7db2\u9801\u4e2d\u53ef\u4ee5\u7576\u4f5c\u547c\u53eb"
+    },
+    {
+        "name": "require",
+        "mean": "\u8acb\u6c42(\u547c\u53eb)",
+        "describe": "\u4e00\u822c\u5728\u7de8\u7a0b\u4e2d\uff0c\u5b83\u6703\u662f\u4e00\u500b\u6307\u4ee4\uff0c\u901a\u5e38\u7528\u65bc\u53eb\u51fa\u6a94\u6848\u7b49\uff0c\r\n\u6240\u4ee5\u901a\u5e38\u662f\u4f3a\u670d\u5668\u5167\u90e8\u7684\u547c\u53eb\u800c\u4e0d\u662f\u5ba2\u6236\u7aef\u7684\u8acb\u6c42"
+    },
+    {
+        "name": "s",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "shield",
+        "mean": "\u76fe\/\u906e\u853d",
+        "describe": ""
+    },
+    {
+        "name": "should",
+        "mean": "\u61c9\u8a72",
+        "describe": ""
+    },
+    {
+        "name": "simple",
+        "mean": "\u7c21\u55ae",
+        "describe": ""
+    },
+    {
+        "name": "single",
+        "mean": "\u55ae\u7368\u7684",
+        "describe": ""
+    },
+    {
+        "name": "singular",
+        "mean": "\u55ae\u6578",
+        "describe": ""
+    },
+    {
+        "name": "site",
+        "mean": "\u5730\u9ede",
+        "describe": ""
+    },
+    {
+        "name": "slash",
+        "mean": "\u524a\u6e1b(\u659c\u7dda)",
+        "describe": "forward slash\uff1a\u6b63\u659c\u7dda"
+    },
+    {
+        "name": "slightly",
+        "mean": "\u7a0d\u5fae",
+        "describe": ""
+    },
+    {
+        "name": "source",
+        "mean": "\u4f86\u6e90",
+        "describe": ""
+    },
+    {
+        "name": "specific",
+        "mean": "\u5177\u9ad4\u7684",
+        "describe": ""
+    },
+    {
+        "name": "spin",
+        "mean": "\u65cb\u8f49",
+        "describe": ""
+    },
+    {
+        "name": "strip",
+        "mean": "\u596a\u53bb\/\u5378\u4e0b",
+        "describe": ""
+    },
+    {
+        "name": "surround",
+        "mean": "\u570d\u7e5e",
+        "describe": ""
+    },
+    {
+        "name": "swap",
+        "mean": "\u4ea4\u63db",
+        "describe": ""
+    },
+    {
+        "name": "t",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "terminal",
+        "mean": "\u7d42\u7aef",
+        "describe": ""
+    },
+    {
+        "name": "the way",
+        "mean": "\u65b9\u5f0f",
+        "describe": "  xx  way\u7684\u7528\u6cd5\u771f\u7684\u6709\u5920\u4ed6X\u7684\u591a\r\n\r\n\u4f46\u61c9\u8a72\u53ef\u4ee5\u7406\u89e3\u70ba\u300c\u65b9\u6848\u300d\u7b49\r\n\r\nno way \u6c92\u6709\u65b9\u6848\uff1a\u6c92\u9580\uff01\r\nthe way is \u90a3\u500b\u65b9\u6848\u662f\uff1a\u63cf\u8ff0\u9032\u7a0b\u7684\u7d30\u7bc0\u6216\u904b\u4f5c\u539f\u7406"
+    },
+    {
+        "name": "theme",
+        "mean": "\u4e3b\u984c",
+        "describe": ""
+    },
+    {
+        "name": "tour",
+        "mean": "\u65c5\u884c\/\u904a\u89bd",
+        "describe": ""
+    },
+    {
+        "name": "traditional",
+        "mean": "\u50b3\u7d71\u7684",
+        "describe": ""
+    },
+    {
+        "name": "typically",
+        "mean": "\u901a\u5e38",
+        "describe": ""
+    },
+    {
+        "name": "u",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "v",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "valid",
+        "mean": "\u6709\u6548\u7684",
+        "describe": ""
+    },
+    {
+        "name": "variables",
+        "mean": "\u8b8a\u6578",
+        "describe": ""
+    },
+    {
+        "name": "version",
+        "mean": "\u7248\u672c",
+        "describe": ""
+    },
+    {
+        "name": "w",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "website",
+        "mean": "\u7db2\u7ad9",
+        "describe": ""
+    },
+    {
+        "name": "x",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "y",
+        "mean": "",
+        "describe": ""
+    },
+    {
+        "name": "z",
+        "mean": "",
+        "describe": ""
+    }
+]

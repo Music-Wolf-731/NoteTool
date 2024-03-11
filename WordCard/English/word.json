@@ -1,5 +1,11 @@
 [
     {
+        "name": "_Special",
+        "mean": "\u5c08\u6709\u540d\u8a5e\u5eab",
+        "describe": "\uff0d\uff0dReact \u95dc\u806f\u6846\u67b6\uff1a\r\nReact Native\uff1afacebook\u958b\u767c\r\n\r\n\uff0d\uff0dReact \u914d\u5957\u6578\u64da\u5305\uff1a\r\nReact Router\uff1a\u8def\u7531\u7cfb\u7d71",
+        "Star": true
+    },
+    {
         "name": "additional",
         "mean": "\u984d\u5916\u7684",
         "describe": "",
@@ -30,6 +36,18 @@
         "Star": true
     },
     {
+        "name": "element",
+        "mean": "\u5143\u7d20",
+        "describe": "",
+        "Star": true
+    },
+    {
+        "name": "feature",
+        "mean": "\u529f\u80fd\/\u7279\u8272",
+        "describe": "\u4e00\u822c\u662f\u6307\u7279\u9ede\u3001\u7279\u8272\r\n\r\n\u5728\u7de8\u78bc\u3001\u7a0b\u5f0f\u3001\u8edf\u9ad4\u4e2d\u6703\u6307\u300c\u529f\u80fd\u300d\r\n\r\n\u7528\u4f5c\u52d5\u8a5e\u7684\u8a71\u6703\u88ab\u89e3\u91cb\u70ba\u300c\u95dc\u9375\u884c\u70ba\u300d\u6216\u300c\u5177\u81f3\u95dc\u91cd\u8981\u610f\u7fa9\u7684\u300d",
+        "Star": true
+    },
+    {
         "name": "hyphen",
         "mean": "\u9023\u5b57\u865f\"-\"",
         "describe": "",
@@ -38,6 +56,12 @@
     {
         "name": "loaders",
         "mean": "\u52a0\u8f09\u5668",
+        "describe": "",
+        "Star": true
+    },
+    {
+        "name": "multiple",
+        "mean": "\u591a\u7a2e\u591a\u6a23\u7684",
         "describe": "",
         "Star": true
     },
@@ -54,6 +78,12 @@
         "Star": true
     },
     {
+        "name": "template",
+        "mean": "\u7bc4\u672c",
+        "describe": "",
+        "Star": true
+    },
+    {
         "name": "a",
         "mean": "",
         "describe": "",
@@ -62,6 +92,12 @@
     {
         "name": "action",
         "mean": "\u884c\u52d5",
+        "describe": "",
+        "Star": false
+    },
+    {
+        "name": "actually",
+        "mean": "\u5be6\u969b\u4e0a",
         "describe": "",
         "Star": false
     },
@@ -80,6 +116,24 @@
     {
         "name": "anchor",
         "mean": "\u9328",
+        "describe": "",
+        "Star": false
+    },
+    {
+        "name": "apply",
+        "mean": "\u7533\u8acb",
+        "describe": "",
+        "Star": false
+    },
+    {
+        "name": "approach",
+        "mean": "\u65b9\u6cd5",
+        "describe": "",
+        "Star": false
+    },
+    {
+        "name": "arguably",
+        "mean": "\u53ef\u4ee5\u8aaa",
         "describe": "",
         "Star": false
     },
@@ -252,12 +306,6 @@
         "Star": false
     },
     {
-        "name": "feature",
-        "mean": "\u7279\u5fb5",
-        "describe": "",
-        "Star": false
-    },
-    {
         "name": "fetch",
         "mean": "\u53d6\u5f97",
         "describe": "",
@@ -336,6 +384,12 @@
         "Star": false
     },
     {
+        "name": "instead",
+        "mean": "\u53cd\u800c\/\u4ee3\u66ff",
+        "describe": "\u5927\u7565\u5c31\u662f\u300c\u4e0d\u662f\u539f\u672c\u7684\uff0c\u662f....\u300d\u7684\u610f\u601d\r\n\r\n\u300c\u4e0d\u662fA\uff0c\u800c\u662fB\u300d\r\n\u6216\u662f\r\n\u300c\u4ee5B\u4f5c\u70baA\u7684\u66ff\u4ee3\u300d",
+        "Star": false
+    },
+    {
         "name": "j",
         "mean": "",
         "describe": "",
@@ -396,14 +450,14 @@
         "Star": false
     },
     {
-        "name": "multiple",
-        "mean": "\u591a\u7a2e\u591a\u6a23\u7684",
+        "name": "n",
+        "mean": "",
         "describe": "",
         "Star": false
     },
     {
-        "name": "n",
-        "mean": "",
+        "name": "native",
+        "mean": "\u672c\u5730",
         "describe": "",
         "Star": false
     },
@@ -498,6 +552,12 @@
         "Star": false
     },
     {
+        "name": "previously",
+        "mean": "\u4e4b\u524d\/\u66fe\u7d93",
+        "describe": "previously of\uff1a\u66fe\u7d93\u7528\u7684",
+        "Star": false
+    },
+    {
         "name": "price",
         "mean": "\u50f9\u683c",
         "describe": "",
@@ -513,6 +573,12 @@
         "name": "property",
         "mean": "\u9663\u5217\u5c6c\u6027",
         "describe": "\u5c31\u662f\u9663\u5217\u4e2d\u7684\u7d22\u5f15\uff0c\u4f60\u8a18\u61b6\u4e2d\u7684key\r\n\r\n\u5b83\u4e5f\u6709\r\n\u8ca1\u7522\u3001\u6240\u6709\u6b0a\r\n\u4e0d\u52d5\u7522\u3001\u623f\u7522\r\n\u7269\u54c1\u7279\u9ede\u3001\u7279\u8272\r\n\u7b49\u7b49\u7684\u89e3\u5ef6\u4f38\u7528\u6cd5",
+        "Star": false
+    },
+    {
+        "name": "provider",
+        "mean": "\u63d0\u4f9b\u8005",
+        "describe": "",
         "Star": false
     },
     {
@@ -662,12 +728,6 @@
     {
         "name": "t",
         "mean": "",
-        "describe": "",
-        "Star": false
-    },
-    {
-        "name": "template",
-        "mean": "\u7bc4\u672c",
         "describe": "",
         "Star": false
     },

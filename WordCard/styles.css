@@ -1,0 +1,178 @@
+
+body{
+    margin:0;
+    background:black;
+}
+
+#TopBar{
+    display : flex;
+    justify-content: space-between;
+    color:white;
+    height:35px;
+    border-width: 0px 0px 2px 0;
+    border-style: solid;
+    border-color: #5e1c89;
+}
+#TopBar div{display:flex;}
+#TopBar h3{margin:5px 15px;}
+#TopBar select{
+    width:130px;
+    background:#5e1c89;
+    color:white;
+    height:100%;
+}
+#TopBar p{
+    color:white;
+    margin:5px;
+}
+
+#WordBoxList {
+    display:flex;
+    flex-wrap: wrap;
+    margin:5px 0;
+}
+#WordWindow hr {
+    border-color : #a860c9;
+    width:100%;
+}
+#WordWindow {
+    height:calc(70vh - 35px);
+    width:100%;
+    overflow-y: auto; 
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+.display .desc p{
+    margin : 5px;
+    white-space: pre-wrap;
+}
+.display .desc {
+    width:100%;
+    height:100%;
+    overflow-y: auto; 
+}
+.WordBox{
+    color:white;
+    padding:5px 10px;
+    margin:6px 8px;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.SinBox{
+    color:rgb(242, 255, 0);
+    background:#0a0e2c;
+}
+.KeyWord{
+    transition: all 0.3s ease;
+    background:linear-gradient(30deg, #bbb800 0%, #520496 40%, #12001f 90%);
+    background-size: 180%;
+    background-position: 100% 0%;
+}
+.KeyWord:hover{
+    background-position: 0% 100%;
+}
+.KeyWord>p:first-of-type{
+    color:rgb(226, 59, 255);
+}
+.Default{
+    background:#320742;
+}
+.Default:hover{
+    background:#7116ae;
+}
+.WordBox .word{
+    font-size: 1.3em;
+}
+.WordBox .mean{
+    font-size: .9em;
+}
+.FlowBox{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.FlowBox p{
+    display: none;
+}
+.linkBox img{
+    width:50px;
+}
+.WordBox p{margin:0}
+
+.inner{display:none;}
+
+.describe {
+    width:100%;
+    height:calc(30vh - 4px);
+    display:flex;
+}
+.discribe div{
+    height:100%;
+}
+.describe .page{
+    width:30px;
+    background:rgb(76, 26, 78);
+}
+.describe>.display{
+    width:calc(100% - 60px);
+    background:#1e031b;
+}
+.describe>.linkBox{
+    width:50px;
+    background:#232323;
+}
+.page p{
+    color: white;
+    margin:0;
+}
+.page>div{
+    color: white;
+    background:#a860c9;
+    padding:4px;
+    margin:5px 0;
+    border-radius: 10px 0px 0px 10px; /* 所有四个边角都有 10px 的圆角 */
+}
+.clickable{color:white;position: relative;}
+.clickable div{position: absolute;width:100%;height:100%;}
+.display {color:white}
+
+
+.display>.edit,form{width:100%;height:100%;}
+.edit label{user-select: none;}
+form>div{padding:5px;}
+form>div:first-of-type{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+form>div:first-of-type>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+}
+form>div:first-of-type>div span{width:50%;}
+#reast{
+    padding:3px 6px;
+    height:100%;
+}
+#submit , #reast{background:#7116ae;}
+.InputText{
+    width:calc(100% - 70px);
+}
+input,textarea{background:#1a141c;color:white;}
+textarea{
+    width:calc(100% - 15px);
+    height:55%;
+    margin:5px;
+}
+form .component{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}

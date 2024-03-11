@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Share",
+        "mean": "\u5171\u4eab",
+        "describe": ""
+    },
+    {
+        "name": "Usage",
+        "mean": "\u4f7f\u7528\u65b9\u5f0f",
+        "describe": ""
+    },
+    {
+        "name": "basics",
+        "mean": "\u57fa\u672c",
+        "describe": ""
+    },
+    {
+        "name": "component",
+        "mean": "\u6210\u4efd",
+        "describe": ""
+    },
+    {
+        "name": "devices",
+        "mean": "\u88dd\u7f6e",
+        "describe": ""
+    },
+    {
+        "name": "ensure",
+        "mean": "\u78ba\u4fdd",
+        "describe": ""
+    },
+    {
+        "name": "mobile",
+        "mean": "\u79fb\u52d5 \/ \u884c\u52d5",
+        "describe": "\u6709\u6642\u6703\u7528\u4f86\u63cf\u8ff0\u512a\u5148\u5e8f\r\n\u6216\u662f\u63cf\u8ff0\u624b\u6a5f\u7b49\u884c\u52d5\u88dd\u7f6e"
+    },
+    {
+        "name": "necessary",
+        "mean": "\u5fc5\u8981\u7684",
+        "describe": ""
+    },
+    {
+        "name": "proper",
+        "mean": "\u6070\u7576\u7684",
+        "describe": ""
+    },
+    {
+        "name": "queries",
+        "mean": "\u67e5\u8a62",
+        "describe": ""
+    },
+    {
+        "name": "rendering",
+        "mean": "\u6e32\u67d3",
+        "describe": ""
+    },
+    {
+        "name": "responsive viewport",
+        "mean": "\u97ff\u61c9\u5f0f\u8996\u7a97",
+        "describe": ""
+    },
+    {
+        "name": "scale",
+        "mean": "\u898f\u6a21",
+        "describe": "scale up \uff1a\u64f4\u5c55 \/ \u653e\u5927"
+    }
+]

@@ -39,15 +39,12 @@ body{
     height:calc(70vh - 35px);
     width:100%;
     overflow-y: auto; 
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 11 */
 }
 .display .desc p{
     margin : 5px;
     white-space: pre-wrap;
-}
-.display .desc {
-    width:100%;
-    height:100%;
-    overflow-y: auto; 
 }
 .WordBox{
     color:white;
@@ -100,7 +97,7 @@ body{
 }
 .WordBox p{margin:0}
 
-.inner{display:none;}
+.WordBox .inner ,.WordBox .Data ,.WordBox .TopType {display:none;}
 
 .describe {
     width:100%;
@@ -114,9 +111,10 @@ body{
     width:30px;
     background:rgb(76, 26, 78);
 }
-.describe>.display{
-    width:calc(100% - 60px);
+.describe>form>.display{
+    width:100%;
     background:#1e031b;
+    height:100%;
 }
 .describe>.linkBox{
     width:50px;
@@ -137,24 +135,83 @@ body{
 .clickable div{position: absolute;width:100%;height:100%;}
 .display {color:white}
 
-
-.display>.edit,form{width:100%;height:100%;}
+form{width:calc(100% - 80px);}
+.display>div{width:100%;height:100%;overflow-y: auto;}
 .edit label{user-select: none;}
-form>div{
-    padding:5px;
+.edit>div{padding:5px;}
+.edit>div:first-of-type{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
+.edit>div:first-of-type>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+}
+.edit>div:first-of-type>div span{width:50%;}
+#reast{
+    padding:3px 6px;
+    height:100%;
+}
+#submit , #reast{background:#7116ae;}
 .InputText{
     width:calc(100% - 70px);
 }
-input,textarea{background:#1a141c;margin:5px;color:white;}
+input,textarea{background:#1a141c;color:white;}
 textarea{
-    width:calc(100% - 15px);
-    height:45%;
+    width:calc(100% - 16px);
+    height:55%;
+    margin:5px;
 }
-form .component{
+.edit .component{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+}
+
+.ExtarDataTitle{
+    color: #897298;
+    width: 100%;
+    padding: .8em 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.ExtarDataTitle p{
+    margin:0 1em;
+}
+
+.ExtarDataTitle div{
+    background:#897298;
+    height:1px;
+    width:100%;
+}
+
+.ExtarDataOption{
+    padding: 0 2em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.ExtarDataOption input{
+    display:none;
+}
+
+.ExtarDataOption label{
+    margin:.4em;
+    transition: background 0.5s ease;
+    padding:5px;
+    border-radius: 5px; 
+    color:white;
+    background:#9212e7;
+}
+
+.ExtarDataOption input:checked + label{
+    background:#ce83ff;
 }
