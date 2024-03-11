@@ -8,6 +8,7 @@
             if(isset($value['Data'][$_GET['EditData']]) ){
                 if(in_array($deleteID,$value['Data'][$_GET['EditData']])){
                     unset($ItemListData[$key]['Data'][$_GET['EditData']][array_search($deleteID,$value['Data'][$_GET['EditData']])]);
+                    $ItemListData[$key]['Data'][$_GET['EditData']] = array_values($ItemListData[$key]['Data'][$_GET['EditData']]);
                 }
             }
             
@@ -42,6 +43,8 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
+
+
         // $NewOrder處理
         // 使用explode將字符串分割成陣列
         // 使用array_map清除項目的頭尾空白
@@ -49,12 +52,12 @@
         $NewOrder = explode(",", $_POST['DataList']);
         $NewOrder = array_map('trim', $NewOrder);
         $NewOrder = array_unique($NewOrder);
-
-
-        // 若陣列項目和原本無差異，即會開始進行修改
+        // 若陣列項目和原本無差異，同時無新增或刪除任何物件，即會開始進行修改
         if(
             empty(array_diff($DataValueInJson['Data'], $NewOrder)) and
-            empty(array_diff($NewOrder, $DataValueInJson['Data']))
+            empty(array_diff($NewOrder, $DataValueInJson['Data'])) and
+            $_POST['DataChangeTo'] !== 'Delete' and
+            $_POST['DataForChange'] !=='AddNewItem'
         ){
             $jsonData[$DataKeyInJson]['Data'] = $NewOrder;
         }
@@ -85,6 +88,7 @@
                 } else if($ChangeToVar == 'Delete'){
                     unset($jsonData[$DataKeyInJson]['Data'][array_search($_POST['DataForChange'],$DataValueInJson['Data'])]);
                     unset($jsonData[$DataKeyInJson]['Id'][array_search($_POST['DataForChange'],$DataValueInJson['Id'])]);
+                    $jsonData[$DataKeyInJson]['Data']=array_values($jsonData[$DataKeyInJson]['Data']);
                     DeleteItemListData(array_search($_POST['DataForChange'],$DataValueInJson['Id']));
                 } else {
                     

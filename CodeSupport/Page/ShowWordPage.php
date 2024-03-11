@@ -41,7 +41,7 @@ foreach ($userData as $key => $value) {
 
 // 使用 usort 函數進行排序
 usort($userData, function($a, $b) {
-    strcmp($a['name'], $b['name']) ;
+    return strcmp($a['name'], $b['name']) ;
 });
 
 
@@ -94,7 +94,7 @@ file_put_contents($DisplayPage.'ItemList.json', $jsonString);
 
 
         //寫入文字流視框
-        $ForPrint='';$typeLine=true;$GroupOrderKey=['置頂','未分類'];
+        $ForPrint='';$typeLine=true;$GroupOrderKey=['置頂'];
         foreach ($JsonExtarData as $key => $value_L) {
             if($value_L['Name']!=='Group'){continue;}
             $GroupData=$value_L;
@@ -102,6 +102,7 @@ file_put_contents($DisplayPage.'ItemList.json', $jsonString);
                 $GroupOrderKey[]= array_search($value, $value_L['Id']);
             }
         }
+        $GroupOrderKey[]='未分類';
         foreach ($GroupOrderKey as $key => $GroupId) {
             if($GroupId !== '置頂'){
                 $TitleWrite=($GroupId == '未分類')?'未分類':$GroupData['Id'][$GroupId];
@@ -115,7 +116,7 @@ file_put_contents($DisplayPage.'ItemList.json', $jsonString);
                     if(!isset($value['Data']['Group'])){continue;};
                     if(!in_array($GroupId, $value['Data']['Group'])){continue;};
                 } else {
-                    if(isset($value['Data']['Group']) or !empty($value['Data']['Group'])){continue;};
+                    if(isset($value['Data']['Group']) and !empty($value['Data']['Group'])){continue;};
                 }
 
                 
