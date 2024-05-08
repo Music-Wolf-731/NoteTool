@@ -140,12 +140,14 @@
 
     
     <?php
-    echo '<a href="'.$LinkVar.'"><p>取消編輯</p></a><a href="'.$LinkVar.'&EditData=Null00"><p>資料集列表</p></a>';
+    $ToBack = '<div id="BackBox"><a href="'.$LinkVar.'"><p>取消編輯</p></a><a href="'.$LinkVar.'&EditData=Null00"><p>資料集列表</p></a></div>';
     //生成群組名按鈕
     if(!$EditKey){
+        $EditStr='';
         foreach ($DataNameList as $key => $value) {
-            echo '<a href='.$LinkVar.'&EditData='.$value.'><p>'.$value.'</p></a>';
+            $EditStr .= '<a href='.$LinkVar.'&EditData='.$value.'><p>'.$value.'</p></a>';
         }
+        $EditStr = '<div id="DataNameList">'.$EditStr.'</div>';
     }
     
     else{
@@ -156,7 +158,7 @@
         };
         $EditStr = '<textarea id="DataList" name="DataList">'.$EditStr.'</textarea>';
 
-        $EditStr .= '
+        $ChangeStr = '
             
                 <select id="DataForChange" name="DataForChange">
                     <option value="false" disabled selected>Choose Data</option>
@@ -164,18 +166,28 @@
                     <option value="AddNewItem" style="color:red;">add New Item</option>
                 </select>
                 <label for="DataChangeTo">更改為</label><input id="DataChangeTo" name="DataChangeTo" placeholder="寫入要更正的值">
-                <p>寫入"Delete"將會將類別刪除，類別原指定的項將會成為無類別項目</p>
         '; 
+        $EditStr = '<div id="DataOrder">'.$EditStr.'</div>'.'<div id="ItemChange">'.$ChangeStr.'</div>';
         
-        $EditStr = '<div id="ChangeData">'.$EditStr.'</div>';
+        // $EditStr = '<div id="ChangeData">'.$EditStr.'</div>';
 
-        $EditStr .= '<br><button onclick="submitForm()">更改</button>'; 
+        $EditStr .= '<button onclick="submitForm()">更改</button>'; 
 
-        // <p>改名：</p><select>
 
-        echo '<form action="./'.$LinkVar.'&EditData='.$_GET['EditData'].'" method="post">'.$EditStr.'</form>';
+        $EditStr = '<form action="./'.$LinkVar.'&EditData='.$_GET['EditData'].'" method="post">'.$EditStr.'</form>';
+
+        $EditStr .= '<div id="illustrate"><p>
+            1.選取項目並輸入"Delete"，即可刪除該項目<br>
+            2.選取"add New Item"並輸入更改內容，即可新增項目<br><br>
+            1.修改順序只需要複製貼上即可，頭尾不可有逗號<br>
+            2.修改順序時若項目若不慎受到改動則會修改失敗<br>
+            3.順序修改和新增、刪除項目不可同步進行<br>
+            4.刪除項目時會順帶刪除序列中擁有該細節的對應ID
+        </p></div>';
+
+
     }
-
+    echo '<div id="display">'.$ToBack.$EditStr.'</div>';
     ?>
     
     

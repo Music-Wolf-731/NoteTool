@@ -1,0 +1,787 @@
+[
+    {
+        "name": ".headers",
+        "mean": "\u6b04\u4f4d\u540d\u5c55\u793a",
+        "describe": ".headers on\r\n\u5c55\u793a\u6b04\u4f4d\u540d",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": ".mode",
+        "mean": "\u8f38\u51fa\u6a21\u5f0f",
+        "describe": "\u4ee5\u5217\u7684\u5f62\u5f0f\u53bb\u5c55\u793a\r\n.mode column\r\n\r\n\u6b64\u5916\u9084\u6709\u5e7e\u7a2e\u6a21\u5f0f\r\nlist\u3001column\u3001html\u7b49",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": ".quit",
+        "mean": "\u9000\u51fa\u7cfb\u7d71",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": "ALTER_TABLE",
+        "mean": "mysql_\u8868\u683c\u6b04\u5c6c\u6027\u7de8\u8f2f",
+        "describe": "\u65b0\u589e\u6b04\u4f4d\uff1a\r\nAFTER TABLE tablename\r\nADD [COLUMN] column_name column_definition [FIRST|AFTER existioing_column]\r\n\u5c0d\u7279\u5b9atable\u65b0\u589e[\u6b04]\uff0c\u8a2d\u5b9a\u540d\u7a31\u3001\u6b04\u4f4d\u578b\u5225\uff0c\u63a5\u8457\u662f[\u6c7a\u5b9a\u5b83\u7684\u4f4d\u7f6e]\r\n\r\n\u7de8\u8f2f\u6b04\u4f4d\uff1a\r\nALTER TABLE table_name\r\n MODIFY column_name column_definition [FIRST | AFTER column_name],\r\n MODIFY column_name column_definition [FIRST | AFTER column_name],\r\n...;\r\n\u7de8\u8f2f\u5df2\u6709\u6b04\u4f4d\u7684\u898f\u683c\uff0c\u6307\u5b9a\u8868\u683c\u3001\u8f38\u5165\u6b04\u540d\u3001\u578b\u5225\u3001[\u4f4d\u7f6e]\r\n\r\n\u4fee\u6539\u6b04\u4f4d\u540d\uff1a\r\nALTER TABLE table_name\r\n CHANGE COLUMN original_name new_name column_definition  [FIRST | AFTER column_name];\r\n\u6307\u5b9a\u8868\u683c\u540d\uff0c\u8f38\u5165\u539f\u672c\u7684\u6b04\u4f4d\u540d\u3001\u65b0\u6b04\u4f4d\u540d\u3001\u6b04\u4f4d\u578b\u5225\u3001[\u6b04\u4f4d\u4f4d\u7f6e]\r\n\r\n\u522a\u9664\u6b04\u4f4d\uff1a\r\nALTER TABLE table_name\r\nDROP COLUMN column_name;\r\n\u6307\u5b9a\u8868\u683c\uff0c\u8f38\u5165\u8981\u522a\u9664\u7684\u6b04\u540d\r\n\r\n\u4fee\u6539\u8868\u683c\u540d\uff1a\r\nALTER TABLE table_name\r\nRENAME TO new_table_name\r\n\u6307\u5b9a\u8868\u683c\uff0c\u8f38\u5165\u65b0\u8868\u683c\u540d",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID011",
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "AS",
+        "mean": "\u5ba2\u88fd\u547d\u540d",
+        "describe": "\u901a\u5e38\u6703\u4f7f\u7528\u5728\u7d50\u5408\u8f38\u51fa\u7684\u60c5\u5883\u4e2d\r\n(\u8f38\u51fa\u7d50\u679c\u70ba\u539f\u672c\u7684\u5217\u8868\u4e2d\u4e0d\u5b58\u5728\u7684\u6b04\u4f4d\u6216\u503c)\r\n\u6307\u4ee4\uff1a\r\nSELECT <A\u6b04\u540d> * <B\u6b04\u540d> AS <\u5ba2\u88fd\u5316\u540d> FROM <\u4f86\u6e90\u8868\u683c>;\r\n\r\n\u8868\u683c\u3001\u6b04\u4f4d\u540d\u7b49\u7b49\u90fd\u53ef\u4ee5\u4f7f\u7528AS\u4f5c\u4f7f\u7528",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "BLOB",
+        "mean": "\u4e8c\u9032\u5236",
+        "describe": "BLOB\uff1a \u7528\u65bc\u5b58\u5132\u4e8c\u9032\u5236\u6578\u64da\uff0c\u5982\u5716\u50cf\u3001\u97f3\u983b\u3001\u8996\u983b\u7b49\u3002\r\nBYTEA\uff1a \u4e00\u7a2e\u7279\u5b9a\u65bc PostgreSQL \u7684\u4e8c\u9032\u5236\u6578\u64da\u985e\u578b\uff0c\u7528\u65bc\u5b58\u5132\u4e8c\u9032\u5236\u5927\u5c0d\u8c61\u6578\u64da\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID010"
+            ]
+        }
+    },
+    {
+        "name": "BOOLEAN",
+        "mean": "\u5e03\u6797",
+        "describe": "BOOLEAN\uff1a \u7528\u65bc\u5b58\u5132\u5e03\u723e\u503c\uff0c\u53ea\u80fd\u662f TRUE \u6216 FALSE\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID010"
+            ]
+        }
+    },
+    {
+        "name": "CHECK",
+        "mean": "\u6aa2\u67e5\u6b04\u4f4d\u8cc7\u6599",
+        "describe": "CREATE TABLE Users (\r\n    col_name_a col_constraints col_attributes,\r\n    col_name_b col_constraints col_attributes,\r\n    col_name_c col_constraints col_attributes,\r\n    CHECK (col_name_a >= 20 AND col_name_b IN ('\u7537', '\u5973'))\r\n);\r\n\r\nCHECK \u7528\u4f86\u6aa2\u67e5\u65b0\u589e\u7684\u8cc7\u6599\u662f\u5426\u7b26\u5408\u898f\u683c\u3001\u6a19\u6e96\uff0c\u5982\u679c\u8981\u65b0\u589e\u6216\u4fee\u6539\u8cc7\u6599\u6642\u548cCHECK\u7684\u898f\u5247\u4e0d\u7b26\u5247\u6703\u7121\u6cd5\u5beb\u5165",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID012"
+            ]
+        }
+    },
+    {
+        "name": "CONCAT",
+        "mean": "\u5b57\u4e32\u7d44\u5408",
+        "describe": "\u5c07\u6578\u500b\u5b57\u4e32\u63a5\u5728\u4e00\u8d77\r\nCONCAT(string1, string2, ...)\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    },
+    {
+        "name": "CORRELATED SUBQUERY",
+        "mean": "\u8acb\u6c42\u968e\u5c64\u7a7f\u63d2\u5408\u4f75",
+        "describe": "\u5728\u9032\u884cSUBQUERY\u7684\u6642\u5019\uff0c\u62ec\u865f\u5167\u6e32\u67d3\u7684TABLE\u5982\u679c\u548c\u62ec\u865f\u5916\u7684TABLE\u9032\u884c\u5c0d\u6bd4\u548c\u689d\u4ef6\u6e32\u67d3\u6642\uff0c\u5c31\u53ef\u4ee5\u7a31\u70baCORRELATED SUBQUERY\uff0c\u9019\u7a2e\u60c5\u6cc1\u4e0b\uff0c\u62ec\u865f\u5916\u7684TABLE\u6bcf\u8b80\u53d6\u4e00\u500bRECORD\uff0c\u5c31\u6703\u5c07\u62ec\u865f\u5167\u7684TABLE\u5168\u90e8\u8b80\u904e\u4e00\u904d\u4e26\u9010\u4e00\u6bd4\u5c0d\uff0c\u6240\u4ee5\u82e5\u662f\u5167\u5916\u90fd\u4f7f\u7528100\u500bRECORD\u7684TABLE\u53bb\u57f7\u884cCORRELATED SUBQUERY\u7684\u8a71\uff0c\u5c31\u6703\u6709100*100=10000\u6b21\u7684\u67e5\u8a62\u6b21\u6578\uff0c\u9019\u53ef\u80fd\u5c0d\u7cfb\u7d71\u7522\u751f\u4e0d\u826f\u5f71\u97ff\uff0c\u6240\u4ee5\u4e00\u822c\u6703\u642d\u914dEXIST\u4f86\u4f7f\u7528\r\n\r\n\u7bc4\u4f8b\uff1a\r\nSELECT name, position, salary\r\n  FROM employee e\r\n  WHERE e.salary > (SELECT AVG(salary) FROM employee e2 WHERE e.position = e2.position)\r\n\r\n\u7bc4\u4f8b\u89e3\u91cb\uff1a\r\n\u9019\u6b21\u7684\u7bc4\u4f8b\u6709\u4e9b\u985e\u4f3c\u5bebphp\u6642\u4f7f\u7528\u7684FOREACH\uff0c\u9996\u5148\u7b2c\u4e00\u5c64\u5148\u6307\u5b9a\u6e32\u67d3\u6b04\u4f4d\uff0c\u4e26\u6e90\u65bcemployee\u91cd\u547d\u540de\uff0c\u63a5\u8457\u4f7f\u7528WHERE\u7be9\u9078e.salary\u5927\u65bc\u4e8c\u5c64\u8f38\u51fa\u7d50\u679c\u7684\u6578\uff0c\u4e8c\u5c64\u50c5\u8f38\u51fa\u4e00\u500bAVG(salary)\uff0c\u6545\u6211\u5011\u53ef\u4ee5\u770b\u5230\u662f\u53d6salary\u7684\u5e73\u5747\u503c\uff0c\u4f86\u6e90\u8868\u683c\u4e00\u6a23\u662femployee\u91cd\u547d\u540de2\uff0c\u63a5\u8457\u4f7f\u7528WHERE\u7be9\u9078\u51fae.position = e2.position\u7684\u5167\u5bb9\uff0c\u9019\u908a\u7684\u7b97\u6cd5\u662f\u7b2c\u4e00\u5c64\u5728\u8d70\u904e\u6bcf\u4e00\u9805\u6642\uff0c\u6703\u5c07\u8a72\u9805\u8a18\u9304\u4e0b\u4f86(e.position)\uff0c\u63a5\u8457\u5230\u7b2c\u4e8c\u5c64\u6642\u56e0\u70baWHERE\u7684\u95dc\u4fc2\uff0c\u5b83\u6703\u5c07\u525b\u525b\u8a18\u9304\u7684e.position\u548c\u7b2c\u4e8c\u5c64\u7684\u6bcf\u4e00\u500b\u9805\u76ee\u7684position(e2.position)\u9032\u884c\u5c0d\u7167\uff0c\u6700\u7d42\u5c31\u6703\u7559\u4e0b\u548c\u4e00\u958b\u59cb\u8a18\u9304\u7684e.position\u76f8\u540c\u7684\u5167\u5bb9\uff0c\u6700\u5f8c\u518d\u88abAVG\u5e73\u5747\u5f8c\u8f38\u51fa\uff0c\u548c\u4e00\u5c64\u7684e.salary\u9032\u884c\u6bd4\u8f03\uff0c\u82e5e.salary\u6bd4\u8f03\u5927\u5247\u4fdd\u7559\u4e26\u5c07\u5176\u8f38\u51fa\r\n\u6545\u9019\u500b\u7bc4\u4f8b\u7684\u908f\u8f2f\u7684\u76ee\u6a19\u662f\u5c07employee\u7684\u9805\u76ee\u5217\u51fa\u4f86\uff0c\u5c07position\u76f8\u540c\u7684\u9805\u76ee\u7684salary\u9032\u884c\u5e73\u5747\uff0c\u4e26\u4e14\u5c07\u6bcf\u4e00\u9805\u7684salary\u548c\u5e73\u5747salary\u9032\u884c\u6bd4\u8f03\uff0c\u5c07salary\u5927\u65bc\u5e73\u5747\u7684\u9805\u76ee\u8f38\u51fa\r\n\r\n\u540c\u7bc4\u4f8b\u7684\u81ea\u6211\u7df4\u7fd2\u7248\u672c\uff1a\r\nSELECT name, position, salary FROM employee a\r\nWHERE a.salary > ( SELECT avgfin FROM\r\n  (SELECT name, position, AVG(salary) avgfin FROM employee e GROUP BY e.position ) b WHERE b.position = a.position\r\n);\r\n\r\n\u7df4\u7fd2\u7bc4\u4f8b\u89e3\u91cb\uff1a\r\n\u4e0a\u8ff0\u7bc4\u4f8b\u6703\u5728\u9032\u884c\u6bcf\u4e00\u9805\u7684\u6e32\u67d3\u6642\u90fd\u6703\u91cd\u8907\u518d\u9032\u884c\u4e00\u6b21\u6574\u500b\u8868\u683c\u7684\u6bd4\u8f03\u548c\u6bd4\u8f03\u6e32\u67d3\uff0c\u6703\u5c0d\u6548\u80fd\u7522\u751f\u4e0d\u826f\u5f71\u97ff\uff0c\u6545\u6211\u5617\u8a66\u7df4\u7fd2\u6539\u6210\u7528GROUP BY\u4f9dposition\u70ba\u57fa\u6e96\u5148\u6e32\u67d3\u51fa\u7b2c\u4e09\u5c64\u8868\u683c\u540c\u6642\u53d6\u5f97salary\u5e73\u5747\u503c\uff0c\u518d\u5f9e\u7b2c\u4e8c\u5c64\u4f7f\u7528WHERE\u53d6\u51fa\u7b2c\u4e00\u5c64\u76ee\u524d\u4f7f\u7528\u4e2d\u7684position\u548c\u7b2c\u4e09\u5c64\u8868\u683c\u4e2d\u7684position\u9032\u884c\u5c0d\u7167\uff0c\u53d6\u51fa\u540cposition\u7684\u9805\u76ee\uff0c\u4e26\u8f38\u51faavgfin(\u5728\u7b2c\u4e09\u5c64\u4e2d\u88ab\u540c\u985e\u5e73\u5747\u904e\u7684salary)\uff0c\u63a5\u8457\u5728\u7b2c\u4e00\u5c64\u548ca.salary\u9032\u884c\u6bd4\u8f03\uff0c\u82e5a.salary\u9ad8\u65bcavgfin\u5373\u70ba\u9ad8\u65bc\u540c\u985e\u5e73\u5747\u503c\uff0c\u5c07\u88ab\u8f38\u51fa\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID007"
+            ]
+        }
+    },
+    {
+        "name": "CREATE_DATABASE",
+        "mean": "\u65b0\u589e\u8cc7\u6599\u5eab",
+        "describe": "create database <databaseName> default character set utf8 collate utf8_general_ci",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": "CURRENT_TIMESTAMP",
+        "mean": "\u73fe\u5728\u6642\u9593",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    },
+    {
+        "name": "Constraint",
+        "mean": "\u6b04\u4f4d\u9650\u5236",
+        "describe": "NOT NULL\uff1a\u4e0d\u53ef\u586b\u5165\u7a7a\u503c\r\nUNIQUE\uff1a\u5167\u5bb9\u4e0d\u53ef\u91cd\u8986\r\nPRIMARY KEY\uff1a\u5167\u5bb9\u4e0d\u53ef\u91cd\u8986\uff0c\u4e14\u55ae\u4e00Table\u53ea\u53ef\u6709\u4e00\u6b04\u88ab\u6a19\u8a18(\u901a\u5e38\u6703\u7528\u65bcid)\r\nFOREIGN KEY\uff1a\u95dc\u806f\u76f8\u95dc",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID009"
+            ]
+        }
+    },
+    {
+        "name": "CreateTable",
+        "mean": "\u5275\u5efa\u8868\u683c",
+        "describe": "\u4ee5\u4e0b\u662f\u4e3b\u8981\u7684\u5beb\u5165\u898f\u5247\uff1a\r\n\r\nCREATE TABLE [IF NOT EXISTS] table_name(\r\n  column_1_definition,\r\n  column_2_definition,\r\n  ...,\r\n  table_constraints\r\n) ENGINE=storage_engine;\r\n\r\ncolumn_1_definition\u5176\u5be6\u4e26\u4e0d\u5b8c\u6574\uff0c\u5b83\u76ee\u524d\u5df2\u77e5\u53ef\u4ee5\u5beb\u50cf\u4ee5\u4e0b\u90a3\u9ebc\u591a\uff0c\u6703\u9806\u5e36\u4f9d\u5e8f\u5beb\u51fa\u610f\u601d\r\ncolumn_name data_type(length)[NOT NULL][DEFAULT value][AUTO_INCREMENT] column_constraint;\r\n\u6b04\u4f4d\u540d \u8cc7\u6599\u985e\u5225 [\u7121\u7a7a\u503c][\u9810\u8a2d\u503c][\u81ea\u52d5\u6392\u5e8f\u503c] \u6b04\u4f4d\u9650\u5236\u985e\u5225\r\n\r\n\u7bc4\u4f8b\uff1a\r\nCREATE TABLE playlist(\r\nlist_id INTEGER PRIMARY KEY,\r\nlist_name TEXT NOT NULL,\r\nuser_id TEXT NOT NULL,\r\nFOREIGN KEY(user_id) PEFERENCES user(id)\r\n);\r\n\r\n\r\n\r\n\u8a3b\uff1a\u7bc4\u4f8b\u4e2d\u7684 \r\nPRIMARY KEY\u662f\u6307\u5b9a\u4e3b\u6b04\u4f4d\u7684\u6307\u4ee4\uff0c\u88ab\u6307\u5b9a\u7684\u6b04\u4f4d\u5c07\u4e0d\u53ef\u91cd\u8907\u4e26\u6703\u5177\u5099\u7d22\u5f15\u529f\u80fd\uff0c\u4e00\u500b\u8868\u683c\u4e2d\u53ea\u80fd\u6307\u5b9a\u4e00\u500b\u6b04\u4f4d\u70ba PRIMARY KEY\r\nFOREIGN KEY(user_id) PEFERENCES user(id) \r\n\u662f\u5c07user_id\u95dc\u806f\u81f3\u53e6\u4e00\u500bTABLE\u7684id\u7684\u5beb\u6cd5",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID012"
+            ]
+        }
+    },
+    {
+        "name": "Create_User",
+        "mean": "\u5275\u5efa\u4f7f\u7528\u8005",
+        "describe": "CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": "DELETE",
+        "mean": "\u522a\u9664\u5167\u5bb9",
+        "describe": "\u53ef\u4ee5\u522a\u9664\u67d0\u500brecord\r\nDELETE FROM table_name\r\nWHERE condition;\r\n\r\n\u6ce8\u610f\uff0c\u95dc\u806f\u6027\u8cc7\u6599\u53ef\u80fd\u6709\u6b78\u5c6c\u554f\u984c\uff0c\u6bd4\u5982\u4f7f\u7528\u8005\u8cc7\u6599\u53ca\u4f7f\u7528\u8005\u8cc7\u6599\u6240\u64c1\u6709\u7684\u9805\u76ee\u3001\u7d30\u7bc0\u3001\u5c0d\u8a71\u5167\u5bb9\u7b49\uff0c\u9019\u5c31\u727d\u6d89\u5230\u4e86\u95dc\u806f\u6027\u8a2d\u7f6e(FOREIGN KEY)\u7684ON DELETE CASCADE\uff0c\u5728\u7236\u7d1a\u88ab\u522a\u9664\u6642\uff0c\u5b50\u7d1a\u4e5f\u6703\u4e00\u4f75\u5931\u53bb\u6b78\u5c6c\u4e00\u8d77\u522a\u9664",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID011"
+            ]
+        }
+    },
+    {
+        "name": "DELETE JOIN",
+        "mean": "mySQL_\u591a\u8868\u683c\u522a\u9664",
+        "describe": "DELETE T1 ,T2\r\n  FROM T1\r\nINNER JOIN T2 ON T1.key = T2.key\r\nWHERE condition;",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID011",
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "Datatype",
+        "mean": "\u8cc7\u6599\u985e\u5225",
+        "describe": "https:\/\/www.mysqltutorial.org\/mysql-basics\/mysql-data-types\/\r\n\u5e38\u7528\u7684\u5982\u4ee5\u4e0b\uff1a\r\n\r\nNumerical\r\n  INT(\u6574\u6578)\/FLOAT(\u5c0f\u6578)\r\n\r\nString\r\n  CHAR(\u56fa\u5b9a\u9577\u5ea6)\/VARCHAR(\u53ef\u8b8a\u9577\u5ea6)\/TEXT(\u9577\u5b57\u4e32)\r\n  BLOB(Binary Large OBject)-\u591a\u5a92\u9ad4\u8cc7\u6599\u578b\u614b\r\n  \u5982\uff1aImages,audio,multimedia\r\n\r\nTIME\r\n  DATE: CCYY-MM-DD format\r\n  TIME: hh:mm:ss format",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID009"
+            ]
+        }
+    },
+    {
+        "name": "FLOAT",
+        "mean": "\u5c0f\u6578",
+        "describe": "\r\nFLOAT\uff1a FLOAT \u662f\u4e00\u7a2e\u6d6e\u9ede\u6578\u985e\u578b\uff0c\u901a\u5e38\u7528\u65bc\u5b58\u5132\u55ae\u7cbe\u5ea6\u6d6e\u9ede\u6578\u503c\u3002\u5b83\u901a\u5e38\u4f7f\u7528 32 \u4f4d\u8868\u793a\u6578\u503c\uff0c\u5176\u4e2d\u7d04\u6709 7 \u4f4d\u6709\u6548\u6578\u5b57\u3002\u7bc4\u570d\u901a\u5e38\u5728 -3.40282347E+38 \u5230 -1.17549435E-38\u30010 \u548c 1.17549435E-38 \u5230 3.40282347E+38 \u4e4b\u9593\u3002\r\n\r\nREAL\uff1a REAL \u662f\u4e00\u7a2e\u6d6e\u9ede\u6578\u985e\u578b\uff0c\u8207 FLOAT \u985e\u4f3c\uff0c\u901a\u5e38\u4e5f\u7528\u65bc\u5b58\u5132\u55ae\u7cbe\u5ea6\u6d6e\u9ede\u6578\u503c\u3002\u5b83\u4e5f\u4f7f\u7528 32 \u4f4d\u8868\u793a\u6578\u503c\uff0c\u4f46\u901a\u5e38\u8207 FLOAT \u985e\u4f3c\u3002\r\n\r\nDOUBLE\uff1a DOUBLE \u662f\u4e00\u7a2e\u6d6e\u9ede\u6578\u985e\u578b\uff0c\u901a\u5e38\u7528\u65bc\u5b58\u5132\u96d9\u7cbe\u5ea6\u6d6e\u9ede\u6578\u503c\u3002\u5b83\u901a\u5e38\u4f7f\u7528 64 \u4f4d\u8868\u793a\u6578\u503c\uff0c\u5176\u4e2d\u7d04\u6709 15-16 \u4f4d\u6709\u6548\u6578\u5b57\u3002\u7bc4\u570d\u901a\u5e38\u5728 -1.7976931348623157E+308 \u5230 -2.2250738585072014E-308\u30010 \u548c 2.2250738585072014E-308 \u5230 1.7976931348623157E+308 \u4e4b\u9593\u3002\r\n\r\n\u6b64\u5916\u9084\u6709\r\nDECIMAL(precision, scale)\r\nNUMERIC(precision, scale)",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID010"
+            ]
+        }
+    },
+    {
+        "name": "FOREIGN KEY",
+        "mean": "\u95dc\u806f\u6027\u7d04\u675f",
+        "describe": "\u7bc4\u4f8b\uff1a\r\nCREATE TABLE playlist(\r\nuser_id TEXT NOT NULL,\r\nFOREIGN KEY(user_id) PEFERENCES user(id)\r\n);\r\n\u5c07\u672c\u8868\u683c\u6b04user_id\u95dc\u806f\u81f3\u53e6\u4e00\u500bTABLE user\u7684id\u6b04\u7684\u5beb\u6cd5\r\n\r\n\u4e5f\u53ef\u4ee5\u76f4\u63a5\u5beb\u5728column\u5f8c\u9762(\u548cPRIMARY KEY\u4f4d\u7f6e\u76f8\u540c)\r\ncolumn_name text REFERENCES othertable_name\r\n\u9700\u6ce8\u610f\u4f7f\u7528\u9019\u7a2e\u5beb\u6cd5\u7684\u8a71\uff0c\u9700\u4fdd\u8b49\u76ee\u6a19(othertable)\u5177\u5099\u548c\u4f60\u76ee\u524dREFERENCES\u7684\u6b04\u4f4d\u540c\u540d\u7684\u6b04\u4f4d(\u4e0d\u78ba\u5b9a\u662f\u5426\u9700\u8981\u70ba\u4e3b\u9375\uff0c\u4f46\u770b\u4f86\u901a\u5e38\u662f\u4e3b\u9375)\u3002\r\n\r\n\u5b83\u6709\u4e09\u7a2e\u522a\u9664\u5f62\u5f0f\uff1a\r\nON DELETE RESTRICE\uff1a\u6709\u95dc\u806f\u5b50\u7d1a\u5b58\u5728\u6642\u4e0d\u53ef\u522a\u9664\u7236\u7d1a\r\nON DELETE CASCADE\uff1a\u7236\u7d1a\u522a\u9664\u5f8c\u95dc\u806f\u7684\u5b50\u7d1a\u4e00\u4f75\u522a\u9664\r\nON DELETE SET NULL\uff1a\u7236\u7d1a\u522a\u9664\u5f8c\u95dc\u806f\u5b50\u7d1a\u7684\u95dc\u806f\u6b04\u4f4d\u6539\u70banull\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID012"
+            ]
+        }
+    },
+    {
+        "name": "GRANT",
+        "mean": "\u8ce6\u4e88\u4f7f\u7528\u8005\u6b0a\u9650",
+        "describe": "\u8ce6\u4e88\u5168\u90e8\u6b0a\u9650\r\nGRANT ALL PRIVILEGES ON *.* TO 'staff'@'hostname';\r\n\r\n\u8ce6\u4e88\u90e8\u4efd\u6b0a\u9650\r\nGRANT \u6b0a\u9650\u985e\u578b ON DatabaseName.TableName TO 'newuser'@'%';\r\n\r\n\u7bc4\u4f8b\uff1a\r\nGRANT SELECT, INSERT, UPDATE ON mydatabase.* TO 'newuser'@'%';\r\n\r\n\u591a\u7a2e\u6b0a\u9650\u53ea\u8981\u5217\u51fa\u4e26\u7528\u9017\u865f\u5206\u958b\u5373\u53ef\uff0c\u6709SELECT\u3001INSERT\u3001UPDATE\u3001DELETE\u3001CREATE\u3001DROP \u548c ALTER \u4e4b\u5916\uff0cMySQL \u9084\u63d0\u4f9b\u4e86\u5176\u4ed6\u4e00\u4e9b\u6b0a\u9650\uff0c\u4f8b\u5982\uff1a\r\n\r\nGRANT OPTION\uff1a\u5141\u8a31\u4f7f\u7528\u8005\u5c07\u81ea\u5df1\u64c1\u6709\u7684\u6b0a\u9650\u6388\u4e88\u5176\u4ed6\u4f7f\u7528\u8005\u3002\r\nSHOW DATABASES\uff1a\u5141\u8a31\u4f7f\u7528\u8005\u67e5\u770b\u6240\u6709\u8cc7\u6599\u5eab\u3002\r\nSHOW VIEW\uff1a\u5141\u8a31\u4f7f\u7528\u8005\u67e5\u770b\u8996\u5716\u3002\r\nCREATE TEMPORARY TABLES\uff1a\u5141\u8a31\u4f7f\u7528\u8005\u5efa\u7acb\u81e8\u6642\u8868\u3002\r\nEXECUTE\uff1a\u5141\u8a31\u4f7f\u7528\u8005\u57f7\u884c\u9810\u5b58\u7a0b\u5e8f\u6216\u51fd\u6578\u3002\r\nINDEX\uff1a\u5141\u8a31\u4f7f\u7528\u8005\u5efa\u7acb\u7d22\u5f15\u3002\r\nREFERENCES\uff1a\u5141\u8a31\u4f7f\u7528\u8005\u5728\u8868\u4e0a\u5efa\u7acb\u5916\u9375\u7d04\u675f\u3002\r\n\u9019\u4e9b\u53ea\u662f\u4e00\u4e9b\u5e38\u898b\u7684\u6b0a\u9650\uff0c\u5be6\u969b\u4e0a MySQL \u63d0\u4f9b\u4e86\u66f4\u591a\u7684\u6b0a\u9650\uff0c\u53ef\u4ee5\u6839\u64da\u9700\u8981\u9032\u884c\u6388\u6b0a\u3002 \u4f60\u53ef\u4ee5\u5728 MySQL \u5b98\u65b9\u6587\u4ef6\u4e2d\u627e\u5230\u5b8c\u6574\u7684\u6b0a\u9650\u6e05\u55ae\u548c\u8a73\u7d30\u8aaa\u660e\u3002\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": "GROUP BY",
+        "mean": "\u7fa4\u7d44",
+        "describe": "\u5c07\u6b04\u4f4d\u9032\u884c\u5206\u7d44\uff0c\u6703\u628a\u6240\u6709\u9805\u76ee\u6383\u4e00\u904d\uff0c\u5c07\u6307\u5b9a\u6b04\u4f4d\u6709\u6240\u91cd\u8986\u7684\u6b78\u985e\u65bc\u540c\u4e00\u7d44\r\nGROUP BY <\u6b04\u540d>\r\n\r\n\u6ce8\uff1a\u539f\u7406\u662f\u5b83\u6703\u966aSELECT\u5c07\u6240\u6709\u8cc7\u6599\u8dd1\u904e\uff0c\u4e26\u5c07\u7b2c\u4e00\u6b21\u9047\u898b\u7684\u8cc7\u6599\u6e32\u67d3\u51fa\u4f86\uff0c\u4e26\u7565\u904e\u91cd\u8986\u7684\u8cc7\u6599\u4e0d\u9032\u884c\u6e32\u67d3\uff0c\u6545\u5982\u679c\u548c\u5176\u5b83\u6b04\u4f4d\u540c\u6642\u9032\u884c\u6e32\u67d3\uff0c\u53ea\u6703\u770b\u5230\u6307\u5b9a\u6b04\u4f4d\u4e2d\u6bcf\u4e00\u7a2e\u8cc7\u6599\u7b2c\u4e00\u6b21\u51fa\u73fe\u7684\u9805\u76ee",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "HAVING",
+        "mean": "\u7fa4\u7d44\u5f8c\u7be9\u9078",
+        "describe": "\u6307\u4ee4\uff1a\r\nHAVING <\u6b04\u540d> = <\u5224\u65b7\u5f0f>;\r\n\r\n\u548cWHERE\u4e00\u6a23\u53ef\u4ee5\u4f7f\u7528AND OR\u7684\u52a0\u6210\u6307\u4ee4\r\n\u5b83\u548cWHERE\u7684\u6700\u4e3b\u8981\u5dee\u7570\u662f\u57f7\u884c\u6642\u9593\r\nWHERE\u662f\u5728\u4e00\u5207GROUP\u884c\u70ba\u904b\u4f5c\u524d\u9032\u884c\u7be9\u9078\r\nHAVING\u5247\u662f\u5728GROUP\u7684\u57f7\u884c\u5e8f\u7d50\u675f\u5f8c\u624d\u7be9\u9078\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "IFNULL",
+        "mean": "\u9047\u5230NULL\u6642\u6539\u8b8a\u5167\u5bb9",
+        "describe": "\u6307\u4ee4\uff1a\r\nIFNULL(<\u6b04\u540d> , <\u66ff\u63db\u5167\u5bb9>)\r\n\r\n\u5728SELECT\u6e32\u67d3\u51fa\u4f86\u6642\uff0c\u5982\u679c\u6307\u5b9a\u7684\u6b04\u4f4d\u7684\u67d0\u4e00\u500brecord\u662fNULL\uff0c\u5247\u6703\u66ff\u63db\u6210\u6307\u5b9a\u7684\u5167\u5bb9",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "INNER JOIN",
+        "mean": "\u91cd\u758a\u5408\u4f75",
+        "describe": "\u5408\u4f75\u8868\u683c\u6642\u6703\u5c07\u5169\u500b\u8868\u683c\u6307\u5b9a\u51fa\u4f86\u7684\u6b04\u4f4d\u9032\u884c\u6bd4\u5c0d\uff0c\u82e5\u540c\u6642\u5177\u5099\u76f8\u540c\u7684\u503c\uff0c\u5247\u6703\u88ab\u6e32\u67d3\u51fa\u4f86\uff0c\u53cd\u4e4b\u6368\u68c4\r\n\r\nSELECT\r\n  select_list\r\nFROM t1\r\n  INNER JOIN t2 ON join_condition1\r\n  INNER JOIN t3 ON join_condition2;\r\n\r\n\u4ee5\u4e0b\u7bc4\u4f8b\r\nSELECT u.user_id, l.user_id, u.name, u.createdAt, l.list_name, l.description \r\nFROM user u \r\nINNER JOIN list l ON u.user_id = l.user_id;\r\n\r\n\u9996\u5148\uff0cFROM\u6307\u5b9a\u4e86\u4e00\u500b\u57fa\u790e\u8868\u683cuser\u4e26\u547d\u540d\u70bau\r\nINNER JOIN \u6307\u5b9a\u4e86\u53e6\u4e00\u500b\u52a0\u5165\u8868\u683clist\u4e26\u540d\u547d\u70bal\r\n\u4e26\u4f7f\u7528INNER JOIN\u5f8c\u7684ON\u4f86\u6307\u5b9au.user_id\u6b04\u4f4d \u548c l.user_id\u6b04\u4f4d\u76f8\u540c\u7684\u9805\u76ee\u7d44\u5408\u6210\u4e00\u500b\u65b0\u8868\u683c(\u9019\u88e1\u4f7f\u7528\u7684\u662f\u525b\u525b\u88ab\u6307\u5b9a\u7684\u65b0\u8868\u683c\u540du\u548cl)\r\n\r\n\u8a3b\uff1a\u9019\u500b\u6307\u4ee4\u6703\u5c07\u5169\u500b\u8868\u683c\u4e2d\u6709\u91cd\u8986\u7684\u9805\u76ee\u4f75\u5728\u4e00\u8d77\uff0c\u6240\u4ee5\u6709\u6240\u7f3a\u6f0f\u6216\u5c0d\u4e0d\u4e0a\u7684\u6703\u88ab\u6368\u68c4\uff0c\u5982\u679cA\u8868\u683c\u7684\u67d0\u6b04\u5728B\u8868\u683c\u6709\u591a\u500b\u7d50\u679c\uff0c\u5408\u4f75\u51fa\u4f86\u7684\u8868\u683c\u5247\u6703\u5c07B\u8868\u683c\u6709\u7684record\u5168\u90e8\u5217\u51fa\uff0c\u4e26\u4e14\u6bcf\u4e00\u9805\u90fd\u91cd\u8986A\u8868\u683c\u5c0d\u5f97\u4e0a\u7684record(\u5373\u4fbf\u90fd\u662f\u540c\u4e00\u500b)",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID009"
+            ]
+        }
+    },
+    {
+        "name": "INSERT INTO VALUES",
+        "mean": "\u8868\u683c\u65b0\u589erecord",
+        "describe": "\u6307\u4ee4\uff1a\r\nINSERT INTO tablename(c1,c2,c3....)\r\nVALUES (v1,v2,v3,........);\r\n\r\n\u591a\u9805\u76ee\u6307\u4ee4\uff1a\r\nINSERT INTO tablename(c1,c2,c3....)\r\nVALUES \r\n  (v11,v12,v13,........),\r\n  (v21,v22,v23,........),\r\n  (v31,v32,v33,........);\r\n\r\n\u76f4\u63a5\u4f7f\u7528SELECT\u4f86\u7f6e\u5165\u8cc7\u6599\u7bc4\u4f8b\uff1a\r\nINSERT INTO table_name(column_list)\r\nSELECT\r\n   select_list\r\nFROM\r\n   another_table\r\nWHERE\r\n   condition;\r\n\u57fa\u672c\u4e0a\u4f7f\u7528\u5728SELECT\u7684\u6240\u6709\u5167\u5bb9\u90fd\u53ef\u4ee5\u7528\u65bc\u9019\u88e1\uff0c\u5c31\u6703\u5c07\u8f38\u51fa\u7684\u5167\u5bb9\u76f4\u63a5\u52a0\u5165\u65b0\u9805\u76ee\r\n\r\n\u5f37\u7f6e\u5165\uff1aIGNORE\r\n\u5728\u4f7f\u7528INSERT\u7684\u6642\u5019\uff0c\u6709\u6642\u6703\u7f6e\u5165\u5927\u91cf\u7684record\uff0c\u9019\u6642\u5c31\u6709\u53ef\u80fd\u6703\u6709\u90e8\u4efdrecord\u7522\u751f\u885d\u7a81\uff0c\u6bd4\u5982\u4e0d\u53ef\u7f6e\u5165\u7a7a\u6b04\u4f4d\uff0c\u6216\u662fid\u3001\u5167\u5bb9\u5fc5\u9700\u8868\u683c\u5167\u552f\u4e00\u7b49\r\n\u7121\u8ad6\u7f6e\u5165\u591a\u5c11record\uff0c\u53ea\u8981\u6709\u4e00\u9805\u51fa\u932f\uff0c\u6240\u6709record\u90fd\u5c07\u53d6\u6d88\u7f6e\u5165\u6d41\u7a0b\r\n\u800cIGNORE\u5c31\u662f\u70ba\u4e86\u80fd\u61c9\u5c0d\u9019\u500b\u72c0\u6cc1\u7522\u751f\u7684\uff0c\u5b83\u53ef\u4ee5\u5ffd\u8996\u6389\u6240\u6709\u51fa\u932f\u7684record\u5c07\u5176\u5b83\u5408\u6cd5\u7684record\u7f6e\u5165\uff0c\u800c\u6307\u4ee4\u5982\u4e0b\uff1a\r\nINSERT OR IGNORE INTO table_name(<col>)\r\nVALUES;",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID011"
+            ]
+        }
+    },
+    {
+        "name": "INT",
+        "mean": "\u6574\u6578",
+        "describe": "INTEGER \/ INT\uff1a \u9019\u662f\u4e00\u500b\u5e38\u898b\u7684\u6574\u6578\u985e\u578b\uff0c\u901a\u5e38\u7528\u65bc\u5b58\u5132\u666e\u901a\u6574\u6578\u6578\u503c\u3002\u5176\u5927\u5c0f\u901a\u5e38\u53d6\u6c7a\u65bc\u5177\u9ad4\u7684\u6578\u64da\u5eab\u7ba1\u7406\u7cfb\u7d71\uff0c\u4f46\u901a\u5e38\u81f3\u5c11\u80fd\u5920\u8868\u793a -2^31 \u5230 2^31 - 1 \u7684\u7bc4\u570d\u3002\r\n\r\nSMALLINT\uff1a \u9019\u662f\u4e00\u7a2e\u8f03\u5c0f\u7684\u6574\u6578\u985e\u578b\uff0c\u901a\u5e38\u7528\u65bc\u5b58\u5132\u7bc4\u570d\u8f03\u5c0f\u7684\u6574\u6578\u503c\u3002\u901a\u5e38\u80fd\u5920\u8868\u793a -2^15 \u5230 2^15 - 1 \u7684\u7bc4\u570d\u3002\r\n\r\nBIGINT\uff1a \u9019\u662f\u4e00\u7a2e\u8f03\u5927\u7684\u6574\u6578\u985e\u578b\uff0c\u901a\u5e38\u7528\u65bc\u5b58\u5132\u7bc4\u570d\u8f03\u5927\u7684\u6574\u6578\u503c\uff0c\u4f8b\u5982\u8868\u793a\u6642\u9593\u6233\u6216\u552f\u4e00\u6a19\u8b58\u7b26\u3002\u901a\u5e38\u80fd\u5920\u8868\u793a -2^63 \u5230 2^63 - 1 \u7684\u7bc4\u570d\u3002\r\n\r\nTINYINT\uff1a \u9019\u662f\u4e00\u7a2e\u7279\u5225\u5c0f\u7684\u6574\u6578\u985e\u578b\uff0c\u901a\u5e38\u53ea\u80fd\u8868\u793a\u5f88\u5c0f\u7684\u7bc4\u570d\uff0c\u4f8b\u5982 0 \u5230 255 \u4e4b\u9593\u7684\u6578\u503c\u3002\u901a\u5e38\u7528\u65bc\u7bc0\u7701\u5b58\u5132\u7a7a\u9593\uff0c\u7576\u4f60\u78ba\u5b9a\u6578\u503c\u5728\u9019\u500b\u7bc4\u570d\u5167\u6642\u4f7f\u7528\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID010"
+            ]
+        }
+    },
+    {
+        "name": "LEFT JOIN",
+        "mean": "\u5408\u4f75\u5165\u524d\u8005(\u53ef\u627e\u5dee\u96c6)",
+        "describe": "\u5148\u7f6e\u5165\u7684\u8868\u683c(\u901a\u5e38\u662fFROM\u6307\u5b9a\u7684)\uff0c\u5c07\u6703\u88ab\u4f5c\u70ba\u57fa\u5e95\uff0c\u5f8c\u7e8c\u7531 LEFT JOIN \u52a0\u5165\u7684\u8868\u683c\u5247\u6703\u4f9d\u5176\u70ba\u57fa\u790e\u52a0\u4e0a\u53bb\uff0c\u548cINNER JOIN\u7684\u5dee\u7570\u662f\u5373\u4fbfLEFT TABLE\u6709\u503c\u548cRIGHT TABLE\u642d\u4e0d\u4e0a\u4ecd\u7136\u6703\u88ab\u8f38\u51fa\uff0c\u4e26\u4e14\u5728\u672c\u8a72\u7531RIGHT TABLE\u586b\u5165\u7684\u6b04\u4f4d\u5168\u90e8\u70baNULL(\u56e0\u70ba\u6c92\u8cc7\u6599)\r\n\r\n\u6307\u4ee4\uff1a\r\nSELECT\r\n  select_list\r\nFROM\r\n  t1\r\nLEFT JOIN t2 ON join_condition;\r\n\r\n\u53ef\u4f7f\u7528IS NULL\u4f86\u5c0b\u627e\u5dee\u96c6",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID009"
+            ]
+        }
+    },
+    {
+        "name": "NOT NULL",
+        "mean": "",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID010"
+            ]
+        }
+    },
+    {
+        "name": "ORDER BY",
+        "mean": "\u6392\u5e8f\u9806\u4f4d",
+        "describe": "\u6307\u4ee4\uff1a\r\nORDER BY <\u6b04\u4f4d\u540d> [ASC][DESC]\r\nASC\u70ba\u9806\u6392 DESC\u70ba\u9006\u6392\uff0c\u4e0d\u5beb\u7684\u8a71\u70badefault:ASC\r\n\r\n\u591a\u968e\u6392\u5e8f\uff1a\r\nORDER BY <\u4e00\u968e\u6b04\u4f4d\u540d> [\u9806\u9006] , <\u4e8c\u968e\u6b04\u4f4d\u540d> [\u9806\u9006]\r\n\r\n\u7d50\u5408\u6392\u5e8f\uff1a\r\nORDER BY <A\u6b04\u540d> * <B\u6b04\u540d> [\u9806\u9006]\r\n\r\n\u6307\u5b9a\u6392\u5e8f\uff1a\r\nORDER BY <\u6b04\u540d> = '<\u7be9\u9078\u908f\u8f2f>'\r\n<\u7be9\u9078\u908f\u8f2f>\u7684\u90e8\u4efd\uff0c\u76ee\u524d\u5df2\u77e5\u53ef\u4ee5\u8f38\u5165\u5b57\u4e32\r\n\u5c31\u6703\u5c07\u7b26\u5408\u7684\u5b57\u4e32\u63d0\u4ea4\u9996\u4f4d\uff0c\u5269\u4e0b\u7684\u5247\u662f\u6b21\u4f4d(\u96a8\u6a5f\u6392)\r\n\u4e00\u6a23\u53ef\u4ee5\u7528\u968e\u5c64\u6392\u5e8f\u6cd5\u53bb\u8abf\u6574\u5b83\r\n\r\n\r\n\u642d\u914dSELECT\u7684\u7bc4\u4f8b\r\nSELECT name, salary, factor \r\nFROM employee \r\nORDER BY salary DESC, factor DESC;\r\n\r\n\u4e0a\u8ff0\u7bc4\u4f8b\u6211\u5011\u53ef\u4ee5\u770b\u5230\u5728ORDER BY\u7684\u5f8c\u9762\u4f7f\u7528\u4e86\u5169\u7a2e\u6392\u5e8f\uff0c\u908f\u8f2f\u5982\u4e0b\uff1a\r\n\u9996\u5148\u662fsalary\u7684\u9006\u6392\u5e8f\uff0c\r\n\u63a5\u8457\u82e5\u6709\u6392\u5e8f\u503c\u76f8\u540c\u7684\u9805\u76ee\uff0c\u5247\u518d\u6309factor\u9006\u6392\u5e8f\u9032\u884c\u4e8c\u6b21\u6392\u5e8f\r\n\r\n\r\n\u5ba2\u88fd\u6b04\u4f4d(\u4f7f\u7528AS\u751f\u6210)\u7684\u6392\u5e8f\u7bc4\u4f8b\r\nSELECT <A\u6b04> * <B\u6b04> AS <\u5ba2\u88fd\u6b04\u540d>\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "PRAGMA",
+        "mean": "\u67e5\u8a62\u7cfb\u7d71\u985e\u8cc7\u8a0a",
+        "describe": "\u6709\u4e9b\u985e\u4f3cSELECT \u4f46\u5b83\u53ea\u91dd\u5c0d\u7cfb\u7d71\uff0c\u4ee5\u4e0b\u7bc4\u4f8b\r\n\r\n\u8f38\u51fa\u8868\u683c\u6b04\u4f4d\u5c6c\u6027\u7684\u6307\u4ee4\uff1a\r\nPRAGMA table_info(table_name);\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": "PRIMARY KEY",
+        "mean": "\u8868\u683c\u4e3b\u9375",
+        "describe": "\u5169\u7a2e\u5beb\u6cd5\r\n\u4e00\uff0c\u6307\u5b9a\u7279\u5b9a\u6b04\u70ba\u4e3b\u9375\r\ncolumn_name INT PRIMARY KEY\r\n\r\n\u4e8c\uff0c\u5c07\u5169\u500b\u4e0d\u540c\u7684\u6b04\u4f4d\u7d44\u5408\u5efa\u88fd\u70ba\u4e3b\u9375\r\ncolumn_a NOT NULL,\r\ncolumn_b NOT NULL,\r\nPRIMARY KEY (column_a, column_b)\r\n\r\n\u4e0d\u53ef\u7a7a\u503c\u3001\u552f\u4e00\u6027\u3001\u5177\u7d22\u5f15\u6027\u8cea\r\n\u4e00\u500b\u8868\u683c\u4e2d\u53ea\u6709\u4e00\u500b\u4e3b\u9375\r\n\u901a\u5e38\u6703\u642d\u914dAUTOINCREMENT(\u81ea\u52d5\u5ef6\u4f38\u5e8f\u5217\u865f)\u4e00\u8d77\u4f7f\u7528\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID012"
+            ]
+        }
+    },
+    {
+        "name": "Permissions",
+        "mean": "\u8ce6\u4e88\u6b0a\u9650",
+        "describe": "grant all on <DataBaseName>. * to <user>@<mail> identified by 'password';\r\n\r\n\u8ce6\u4e88\u6240\u6709\u6b0a\u9650\u7d66\u6307\u5b9a\u4f7f\u7528\u8005\r\n\u82e5\u8a72\u4f7f\u7528\u8005\u4e0d\u5b58\u5728\u5247\u5275\u5efa\u65b0\u7684\u4f7f\u7528\u8005\r\n\r\n\u5617\u8a66\u4f7f\u7528\uff1a\r\ngrant all on <\u8cc7\u6599\u5eab\u540d>.* to MusicWolf@localhost identified by 'MusicUseThis';",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": "REFERENCE",
+        "mean": "\u95dc\u806f\u5f0f\u6b04\u4f4d",
+        "describe": "\u5728\u5275\u5065\u8868\u683c\u6642\u6e96\u5099\u9032\u884c\u6b04\u4f4d\u95dc\u806f\u6642\u6703\u4f7f\u7528\r\n\r\nFOREIGN KEY(user_id) PEFERENCES user(id)",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID009"
+            ]
+        }
+    },
+    {
+        "name": "REPAIR ",
+        "mean": "\u4fee\u5fa9",
+        "describe": "REPAIR TABLE mysql.global_priv\r\n\u4fee\u5fa9global_priv",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": "REPLACE",
+        "mean": "\u5b57\u4e32\u66ff\u63db",
+        "describe": "\u5b83\u53ef\u5c07\u6307\u5b9a\u7684\u5b57\u4e32\u653e\u5165\uff0c\u4e26\u5c07\u6307\u5b9a\u7684\u5b57\u4e32\u6539\u6210\u53e6\u4e00\u500b\u6307\u5b9a\u7684\u5b57\u4e32\r\nREPLACE( <\u4f86\u6e90\u5b57\u4e32> , <\u6307\u5b9a\u66ff\u63db\u7684\u5b57\u4e32> , <\u8981\u66ff\u63db\u6210\u7684\u5b57\u4e32> )",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    },
+    {
+        "name": "RIGHT JOIN",
+        "mean": "\u4f75\u5165\u5f8c\u8005",
+        "describe": "\u5176\u5be6\u4e0d\u9700\u8981\u7279\u5225\u7ba1\uff0c\u5beb\u6cd5\u8ddfLEFT JOIN\u5b8c\u5168\u4e00\u6a23\uff0c\u552f\u4e00\u7684\u5dee\u7570\u53ea\u6709\u524d\u5f8c\u9806\u4f4d\u800c\u5df2",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID009"
+            ]
+        }
+    },
+    {
+        "name": "Relational",
+        "mean": "\u95dc\u806f",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "SELECT",
+        "mean": "\u8abf\u53d6\u8cc7\u6599",
+        "describe": "SELECT <\u6b04\u4f4d\u540d> FROM <\u8868\u683c\u540d>\r\n\r\n\u82e5\u8981\u7d44\u5408\u6b04\u4f4d\uff1a\r\nSELECT <\u6b04A> || ' ' || <\u6b04B> FROM <\u8868\u683c\u540d>\r\n\r\n\u6b64\u5916\u6b04\u4f4d\u53ef\u4ee5\u4e00\u6b21\u5beb\u591a\u500b\uff0c\u7528\u9017\u865f','\u9694\u958b\u5c31\u597d\r\n\u6b04\u4f4d\u540d\u586b\u5165*\u5373\u53ef\u5c07\"\u6240\u6709\u9805\u76ee\"\u53d6\u51fa",
+        "Top": true,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "SELF JOIN",
+        "mean": "\u540c\u8868\u683c\u5408\u4f75",
+        "describe": "\u5b83\u4e26\u4e0d\u662f\u4e00\u500b\u7368\u7acb\u7684\u6307\u4ee4\r\n\u4e3b\u8981\u662f\u55ae\u4e00\u8868\u683c\u4e2d\u53ef\u80fd\u5b58\u5728\u5f7c\u6b64\u95dc\u806f\u7684\u8cc7\u6599\r\n\u6bd4\u5982\u6709A B C D E\u4e94\u500b\u4eba\r\n\u7136\u5f8c\u4ed6\u5011\u7684\u540d\u5b57\u5f8c\u9762\u6709\u500b\u6b04\u4f4d\u662f\u4e0a\u53f8\r\n\u5982 C D\u7684\u4e0a\u53f8\u662fA \u3001B\u7684\u4e0a\u53f8\u662fD\uff0cE\u7684\u4e0a\u53f8\u662fB\r\n\u90a3\u5c31\u53ef\u4ee5\u4f7f\u7528\u540c\u4e00\u500b\u8868\u683c\u53bb\u505a\u7d44\u5408\r\n\u540c\u6642\u56e0\u70ba\u662f\u540c\u4e00\u500b\u8868\u683c\uff0c\u6545\u5728\u4f7f\u7528FROM\u548c LEFT\/RIGHT\/INNER JOIN \u52a0\u5165\u5176\u5b83\u8868\u683c\u6642\u5fc5\u9700\u91cd\u65b0\u53d6\u540d\uff0c\u5426\u5247\u7cfb\u7d71\u6703\u641e\u6df7\r\n\r\n\u5982\u6b64\u5728\u540c\u4e00\u500b\u8868\u683c\u4e2d\u53d6\u5f97\u81ea\u8eab\u7684\u95dc\u4fc2\u5716\u6bd4\u8f03",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID009"
+            ]
+        }
+    },
+    {
+        "name": "SUBQUERY",
+        "mean": "\u591a\u8acb\u6c42\u5408\u4f75",
+        "describe": "\u6709\u4e9b\u60c5\u6cc1\u4e0b\u6703\u9700\u8981\u5c07\u5404\u7a2e\u6e32\u67d3\u7be9\u9078\u6216\u7fa4\u7d44\u7684\u6307\u4ee4\u9032\u884c\u7d44\u5408\uff0c\u70ba\u4e86\u7bc0\u7701\u4f86\u56de\u50b3\u8f38\u7684\u6642\u9593\u548c\u6210\u672c\uff0c\u6703\u5c07\u591a\u500bQuery\u7d44\u5408\u6210\u55ae\u4e00\u500bquery\uff0c\u9019\u5c31\u662fSUBQUERY\r\n\r\n\u4ee5\u4e0b\u7bc4\u4f8bA\uff1a\r\nSELECT name, position, salary\r\n  FROM employee\r\n  WHERE salary = (SELECT MAX(salary) FROM employee);\r\n\r\n\u7bc4\u4f8bA\u89e3\u91cb\uff1a\u9019\u500b\u7bc4\u4f8b\u662f\u4e00\u500bemployee\u7684\u8868\u683c\uff0c\u5148\u4f7f\u7528MAX\u4f86\u8abf\u51fasalary\u6b04\u4e2d\u7684\u6700\u9ad8\u6578\u503c\uff0c\u518d\u5c07\u6c42\u51fa\u4f86\u7684\u503c\u6295\u5165WHERE\u7be9\u9078\u51fasalary\u6b04\u4e2d\u6700\u9ad8\u6578\u503c\u7684\u6240\u6709\u9805\u76ee\u3002\r\n\r\n\u7bc4\u4f8bB\uff1a\r\nSELECT list_name, description\r\n  FROM list\r\n  WHERE list_id IN(\r\n    SELECT list_id\r\n    FROM (\r\n       SELECT list_id, COUNT(song_name) AS num_of_song \r\n       FROM song GROUP BY list_id\r\n    )\r\nWHERE num_of_song >= 3);\r\n\r\n\u7bc4\u4f8bB\u89e3\u91cb\uff1a\r\n\u6b64\u7bc4\u4f8b\u662f\u7528\u65bc\u5f9elist\u8868\u683c\u4e2d\u7be9\u9078\u6240\u6709\u6b4c\u66f2\u6578\u91cf\u5927\u65bc\u7b49\u65bc3\u9996\u7684\u6b4c\u55ae\r\n\r\n\u7b2c\u4e00\u5c64\u662f\u5f9eTABLE list\u7576\u4e2d\u6e32\u67d3\u51falist_name\u548cdescription\u5169\u500b\u6b04\u4f4d\uff0c\u4e26\u4f7f\u7528WHERE IN\u9032\u884c\u591a\u9805\u7be9\u9078\uff0c\u800c\u9019\u500bIN\u6307\u5b9a\u7684\u662f\u4e00\u500b\u540d\u70balist_id\u7684\u6b04\u4f4d(\u4ee5\u4e0b\u7a31\u7b2c\u4e8c\u5c64)\uff0c\u548c\u7b2c\u4e00\u5c64\u7684\u4e0d\u540c\uff0c\u53d6\u7528\u7684\u662f\u7d93\u904e\u6e32\u67d3\u7684\u884d\u4f38\u8868\u683cderive TABLE(\u4ee5\u4e0b\u7a31\u7b2c\u4e09\u5c64)\uff0c\u8a72derive TABLE\u5f9esong\u53d6\u51fa\u4e86list_id\u6b04\u4f4d\uff0c\u4e26\u7f6e\u5165\u7531COUNT\u8a08\u7b97\u7684\u7fa4\u7d44\u9805\u76ee\u7e3d\u6578\u5f8c\u91cd\u65b0\u547d\u540d\u70banum_of_song\u7684\u6b04\u4f4d\uff0c\u6700\u5f8c\u518d\u4ee5list_id\u70ba\u57fa\u6e96\u7528GROUP BY\u7fa4\u7d44\u8d77\u4f86\uff0c\u7b2c\u4e09\u5c64\u9589\u74b0\uff0c\u63a5\u4e0b\u4f86\u5c07\u7b2c\u4e09\u5c64\u53d6\u5f97\u7684\u65b0\u8868\u683c\u7f6e\u5165\u7b2c\u4e8c\u5c64\uff0c\u4f7f\u7528WHERE\u5c07\u7b2c\u4e09\u5c64\u7522\u51fa\u7684\u8868\u683c\u91cd\u65b0\u547d\u540d\u7684num_of_song\u9032\u884c\u7be9\u9078\uff0c\u5c07\u7d50\u679c\u4f4e\u65bc3\u7684\u9805\u76ee\u53bb\u9664\uff0c\u53d6\u5f97\u7684\u7d50\u679c\u88ab\u7b2c\u4e00\u5c64\u7528WHERE IN\u6307\u4ee4\u4f86\u7be9\u9078list\u8868\u683c\u751f\u6210\u7684\u7d50\u679c\uff0c\u6700\u7d42\u518d\u9032\u884c\u8f38\u51fa\r\n\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID007"
+            ]
+        }
+    },
+    {
+        "name": "TABLE",
+        "mean": "\u8868\u683c",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "TIME",
+        "mean": "\u6642\u9593",
+        "describe": "DATE\uff1a \u7528\u65bc\u5b58\u5132\u65e5\u671f\u503c\uff0c\u5305\u62ec\u5e74\u3001\u6708\u3001\u65e5\uff0c\u4f46\u4e0d\u5305\u62ec\u6642\u9593\u90e8\u5206\u3002\r\nTIME\uff1a \u7528\u65bc\u5b58\u5132\u6642\u9593\u503c\uff0c\u5305\u62ec\u5c0f\u6642\u3001\u5206\u9418\u3001\u79d2\uff0c\u4f46\u4e0d\u5305\u62ec\u65e5\u671f\u90e8\u5206\u3002\r\nDATETIME\uff1a \u7528\u65bc\u5b58\u5132\u65e5\u671f\u548c\u6642\u9593\u503c\uff0c\u5305\u62ec\u5e74\u3001\u6708\u3001\u65e5\u3001\u5c0f\u6642\u3001\u5206\u9418\u3001\u79d2\u3002\r\nTIMESTAMP\uff1a \u7528\u65bc\u5b58\u5132\u65e5\u671f\u548c\u6642\u9593\u503c\uff0c\u901a\u5e38\u7528\u4f5c\u81ea\u52d5\u66f4\u65b0\u7684\u6642\u9593\u6233\uff0c\u4f8b\u5982\u8a18\u9304\u6578\u64da\u7684\u5275\u5efa\u6642\u9593\u6216\u4fee\u6539\u6642\u9593\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID010"
+            ]
+        }
+    },
+    {
+        "name": "TRANSACTION",
+        "mean": "[\u91cd\u8981] \u4e8b\u52d9\u958b\u555f(\u7de9\u5b58\u5099\u4efd\u7de8\u8f2f)",
+        "describe": "\u5728\u4f60\u64cd\u4f5c\u8abf\u6574TABLE\u524d\uff0c\u6709\u53ef\u80fd\u9700\u8981\u7d93\u6b77\u5f88\u591a\u4f86\u56de\u4ea4\u53c9\u7684\u6e2c\u8a66\uff0c\u800c\u8cc7\u6599\u5eab\u4e26\u4e0d\u5177\u5099\u4e8b\u5f8c\u5b58\u6a94\u7684\u529f\u80fd\uff0c\u6bcf\u4e00\u6b21\u7684\u4fee\u6539\u90fd\u662f\u76f4\u63a5\u6539\u539f\u6a94\uff0c\u5982\u679c\u4f60\u8981\u7cfb\u7d71\u5c07\u73fe\u6709\u6578\u64da\u958b\u555f\u4e00\u500b\u5099\u4efd\uff0c\u4e26\u5c07\u81ea\u5df1\u9650\u5b9a\u5728\u9019\u500b\u5099\u4efd\u5167\u9032\u884c\u64cd\u4f5c\uff0c\u6709\u53cd\u6094\u7684\u6a5f\u6703\u7684\u8a71\uff0c\u5c31\u9700\u8981\u4f7f\u7528TRANSACTION\r\n\r\n\u9996\u5148\uff0c\u5728\u4fee\u6539\u4efb\u4f55\u5167\u5bb9\u4e4b\u524d\uff0c\u8f38\u5165\u4ee5\u4e0b\u6307\u4ee4\uff0c\u7cfb\u7d71\u5c31\u6703\u958b\u555f\u66ab\u5b58\u7a7a\u9593\uff0c\u8b93\u4f60\u7684\u8abf\u6574\u53ef\u4ee5\u4e0d\u5c0d\u539f\u6a94\u7522\u751f\u5f71\u97ff\uff1a\r\nBEGIN TRANSACTION;\r\n\r\n\u7528\u4e0a\u8ff0\u6307\u5b9a\u9328\u5b9a\u5b8c\u5f8c\u5c31\u53ef\u4ee5\u81ea\u7531\u4f7f\u7528INSERT\u3001UPDATE\u7b49\u6307\u4ee4\r\n\u63a5\u8457\u4fee\u6539\u5b8c\u6210\u7684\u5167\u5bb9\u5982\u679c\u8981\u5b58\u53d6\uff0c\u8986\u84cb\u539f\u6a94\uff0c\u5247\u9700\u8981\u4f7f\u7528\u4ee5\u4e0b\u6307\u4ee4\uff0c\u5426\u5247\u4e00\u5207\u66f4\u6539\u6703\u88ab\u5ffd\u7565\r\n\r\nCOMMIT;\r\n\r\n\u82e5\u771f\u7684\u5beb\u932f\u4e86\u751a\u9ebc\u5c0e\u81f4\u8cc7\u6599\u51fa\u932f\u7b49\uff0c\u8981\u5c07\u4e00\u5207\u56de\u6b78\u9328\u9ede\uff0c\u62cb\u68c4\u4fee\u6539\u7684\u8a71\uff0c\u53ea\u8981\u5beb\u5165\u4ee5\u4e0b\u6307\u4ee4\u5c31\u80fd\u5c07\u8cc7\u6599\u9084\u539f\u56de\u9328\u5b9a\u6642\u7684\u72c0\u614b\uff1a\r\n\r\nROLLBACK;",
+        "Top": true,
+        "Data": {
+            "Group": [
+                "ID008"
+            ]
+        }
+    },
+    {
+        "name": "UNIQUE",
+        "mean": "",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID010"
+            ]
+        }
+    },
+    {
+        "name": "UPDATE",
+        "mean": "\u66f4\u65b0record",
+        "describe": "UPDATE [LOW_PRIORITY] [IGNORE] table_name\r\nSET\r\n  col_name1 = expr1,\r\n  col_name2 = expr2,\r\n  ...\r\n[WHERE\r\n  condition]\r\n\r\n[LOW_PRIORITY] (\u53ef\u4e0d\u7528) \uff1a\u5c1a\u672a\u5b78\u7fd2\r\n[IGNORE] (\u53ef\u4e0d\u7528) \uff1a\u5beb\u4e0a\u5f8c\u53ef\u7565\u904e\u4e0d\u5408\u6cd5\u7684\u4fee\u6539\u9805\u76ee\uff0c\u5c07\u5269\u4e0b\u7684\u5408\u6cd5\u5167\u5bb9\u586b\u5165\r\n[WHERE ...] (\u901a\u5e38\u6703\u7528) \uff1a\u5b83\u662f\u7528\u4f86\u7be9\u9078\u548c\u6307\u5b9a\u7b26\u5408\u7684record\u7528\u7684\uff0c\u5982\u679c\u4f60\u4e0d\u4f7f\u7528\u5b83\uff0c\u6574\u500bTABLE\u7684record\u5168\u90e8\u90fd\u6703\u88ab\u540c\u6b65\u4fee\u6539\r\n\r\n\u9996\u5148\u662f\u5beb\u5165\u8981\u4fee\u6539\u7684\u8868\u683c\u540d\uff0c\u63a5\u8457\u63d0\u51fa\u4fee\u6539\u7684\u6b04\u4f4d(col_name)\u4ee5\u53ca\u4fee\u6539\u7684\u5167\u5bb9(expr)\uff0c\u6700\u5f8c\u518d\u7528WHERE\u4f86\u5c0d\u7279\u5b9a\u7684record\u9032\u884c\u7be9\u9078\uff0c\u5c0d\u7b26\u5408\u7684record\u9032\u884c\u4fee\u6539",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID011"
+            ]
+        }
+    },
+    {
+        "name": "UPDATE JOIN",
+        "mean": "mySQL_\u8868\u683c\u7d44\u5408\u66f4\u65b0",
+        "describe": "UPDATE T1\r\n  [INNER JOIN | LEFT JOIN] T2 ON T1.C1 = T2.C2\r\nSET\r\n   T1.C2 = T2.C2,\r\n   T2.C3 = expr\r\nWHERE condition;",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID011",
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "VARCHAR",
+        "mean": "\u5b57\u4e32\u985e",
+        "describe": "\r\nCHAR(n)\uff1a \u7528\u65bc\u56fa\u5b9a\u9577\u5ea6\u7684\u5b57\u7b26\u6578\u64da\uff0c\u5176\u4e2d n \u6307\u5b9a\u4e86\u5b57\u7b26\u4e32\u7684\u6700\u5927\u9577\u5ea6\u3002\r\nVARCHAR(n)\uff1a \u7528\u65bc\u53ef\u8b8a\u9577\u5ea6\u7684\u5b57\u7b26\u6578\u64da\uff0c\u5176\u4e2d n \u6307\u5b9a\u4e86\u5b57\u7b26\u4e32\u7684\u6700\u5927\u9577\u5ea6\uff0c\u4f46\u5be6\u969b\u5b58\u5132\u7684\u5b57\u7b26\u6578\u64da\u53ef\u4ee5\u662f\u4e0d\u540c\u9577\u5ea6\u7684\u3002\r\nTEXT\uff1a \u7528\u65bc\u5b58\u5132\u9577\u5ea6\u53ef\u8b8a\u7684\u5927\u91cf\u5b57\u7b26\u6578\u64da\uff0c\u4f8b\u5982\u9577\u6587\u672c\u6216\u5927\u578b\u6587\u4ef6\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID010"
+            ]
+        }
+    },
+    {
+        "name": "WHERE",
+        "mean": "\u7be9\u9078",
+        "describe": "\u6307\u4ee4\uff1a\r\nWHERE <\u6b04\u4f4d\u540d> = <\u689d\u4ef6>;\r\nWHERE <\u6b04\u4f4d\u540d> > 200;\r\n\r\n\u7d44\u5408\u5f0f\r\nWHERE <\u6b04\u540dA> = <\u7d5b\u4ef6A> AND <\u6b04\u540dB> = <\u7d5b\u4ef6B> ;\r\nWHERE <\u6b04\u540dA> = <\u7d5b\u4ef6A> OR <\u6b04\u540dB> = <\u7d5b\u4ef6B> ;\r\n\r\n\r\n\u4e0d\u4e00\u5b9a\u8981\u7b49\u65bc\uff0c\u4e5f\u53ef\u4ee5\u4f7f\u7528\u5927\u65bc\u5c0f\u65bc\uff0c\u57fa\u672c\u53ea\u8981\u7b26\u5408\u689d\u4ef6\u5373\u6703\u88ab\u6e32\u67d3",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "WITH AS",
+        "mean": "\u5efa\u7acb\u884d\u4f38\u8868\u683c",
+        "describe": "\u53ef\u4ee5\u63d0\u524d\u5ba3\u544a\u4e00\u500b\u6216\u591a\u500bcommon TABLE\u9032\u884c\u6e32\u67d3\r\n\r\n\u55ae\u500bcommon TABLE\u7684\u7bc4\u4f8b\r\nWITH cte_name (column_list) AS (\r\n  query\r\n)\r\nSELECT * FROM cte_name\r\ncolumn_list\u7684\u90e8\u4efd\u662f\u7528\u4f86\u5beb\u6b04\u4f4d\u540d\u5217\u8868\u7684\uff0c\u53ef\u7701\u7565\uff0c\u7701\u7565\u5c31\u662f\u76f4\u63a5\u628a\u539f\u5167\u5bb9\u7684\u6b04\u540d\u8f38\u51fa\r\n\r\n\u5ba3\u544a\u591a\u500b\u7684\u7bc4\u4f8b\r\nWITH cte_name_A AS (\r\n  SELECT col_A,col_B,col_C\r\n  FROM base_TABLE\r\n),\r\ncte_name_B(\r\n  SELECT col_A,col_B\r\n  FROM cte_name_A \r\n)\r\n\u5ba3\u544a\u591a\u500bcommon TABLE\u6642\u6709\u5e7e\u500b\u7d30\u7bc0\u53ef\u7528\uff1a\r\n1.\u958b\u982d\u5beb\u4e0aWITH\uff0c\u5f8c\u7e8c\u90fd\u53ea\u9700\u8981\u4f7f\u7528\u9017\u865f\u9694\u958b\u5c31\u597d\r\n2.AS\u5728\u6bcf\u4e00\u6b21\u5ba3\u544a\u6642\u90fd\u9700\u8981\u5beb\r\n3.\u5148\u5ba3\u544a\u5b8c\u7684common TABLE\u5728\u4e0b\u4e00\u500bcommon TABLE\u5ba3\u544a\u6642\u5c31\u53ef\u4ee5\u62ff\u4f86\u4f7f\u7528\u4e86\r\n\r\n\r\n\u7bc4\u4f8b\uff1a\r\nWITH cou_list_num AS(\r\n     SELECT user_id cln_user_id ,COUNT(user_id) list_count  FROM list GROUP BY cln_user_id\r\n),\r\nlist_cou_top AS(SELECT cln_user_id lct_user_id,MAX(list_count) FROM cou_list_num)\r\nSELECT * FROM user\r\nINNER JOIN cou_list_num\r\nON user_id = cln_user_id\r\n WHERE user_id IN (SELECT lct_user_id FROM list_cou_top);\r\n\r\n\u89e3\u91cb\uff1a\r\n\u64b0\u5beb\u4e86\u5169\u5c64cte\u7d50\u69cb\uff0c\u4e26\u5728\u6700\u5f8c\u4e00\u5c64\u9032\u884c\u7be9\u9078\u3002\r\n\u7b2c\u4e00\u5c64\u662f\u53d6\u7528\u300c\u6b4c\u55ae\u300d\u8868\u683c\uff0c\u7d71\u8a08\u6bcf\u500b\u6b4c\u55ae\u7684\u4f7f\u7528\u8005id\uff0c\u53d6\u5f97\u6bcf\u500b\u4f7f\u7528\u8005\u5275\u5efa\u7684\u6b4c\u55ae\u6578\r\n\u7b2c\u4e8c\u5c64\u662f\u53d6\u6700\u9ad8\u7684\u6b4c\u55ae\u6578\uff0c\u4e26\u6311\u51fa\u8a72\u4e9b\u4f7f\u7528\u8005\r\n\u63a5\u8457\u4f7f\u7528\u7b2c\u4e8c\u5c64\u53d6\u5f97\u7684\u6700\u591a\u6b4c\u55ae\u7684\u4f7f\u7528\u8005id\u5728\u4f7f\u7528\u8005\u8868\u683c\u4e2d\u53d6\u5f97\u9019\u4e9b\u4f7f\u7528\u8005\u7684\u8cc7\u6599\r\n\u540c\u6642\u5c07\u7b2c\u4e00\u5c64\u6e32\u67d3\u51fa\u4f86\u7684\u8868\u683c\u548cuser\u8868\u683c\u5408\u4f75(\u9019\u908a\u5728\u53d6\u540d\u4e0a\u591a\u82b1\u4e86\u9ede\u7cbe\u529b)",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID009"
+            ]
+        }
+    },
+    {
+        "name": "_READ ORDER",
+        "mean": "\u89e3\u6790\u9806\u5e8f",
+        "describe": "\u8a3b\uff1a\u89e3\u6790\u9806\u5e8f\u4e0d\u7b49\u65bc\u64b0\u5beb\u9806\u5e8f\uff0c\u4f46\u9664\u4e86\u6e32\u67d3\u7528\u7684SELECT\u5fc5\u9700\u5beb\u5728\u6700\u524d\u982d\u4ee5\u5916\uff0c\u5269\u4e0b\u7684\u90e8\u4efd\u6309\u89e3\u6790\u9806\u5e8f\u53bb\u64b0\u5beb\u4e26\u7121\u5927\u554f\u984c\r\n\r\nFROM > WHERE > SELECT > GROUP BY > HAVING > ORDER BY > LIMIT\r\n\r\nFROM\uff1a\r\n\u9806\u4f4d\u5148\u65bcSELECT\uff0c\u662f\u63d0\u53d6\u4f86\u6e90\u7684\u6307\u4ee4\uff0c\u53d6\u5f97\u8868\u683c\u4f86\u6e90\u5f8c\u624d\u53ef\u4ee5\u9032\u884c\u6b04\u4f4d\u6e32\u67d3\r\n\r\nSELECT\uff1a\r\n\u5c31\u662f\u8f38\u51fa\uff0c\u5148\u628a\u8acb\u6c42\u7684\u5167\u5bb9\u5168\u90e8\u8abf\u51fa\u4f86\uff0c\u662f\u6700\u57fa\u790e\u7684\u6307\u4ee4\r\nAS\uff1a\r\n\u5c6c\u65bcSELECT\u7684\u9644\u5c6c\uff0cSELECT\u5176\u5be6\u53ef\u4ee5\u5c0d\u6b04\u4f4d\u9032\u884c\u7d44\u5408\u6216\u758a\u52a0\u7684\u64cd\u4f5c\u5f8c\u5275\u5efa\u51fa\u4e00\u500b\u81e8\u6642\u6b04\u4f4d\uff0c\u800cAS\u5c31\u662f\u7528\u65bc\u547d\u540d\uff0c\u6545AS\u7684\u9806\u4f4d\u65bcSELECT\u540c\u6b65\uff0c\u5b83\u6703\u88ab\u6b78\u5165SELECT\u7684\u884c\u52d5\u4e2d\r\nWHERE\uff1a\r\n\u548cAS\u5dee\u4e0d\u591a\uff0c\u548cSELECT\u9032\u884c\u7d44\u5408\uff0c\u5c07\u6700\u7d42\u7d50\u679c\u7be9\u9078\u6210\u7b26\u5408\u689d\u4ef6\u7684\u9078\u9805\r\n\r\nORDER BY\uff1a\r\n\u662f\u65bcSELECT\u5f8c\u884c\u52d5\u7684\u6307\u4ee4\uff0c\u5b83\u6703\u5c07\u63d0\u53d6\u51fa\u4f86\u7684\u6b04\u4f4d\u4ee5\u8981\u6c42\u7684\u65b9\u5f0f\u9032\u884c\u6392\u5e8f",
+        "Top": true,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "agf_AGF",
+        "mean": "\u7fa4\u96c6\u51fd\u5f0f",
+        "describe": "\u662f\u6211\u5c0dAGGREGATE FUNCTION\u7684\u7c21\u5beb\uff0c\u6240\u6709agf\u958b\u982d\u7684\u9805\u76ee\u968e\u662f\u5c07\u6703\u5c07\u7fa4\u7d44\u9805\u7d66\u5408\u4f75\u8655\u7406\u518d\u8f38\u51fa\u7684\u6307\u4ee4\uff0c\u6240\u4ee5\u6b63\u5e38\u9700\u642d\u914dGROUP UP\uff0c\u5426\u5247\u901a\u5e38\u53ea\u6703\u8f38\u51fa\u4e00\u500b\u7d50\u679c\r\n\r\n\u53c3\u8003\u7db2\u7ad9\uff1ahttps:\/\/sqlite.org\/lang_aggfunc.html\r\n\u6709agf\u6a19\u7c64\u7684\u9805\u76ee\u90fd\u9700\u8981\u88ab\u5beb\u5728SELECT\u5f8c\uff0cFROM\u524d\r\n\u5176\u5c07\u6703\u6210\u70ba\u4e00\u500b\u7368\u7acb\u6b04\u4f4d\u9032\u884c\u8f38\u51fa\r\n\r\n\u4e26\u4e14\u5176\u8f38\u51fa\u7684\u65b9\u5f0f\u5c07\u6703\u4ee5\"\u7fa4\u7d44\"\u4f5c\u70ba\u5a92\u4ecb\r\n\u6545\u9700\u8981\u4f7f\u7528GROUP BY\u9032\u884c\u7fa4\u7d44\u7684\u7de8\u5217\r\n\u5426\u5247\u5c07\u6703\u628a\u6574\u500bTABLE\u88e1\u7684\u9805\u76ee\u8996\u70ba\u4e00\u500b\u7fa4\u7d44\uff0c\u6700\u7d42\u53ea\u8f38\u51fa\u4e00\u500b\u7d50\u679c",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "agf_AVG",
+        "mean": "\u53d6\u5f97\u5e73\u5747\u503c",
+        "describe": "\u7528\u65bc\u53d6\u5f97\u5e73\u5747\u503c\r\n\u5b83\u5c6c\u65bcSELECT\u7684\u8f38\u51fa\u6307\u5b9a\u9805\uff0c\u6545\u8981\u5beb\u5728SELECT\u4e4b\u5f8cFROM\u4e4b\u524d\r\n\u8f38\u51fa\u5f62\u5f0f\u53ef\u53c3\u8003AGF\u4e4b\u5167\u5bb9\r\n\r\n\u6307\u4ee4\uff1a\r\nAVG(<\u6b04\u540d>)",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "agf_COUNT",
+        "mean": "\u6578\u500b\u6578",
+        "describe": "\u8a08\u7b97\u7fa4\u7d44\u4e2d\u7684\u9805\u76ee\u6578\u91cf",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "agf_MAX\/MIN",
+        "mean": "\u6700\u9ad8\u6700\u4f4e\u503c",
+        "describe": "\u53d6\u5f97\u7fa4\u7d44\u4e2d\u7684\u6700\u9ad8\u503c\u6216\u6700\u4f4e\u503c\r\n\u53ef\u4ee5\u4e0d\u642d\u914dGROUP BY\u4f7f\u7528\uff0c\u5373\u53ef\u76f4\u63a5\u53d6\u5f97\u8868\u683c\u6975\u503c",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "agf_SUM",
+        "mean": "",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "alias",
+        "mean": "\u4fee\u6539\u540d\u7a31",
+        "describe": "\u7bc4\u4f8b\uff1a\r\nSELECT\r\n e.fistName,e.lastName\r\nFROM\r\n employees e\r\nORDER BY\r\n e.firstName;\r\n\r\n\u53ef\u4ee5\u770b\u5230\u5728FROM\u7684\u6642\u5019\uff0c\u8868\u683c\u5f8c\u65b9\u6709\u53e6\u4e00\u500be\u7684\u5b57\u4e32\uff0c\u4e2d\u9593\u5176\u5be6\u7701\u7565\u4e86\u4e00\u500bAS\uff0c\u610f\u6307\u628a\u8a72\u8868\u683c\u53d6\u540d\u70bae\uff0c\u6240\u4ee5\u5176\u5b83\u90e8\u4efd\u5168\u90e8\u90fd\u4ee5e\u4f86\u4ee3\u66ff\u8a72\u8868\u683c\u64cd\u4f5c\r\n\r\n\u53e6\u5916\u63d0\u9192\u4e00\u4e0b\uff0c\u5982\u679c\u91cd\u65b0\u547d\u540d\u7684\u9805\u76ee\u4e2d\u9593\u6709\u7a7a\u683c\u7684\u8a71\uff0c\u5fc5\u9700\u4f7f\u7528\u659c\u9ede\"`\"\u4f86\u6846\u9078\u8b93\u7cfb\u7d71\u77e5\u9053\u8a72\u90e8\u4efd\u70ba\u55ae\u4e00\u5b57\u4e32",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "attributes",
+        "mean": "\u6b04\u4f4d\u5c6c\u6027",
+        "describe": "DEFAULT \uff1a \u9810\u8a2d\u7f6e\uff0c\u7576\u6c92\u6709\u586b\u5165\u8cc7\u6599\u6642\u8f38\u5165\u9810\u8a2d\u5167\u5bb9\uff0c\u76f4\u63a5\u5728DEFAULT\u5f8c\u9762\u52a0\u5165\u9810\u8a2d\u5167\u5bb9\u5373\u53ef\r\nDEFAULT VALUE\r\nDEFAULT 0\r\n\r\nCOLLATE \u6703\u5c07\u5167\u5bb9\u81ea\u4e3b\u8abf\u6574\u9806\u5e8f\uff0c\u76ee\u524d\u5df2\u77e5\u7684\u662fNOCASE\uff0c\u9084\u6709\u5176\u5b83\u7684\u81ea\u5df1\u67e5\uff0c\u7bc4\u4f8b\u5982\u4e0b\uff1a\r\nCALLATE NOCASE\r\n\r\nAUTOINCREMENT \u81ea\u52d5\u5e8f\u5217\uff0c\u4e00\u822c\u548c\u4e3b\u9375\u4e00\u8d77\u4f7f\u7528\uff0c\u4e00\u8868\u683c\u53ea\u80fd\u4e00\u500b",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID012"
+            ]
+        }
+    },
+    {
+        "name": "column",
+        "mean": "\u6b04",
+        "describe": "column_name <\u578b\u5225> <\u81ea\u7d04\u675f>\r\n\r\n\u578b\u5225\u53ef\u53c3\u8003\u6b04\u4f4d\u578b\u5225\r\n\u81ea\u7d04\u675f\u7684\u90e8\u4efd\u53ef\u898bconstraints",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID012"
+            ]
+        }
+    },
+    {
+        "name": "constraints",
+        "mean": "\u6b04\u4f4d\u81ea\u7d04\u675f",
+        "describe": "\u5728\u5275\u5efa\u6216\u66f4\u6539\u6b04\u4f4d\u8cc7\u6599\u6642\uff0c\u683c\u5f0f\u70ba\r\ncolumn_name <\u578b\u5225> <\u81ea\u7d04\u675f(\u53ef\u8907\u6578)>\r\n\u4f8b\uff1aExampleCol text NOT NULL\r\n\r\n\u800c\u9019\u908a\u7684\u5167\u5bb9\u968e\u6703\u5c6c\u65bc\u5beb\u5728\u81ea\u7d04\u675f\u7684\u90e8\u4efd\uff0c\u4e3b\u8981\u662f\u4f5c\u7528\u5728\u6b04\u4f4d\u672c\u8eab\u7684\u9650\u5236\r\n\r\nPRIMARY KEY(\u4e3b\u9375) \uff1a \u4e0d\u53ef\u7a7a\u503c\u3001\u552f\u4e00\u6027\u3001\u5177\u7d22\u5f15\u6027\u8cea\r\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u4e00\u500b\u8868\u683c\u4e2d\u53ea\u6709\u4e00\u500b\u4e3b\u9375\r\nUNIQUE(\u552f\u4e00\u6027) \uff1a \u53ef\u7a7a\u3001\u552f\u4e00\u6027\u3001\u5177\u7d22\u5f15\u6027\u8cea\r\nNOT NULL(\u975e\u7a7a) \uff1a \u4e0d\u53ef\u7a7a\u503c",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID012"
+            ]
+        }
+    },
+    {
+        "name": "datetime",
+        "mean": "\u8f38\u5165\u65e5\u671f",
+        "describe": "\u73fe\u5728\u6642\u9593\uff1a\r\ndatetime('now')",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    },
+    {
+        "name": "derive",
+        "mean": "\u884d\u4f38\u7684",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "expression",
+        "mean": "\u8868\u9054\u5f0f",
+        "describe": "\u901a\u5e38\u662f\u6307\u7d93\u904e\u904b\u7b97\u6216\u662f\u8abf\u6574\u5f8c\u53d6\u5f97\u7684\u503c\uff0c\u800c\u975e\u8868\u683c\u672c\u8eab\u5c31\u6709\u7684\u6771\u897f",
+        "Top": true,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "query",
+        "mean": "\u8acb\u6c42",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "record",
+        "mean": "\u6cdb\u6307\u6bcf\u4e00\u7b46\u8cc7\u6599",
+        "describe": "\u4ee5\u8868\u683c\u4f86\u8aaa\u5c31\u662f\u6bcf\u4e00\u5217\r\n\u5982\u679c\u662f\u4e00\u7b46\u5f88\u591a\u4eba\u7684\u8cc7\u6599\uff0c\u6709\u540d\u5b50\u3001\u96fb\u8a71\u3001\u96fb\u5b50\u90f5\u4ef6\u7b49\u7b49\u7684\r\n\u90a3\u6bcf\u4e00\u500brecord\u5c31\u662f\"\u6bcf\u4e00\u500b\u4eba\"\u6709\u8a18\u9304\u7684\"\u6240\u6709\u8cc7\u6599\"",
+        "Top": true,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "row\/record",
+        "mean": "\u5217",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "where_BETWEEN",
+        "mean": "\u4ecb\u65bc\u4e4b\u9593(\u6578\u5b57)",
+        "describe": "\u6307\u4ee4\uff1a\r\nWHERE <\u6b04\u540d> BETWEEN <\u689d\u4ef6A> AND <\u689d\u4ef6B>;\r\n\r\n\u7be9\u9078\u5728\u6b04\u4f4d\u4e2d\u4ecb\u65bcA\u3001B\u689d\u4ef6\u9593\u7684\u9805\u76ee",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "where_EXIST \/ NOT EXIST",
+        "mean": "\u6aa2\u6e2c\u7a7a\u503c",
+        "describe": "\u7d04\u7565\u53ef\u4ee5\u7406\u89e3\u6210\u662f\u6e1b\u5c11\u6548\u80fd\u6d88\u8017\u7684\u6307\u4ee4\uff0c\u5728CORRELATED SUBQUERY\u5167\u4f7f\u7528\uff0c\u80fd\u6e1b\u5c11\u5b50\u67e5\u8a62\u7684\u57f7\u884c\u6b21\u6578\r\n\r\nhttps:\/\/www.fooish.com\/sql\/exists.html\r\nhttps:\/\/medium.com\/@po_yk\/sql\u5de2\u72c0exists-not-exists-ae46e96b9aa0",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005",
+                "ID007"
+            ]
+        }
+    },
+    {
+        "name": "where_IN\/NOT IN",
+        "mean": "\u591a\u7a2e\u5b57\u4e32\u7b26\u5408\/\u4e0d\u7b26\u5408",
+        "describe": "\u53ef\u4ee5\u5c07\u591a\u500b\u5b57\u4e32\u505a\u70ba\u7be9\u9078\u689d\u4ef6\u9078\u53d6\u9805\u76ee\r\n\u6307\u4ee4\uff1a\r\nWHERE <\u6b04\u540d> IN('<\u5b57\u4e32A>', '<\u5b57\u4e32B>');\r\n\r\n\u8a72\u6b04\u540d\u7b26\u5408A\u3001B\u5b57\u4e32\u6642\u5c31\u6703\u88ab\u8f38\u51fa\r\n\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "where_IS NULL",
+        "mean": "\u7be9\u9078\u7a7a\u503c",
+        "describe": "\u662f\u7a7a\u503c\r\n\r\nWHERE <\u6b04\u540d> IS NULL\r\n\r\n\u8a72\u6b04\u70ba\u7a7a\u503c\u5373\u88ab\u7be9\u9078",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "where_LIKE",
+        "mean": "\u689d\u4ef6\u5f0f\u7be9\u9078(\u5b57\u4e32)",
+        "describe": "\u6307\u4ee4\uff1a\r\nWHERE <\u6b04\u540d> LIKE '%_1%';\r\n\r\n\u6b04\u540d\u7b26\u5408\u689d\u4ef6\u5f0f\u7684\u5373\u88ab\u7be9\u9078\uff0c\u4ee5\u4e0b\u662f\u689d\u4ef6\u7b26\u865f\u7684\u610f\u7fa9\r\n% \uff1a 0 ~ N \u500b\u4efb\u610f\u6587\u5b57\r\n_ \uff1a \u4e00\u500b\u4efb\u610f\u6587\u5b57\r\n\u975e\u4e0a\u8ff0\u7684\u9805\u76ee \uff1a \u5fc5\u9700\u5b8c\u5168\u7b26\u5408\r\n\r\n\u82e5\u689d\u4ef6\u5f0f\u7b26\u865f\u8981\u88ab\u7576\u4f5c\u4e00\u822c\u7be9\u9078\u6587\u5b57\u4f7f\u7528(\u6bd4\u5982\u6211\u771f\u7684\u8981\u641c\u5c0b\u6709\u5e95\u7dda\u6216%\u7684\u5b57\u4e32)\u6642\uff0c\u53ef\u4f7f\u7528ESCAPE\u9032\u884c\u4ee5\u4e0b\u5beb\u6cd5\uff1a\r\nWHERE <\u6b04\u540d> LIKE '%\\_1%' ESCAPE '\\';\r\n\r\n\u88abESCAPE\u6307\u5b9a\u7684\u7b26\u865f\u5c07\u5728\u5224\u65b7\u5f0f\u88e1\u9762\u69cb\u6210\u8df3\u904e\u529f\u80fd\u7b26\u865f\u7684\u7b26\u865f\uff0c\u5982\u4e0a\uff0c\u53cd\u659c\u7dda'\\'\u88abESCAPE\u6307\u5b9a\uff0c\u65bc\u662f\u5728LIKE\u88e1\u9762\uff0c\u5b83\u5c07\u5b83\u5f8c\u9762\u7684\u5e95\u7dda'_'\u8b8a\u70ba\u4e86\u4e00\u822c\u5b57\u4e32\uff0c\u6240\u4ee5\u4e0a\u8ff0\u7684LIKE\u6703\u7be9\u9078\u51fa\u6307\u5b9a\u6b04\u4f4d\u4e2d\u5e36\u6709'_1'\u5b57\u4e32\u7684\u5167\u5bb9",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    }
+]

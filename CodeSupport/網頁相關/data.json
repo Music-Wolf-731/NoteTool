@@ -2,7 +2,6 @@
     {
         "Name": "Group",
         "Data": [
-            "MySQL",
             "\u95dc\u65bc\u7de8\u7a0b",
             "\u5e38\u898b",
             "\u53e3\u8a9e\u985e"
@@ -10,8 +9,7 @@
         "Id": {
             "ID002": "\u95dc\u65bc\u7de8\u7a0b",
             "ID001": "\u5e38\u898b",
-            "ID003": "\u53e3\u8a9e\u985e",
-            "ID004": "MySQL"
+            "ID003": "\u53e3\u8a9e\u985e"
         }
     }
 ]

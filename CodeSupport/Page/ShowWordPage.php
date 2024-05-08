@@ -12,7 +12,8 @@ $userData = json_decode($jsonData, true);
 
 //在json陣列中，找到name項目符合目標的項目
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    if(!isset($_POST['Top'])){$_POST['Top']=false;}
+    $_POST['Top'] =(isset($_POST['Top']))?$_POST['Top']:false;
+    $DataId =(isset($_POST['Data']))? $_POST['Data']:[];
     $OnSet = false;
     //如果是已經有的內容，就更新目前的項目
     foreach ($userData as $key => $value) {
@@ -22,15 +23,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $userData[$key]['mean']=$_POST['mean'];
             $userData[$key]['describe']=$_POST['describe'];
             $userData[$key]['Top']=($_POST['Top']=='on')?true:false;
-            $userData[$key]['Data'] =(isset($_POST['Data']))? $_POST['Data']:[];
+            $userData[$key]['Data'] =$DataId;
         }
     }
     //如果是新的內容，就新增在列表最後
-    if(!$OnSet){
+    if(!$OnSet and $_POST['keyword'] !== ''){
         $Set['name']=$_POST['keyword'];
         $Set['mean']=$_POST['mean'];
         $Set['describe']=$_POST['describe'];
         $Set['Top']=($_POST['Top']=='on')?true:false;
+        $Set['Data'] =$DataId;
         $userData[]=$Set;
     }
 }
@@ -74,9 +76,14 @@ file_put_contents($DisplayPage.'ItemList.json', $jsonString);
 
 
     <?php
+
+        function Convert($value){
+            return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+        }
     
         $PageOption = '';
         foreach ($folders as $key => $value) {
+            if($value == "Page" or $value == "_Example"){continue;}
             $PageOption .= '<option>'.$value.'</option>';
         }
         $PageOption = 
@@ -130,12 +137,12 @@ file_put_contents($DisplayPage.'ItemList.json', $jsonString);
 
                 $DataWrite = (isset($value["Data"]))? json_encode($value["Data"]) :'[]' ;
                 $writeBox = '
-                <div class="WordBox'.$ExtraClass.'">
-                    <p class="word">'.$value["name"].'</p>
-                    <p class="mean">'.$value["mean"] .'</p>
-                    <p class="inner">'.$value["describe"].'</p>
-                    <p class="TopType">'.$TopType.'</p>
-                    <p class="Data">'.$DataWrite .'</p>
+                <div class="WordBox'.Convert($ExtraClass).'">
+                    <p class="word">'.Convert($value["name"]).'</p>
+                    <p class="mean">'.Convert($value["mean"]) .'</p>
+                    <p class="inner">'.Convert($value["describe"]).'</p>
+                    <p class="TopType">'.Convert($TopType).'</p>
+                    <p class="Data">'.Convert($DataWrite) .'</p>
                     <div class="FlowBox">
                     </div>
                 </div>';

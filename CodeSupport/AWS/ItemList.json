@@ -1,0 +1,68 @@
+[
+    {
+        "name": "apt update",
+        "mean": "\u66f4\u65b0\u5957\u4ef6",
+        "describe": "sudo apt update",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "install MySql",
+        "mean": "\u5b89\u88ddMysql",
+        "describe": "sudo apt update\r\nsudo apt install mysql-server\r\n\r\n\u9078\u9805\u6709\u9019\u4e9b\uff0c\u81ea\u884c\u9078\u7528\r\nacpid.service\uff1a\r\n\u3000ACPI\uff08\u9032\u968e\u8a2d\u5b9a\u548c\u96fb\u6e90\u4ecb\u9762\uff09\u4e8b\u4ef6\u5075\u807d\u5668\u670d\u52d9\uff0c\u7528\u65bc\u8655\u7406 ACPI \u4e8b\u4ef6\u3002\r\n\r\napache-htcacheclean.service\uff1a\r\n\u3000Apache HTTP \u4f3a\u670d\u5668\u7684\u5feb\u53d6\u6e05\u7406\u670d\u52d9\uff0c\u7528\u65bc\u6e05\u7406\u78c1\u789f\u5feb\u53d6\u3002\r\n\r\nchrony.service\uff1a\r\n\u3000Chrony \u6642\u9593\u540c\u6b65\u670d\u52d9\uff0c\u7528\u65bc\u5728\u7cfb\u7d71\u4e0a\u540c\u6b65\u6642\u9593\u3002\r\n\r\ncron.service\uff1a\r\n\u3000cron \u5b9a\u6642\u4efb\u52d9\u670d\u52d9\uff0c\u7528\u65bc\u5728\u9810\u5b9a\u7684\u6642\u9593\u57f7\u884c\u6307\u4ee4\u6216\u8173\u672c\u3002\r\n\r\ndbus.service\uff1a\r\n\u3000D-Bus \u901a\u8a0a\u532f\u6d41\u6392\u670d\u52d9\uff0c\u7528\u65bc\u61c9\u7528\u7a0b\u5f0f\u4e4b\u9593\u7684\u901a\u8a0a\u3002\r\n\r\ngetty@tty1.service\uff1a\r\n\u3000\u63a7\u5236\u53f0\u767b\u5165\u670d\u52d9\uff0c\u7528\u65bc\u7d42\u7aef tty1 \u4e0a\u7684\u4f7f\u7528\u8005\u767b\u5165\u3002\r\n\r\nmultipathd.service\uff1a\r\n\u3000\u591a\u8def\u5f91\u8a2d\u5099\u7ba1\u7406\u5b88\u8b77\u7a0b\u5f0f\u670d\u52d9\uff0c\u7528\u65bc\u7ba1\u7406\u591a\u8def\u5f91\u8a2d\u5099\u3002\r\n\r\nnetworkd-dispatcher.service\uff1a\r\n\u3000systemd \u7db2\u8def\u4e8b\u4ef6\u5206\u767c\u5668\u670d\u52d9\uff0c\u7528\u65bc\u8655\u7406\u7db2\u8def\u76f8\u95dc\u4e8b\u4ef6\u3002\r\n\r\npackagekit.service\uff1a\r\n\u3000PackageKit \u5957\u4ef6\u7ba1\u7406\u670d\u52d9\uff0c\u7528\u65bc\u7ba1\u7406\u8edf\u9ad4\u5957\u4ef6\u3002\r\n\r\npolkit.service\uff1a\r\n\u3000Polkit \u6b0a\u9650\u7ba1\u7406\u670d\u52d9\uff0c\u7528\u65bc\u63a7\u5236\u4f7f\u7528\u8005\u5c0d\u7cfb\u7d71\u8cc7\u6e90\u7684\u5b58\u53d6\u6b0a\u9650\u3002\r\n\r\nrsyslog.service\uff1a\r\n\u3000rsyslog \u7cfb\u7d71\u65e5\u8a8c\u670d\u52d9\uff0c\u7528\u65bc\u8a18\u9304\u7cfb\u7d71\u65e5\u8a8c\u3002\r\n\r\nserial-getty@ttyS0.service\uff1a\r\n\u3000\u5e8f\u5217\u63a7\u5236\u53f0\u767b\u5165\u670d\u52d9\uff0c\u7528\u65bc\u5e8f\u5217\u57e0 ttyS0 \u4e0a\u7684\u4f7f\u7528\u8005\u767b\u5165\u3002\r\n\r\nsnapd.service\uff1a\r\n\u3000snapd \u5b88\u8b77\u7a0b\u5f0f\u670d\u52d9\uff0c\u7528\u65bc\u7ba1\u7406 Snap \u5957\u4ef6\u3002\r\n\r\nssh.service\uff1a\r\n\u3000SSH \u4f3a\u670d\u5668\u670d\u52d9\uff0c\u7528\u65bc\u9060\u7aef\u767b\u5165\u548c\u7ba1\u7406\u7cfb\u7d71\u3002\r\n\r\nsystemd-journald.service\uff1a\r\n\u3000systemd \u65e5\u8a8c\u670d\u52d9\uff0c\u7528\u65bc\u7ba1\u7406\u548c\u8a18\u9304\u7cfb\u7d71\u65e5\u8a8c\u3002\r\n\r\nsystemd-logind.service\uff1a\r\n\u3000systemd \u767b\u5165\u7ba1\u7406\u670d\u52d9\uff0c\u7528\u65bc\u4f7f\u7528\u8005\u767b\u5165\u548c\u6703\u8a71\u7ba1\u7406\u3002\r\n\r\nsystemd-manager\uff1a\r\n\u3000systemd \u7ba1\u7406\u5668\u670d\u52d9\uff0c\u7528\u65bc\u7ba1\u7406\u7cfb\u7d71\u4e2d\u7684\u5176\u4ed6\u670d\u52d9\u3002\r\n\r\nsystemd-networkd.service\uff1a\r\n\u3000systemd \u7db2\u8def\u670d\u52d9\uff0c\u7528\u65bc\u7ba1\u7406\u7db2\u8def\u9023\u7dda\u3002\r\n\r\nsystemd-resolved.service\uff1a\r\n\u3000systemd DNS \u89e3\u6790\u670d\u52d9\uff0c\u7528\u65bc\u7cfb\u7d71\u7684 DNS \u89e3\u6790\u3002\r\n\r\nsystemd-udevd.service\uff1a\r\n\u3000systemd \u8a2d\u5099\u7ba1\u7406\u670d\u52d9\uff0c\u7528\u65bc\u8a2d\u5099\u6aa2\u6e2c\u548c\u7ba1\u7406\u3002\r\n\r\nunattended-upgrades.service\uff1a\r\n\u3000\u81ea\u52d5\u66f4\u65b0\u670d\u52d9\uff0c\u7528\u65bc\u81ea\u52d5\u66f4\u65b0\u7cfb\u7d71\u4e0a\u7684\u8edf\u9ad4\u5305\u3002\r\n\r\nuser@1000.service\uff1a\r\n\u3000\u4f7f\u7528\u8005\u670d\u52d9\uff0c\u91dd\u5c0d\u4f7f\u7528\u8005 ID \u70ba 1000 \u7684\u4f7f\u7528\u8005\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "install php",
+        "mean": "\u5b89\u88ddphp",
+        "describe": "\u5b89\u88dd\u6700\u65b0\u7248\uff1a\r\nsudo apt install php\r\n\u6aa2\u67e5\u5b89\u88dd\u6210\u529f\uff1a\r\nphp --version\r\n\r\n\u5217\u51fa\u53ef\u7528\u7684PHP\u7248\u672c\uff1a\r\nsudo apt list -a php\r\n\u5b89\u88dd\u6307\u5b9a\u7248\u672c\uff1a\r\nsudo apt install php=\u9078\u5b9a\u7684\u7248\u672c\u865f\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "install phpAdmin",
+        "mean": "\u5b89\u88ddphpAdmin",
+        "describe": "\u88dd\u8a2d\u6240\u9700\u64f4\u5c55\u5957\u4ef6\r\nsudo apt update\r\nsudo apt install php-mysql php-xml\r\n\r\n\u4e0b\u8f09Admin\u58d3\u7e2e\u5305\r\nwget https:\/\/files.phpmyadmin.net\/phpMyAdmin\/5.1.1\/phpMyAdmin-5.1.1-all-languages.zip\r\n\r\n\u89e3\u58d3\u7e2e\u6a94\u6848\u4e26\u7f6e\u5165\u6307\u5b9a\u4f4d\u7f6e(\u4ee5php\u7db2\u9801\u7684\u4f4d\u7f6e\u70ba\u4e3b)\r\n\u8a3b\uff1a\u9700\u8981\u5b89\u88ddunzip\r\nunzip phpMyAdmin-5.1.1-all-languages.zip\r\nmv phpMyAdmin-5.1.1-all-languages \/var\/www\/html\/phpmyadmin\r\n\r\n\u65b0\u589e\u914d\u7f6e\u6587\u4ef6\uff1a\r\n\u70ba\u4e86\u4fbf\u65bc\u7f6e\u5165\u8a2d\u5b9a\r\ncp \/var\/www\/html\/phpmyadmin\/config.sample.inc.php \/var\/www\/html\/phpmyadmin\/config.inc.php\r\n\r\n\u8a2d\u7f6e\u6b0a\u9650\uff0c\u8b93phpMyAdmin\u7684\u8cc7\u6599\u593e\u6709\u9069\u7576\u7684\u6b0a\u9650\u4f9bApache\u8a2a\u554f\r\nchown -R apache:apache \/var\/www\/html\/phpmyadmin\r\n\r\n\u91cd\u555fApache\u4ee5\u904b\u4f5c\u8a2d\u7f6e\r\nsystemctl restart apache2\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "install unzip",
+        "mean": "\u5b89\u88dd\u89e3\u58d3\u7e2e\u8edf\u9ad4 unzip",
+        "describe": "\u5b89\u88dd\u89e3\u58d3\u7e2e\u8edf\u9ad4unzip\r\nsudo apt update\r\nsudo apt install unzip",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "install xmi",
+        "mean": "\u5b89\u88ddxmi",
+        "describe": "\r\nsudo apt-get install php-xml\r\n\r\nextension=xml\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    }
+]

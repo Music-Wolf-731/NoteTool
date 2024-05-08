@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Dimension Table",
+        "mean": "\u7dad\u5ea6\u8868\u683c",
+        "describe": "Dimension Table\r\n\u901a\u5e38\u662f\u4ea4\u4e92\u4f5c\u7528\u4e2d\u7684\u7e31\u8ef8\u548c\u6a6b\u8ef8\u7684\u4f5c\u7528\r\n\u767d\u8a71\u4e00\u9ede\u4f86\u8aaa\uff0c\u9019\u7a2e\u8868\u683c\u7684\u5167\u5bb9\u662f\u7121\u6cd5\u4ea4\u4e92\u7522\u751f\u7684\uff0c\u800c\u9700\u8981\u4eba\u70ba\u5beb\u5165\u6216\u7f6e\u5165\uff0c\u50cf\u662f\u6703\u54e1\u7533\u8acb\u7684\u8cc7\u6599\u6216\u662f\u5efa\u69cb\u5546\u54c1\uff0c\u9019\u4e9b\u4e0d\u592a\u8b8a\u52d5\u7684\u5167\u5bb9\uff0c\u901a\u5e38\u4f5c\u70baDimension\u4f86\u89e3\u91cb\r\n\r\n\u62ffyoutube\u4f86\u6bd4\u55bb\uff0c\u6703\u54e1\u81ea\u7136\u4e0d\u7528\u8aaa\uff0c\u4ee5\u5f71\u7247\u4f86\u8aaa\uff0c\u5f71\u7247\u672c\u8eab\u3001\u5f71\u7247\u6a19\u984c\u3001\u63cf\u8ff0\u9019\u4e9b\u53ef\u80fd\u5c31\u662fDimension\u7684\u7bc4\u7c4c\uff0c\u800c\u9ede\u8b9a\u3001\u9ede\u95b1\u3001\u7559\u8a00\u9019\u4e9b\u5c31\u6703\u662fFact Table\u7684\u7bc4\u7c4c",
+        "Top": false,
+        "Data": []
+    },
+    {
+        "name": "Fact Table",
+        "mean": "\u4e8b\u4ef6\u8868\u683c",
+        "describe": "",
+        "Top": false,
+        "Data": []
+    },
+    {
+        "name": "Snowflake Schema",
+        "mean": "",
+        "describe": "",
+        "Top": false,
+        "Data": []
+    },
+    {
+        "name": "Star Schema",
+        "mean": "",
+        "describe": "\u7531\u4e00\u500b\u6703\u591a\u500bfact table\u9023\u7d50\u591a\u500bdimension table",
+        "Top": false,
+        "Data": []
+    }
+]

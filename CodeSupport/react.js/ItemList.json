@@ -1,0 +1,150 @@
+[
+    {
+        "name": "0_Promise_Explain",
+        "mean": "Promise\u89e3\u91cb",
+        "describe": "JavaScript\u5728\u8abf\u53d6\u5916\u90e8\u8cc7\u6599\u6642\u901a\u5e38\u6703\u9700\u8981\u7b49\u5f85\u56de\u61c9\uff0c\u78ba\u8a8d\u8cc7\u6599\u8abf\u5b8c\u5f8c\u624d\u9032\u884c\u4e0b\u4e00\u6b65\u6e32\u67d3\u7b49\uff0c\u9019\u7a2e\u6642\u5019\u5f88\u5e38\u6703\u4f7f\u7528\u5230Promise\u7269\u4ef6\uff0c\u81f3\u65bc\u8a72\u5982\u4f55\u4f7f\u7528\u6e32\u67d3\uff0c\u53ef\u4ee5\u5148\u770b\u4e00\u4e0b\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID007"
+            ]
+        }
+    },
+    {
+        "name": "1_Promise_Base",
+        "mean": "\u57fa\u790e\u7528\u6cd5",
+        "describe": "\u8a3b\uff1aJavaScript\u5176\u5be6\u6709\u5176\u7528\u6cd5\uff0c\u800c\u9019\u908a\u6703\u4ee5React.js\u7684\u5beb\u6cd5\u9032\u884c\u63cf\u8ff0\u3002\r\n\u4e00\u822c\u6703\u4f7f\u7528\u5230react\u7684useEffect\u548cuseState\u5169\u7a2e\u5143\u4ef6\r\n\u5728\u9019\u908a\u66ab\u4e0d\u63d0\u53ca\r\n\r\n\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID007"
+            ]
+        }
+    },
+    {
+        "name": ">Router_Import",
+        "mean": "\u50b3\u5165\u8cc7\u6599\u5beb\u6cd5",
+        "describe": "import  {NavLink, Route, Routes, BrowserRouter as Router }  from 'react-router-dom';\r\n\r\nRouter\u8c8c\u4f3c\u6703\u8d77\u885d\u7a81\uff0c\u6240\u4ee5\u9700\u8981\u52a0\u4e00\u500bBrowserRouter\uff0c\u4f46\u5be6\u969b\u539f\u7406\u5c1a\u5f85\u9a57\u8b49",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "API_Server",
+        "mean": "\u958b\u59cb\u5efa\u8a2d\u4f3a\u670d\u5668",
+        "describe": "--\u5efa\u88fd\u7528--\r\n\u6aa2\u67e5\u672c\u5730API\u4f3a\u670d\u5668\u7248\u672c\r\njson-server --version\r\n\r\n\u5b89\u88dd\u672c\u5730API\u4f3a\u670d\u5668\r\nnpm install -g json-server\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "API_Server_Start",
+        "mean": "\u4f3a\u670d\u5668\u555f\u7528",
+        "describe": "\u7bc4\u4f8b\uff1a\r\njson-server -p 4000 -w .\/src\/data\/TentativeData.json \r\n\r\n\u7c21\u55ae\u4f86\u8aaa\uff0c\u9019\u500b\u6307\u4ee4\u7684\u76ee\u7684\u662f\u5728\u672c\u5730\u555f\u52d5\u4e00\u500b REST API \u4f3a\u670d\u5668\uff0c\u8a72\u4f3a\u670d\u5668\u4f7f\u7528 .\/data\/db.json \u4e2d\u7684 JSON \u6a94\u6848\u4f5c\u70ba\u8cc7\u6599\u5eab\uff0c\u4e26\u76e3\u807d\u5728 4000 \u7aef\u53e3\u4e0a\u3002\u5982\u679c\u4f60\u6709\u9019\u500b db.json \u6a94\u6848\uff0c\u4f60\u53ef\u4ee5\u4f7f\u7528\u9019\u500b\u6307\u4ee4\u6a21\u64ec\u4e00\u500b\u5f8c\u7aef API\uff0c\u4f9b\u4f60\u7684\u524d\u7aef\u61c9\u7528\u7a0b\u5f0f\u4f7f\u7528\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "Get API",
+        "mean": "\u53d6\u5f97API\u5167\u5bb9",
+        "describe": "\u7bc4\u4f8b\uff1a\r\nconst VarAPI = await fetch(`API_Link + id`);\r\n\r\n\u53d6\u5f97API\u7684\u8def\u5f91\uff0c\u4e26\u4e14\u6307\u5b9aid\u4ee5\u53d6\u5f97\u5c0d\u61c9\u8cc7\u6599\r\nid\u70baAPI\u5b50\u7cfb\u6578\u4e4b\u4e00\uff0c\u4e00\u822c\u6703\u76f4\u63a5\u5f71\u97ff\u8cc7\u6599\u6293\u53d6",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "Import \/ Export",
+        "mean": "\u50b3\u5165\u8207\u50b3\u51fa",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "Router",
+        "mean": "\u8def\u7531\u7d04\u7565\u7d50\u69cb",
+        "describe": "\u5728Router.js\u4e2d\uff0c\u9700\u8981\u4ee5 Router > Routes > Route \u7684\u9806\u5e8f\u4f86\u52a0\u5165\u9805\u76ee\r\n\u4e26\u4e14\u5728\u7b2c\u4e00\u968e\u5c64Route\u5167\uff0c\u4ee5path\u4f86\u52a0\u5165\u8def\u7531\u5ea7\u6a19\u540d(\u7db2\u5740)\uff0c\u4e26\u4e14\u4ee5element\u5beb\u5165\u8f09\u5165\u9801\u9762\r\n\r\n<Router>\r\n    <Routes>\r\n        <Route path=\"\/\" element={<LandingPage \/>}\/>\r\n    <\/Routes>\r\n<\/Router>",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "Router Id",
+        "mean": "\u8def\u7531id",
+        "describe": "\u4ee5\u4e0b\u7bc4\u4f8b\u53ea\u5c07\u76f8\u95dc\u7684\u6307\u4ee4\u5167\u5bb9\u5beb\u51fa\r\n\r\n\uff11. \u5728Router.js\u4f7f\u7528Route\u548c\u76ee\u6a19\u9032\u884c\u9023\u7d50\r\n\u9019\u4e00\u6b65\u8981\u5169\u5c64\uff0c\u5916\u90e8Route\u662f\u7b2c\u4e00\u500b\u76ee\u6a19\uff0c\u6c7a\u5b9a\u6846\u67b6\u548c\u76ee\u6a19\r\n\u5167\u90e8\u7684Route\u5247\u662f\u6c7a\u5b9aId\u7684\u8b8a\u6578\u540d\u7a31(\u4ee5\u4e0b\u7bc4\u4f8b\u7684\u540d\u7a31\u70baid)\r\n\r\n\uff12. \u5728\u5c0d\u61c9\u9801\u9762\u7684\u6a94\u6848\u4f7f\u7528import\u8abf\u53d6useParams\u7cfb\u6578\uff0c\u4e26\u4f7f\u7528\u6b65\u9a5f1\u7576\u4e2d\u7684\u8def\u7531\u8b8a\u6578(id)\u9032\u884c\u5e36\u5165\r\n\u6b64\u5916\uff0c\u7bc4\u4f8b\u5247\u662f\u5c07id\u900f\u904euseParams()\u53eb\u51fa\r\n\r\n----In Router.js----\r\n\r\n<Route path=\"Commission\" element={<Commission \/>}>\r\n    <Route path=\":id\"\/>\r\n<\/Route>\r\n\r\n\r\n----In Commission.jsx----\r\n\r\nimport { useParams } from 'react-router-dom'\r\nconst { id } = useParams();\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "Server_Start",
+        "mean": "\u4f3a\u670d\u5668\u555f\u7528",
+        "describe": "\u555f\u7528node.js\u7684\u4f3a\u670d\u5668\r\n\u5728\u7d42\u7aef\u6a5f\u5167\u8f38\u5165\r\nnpm start",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "link",
+        "mean": "\u7db2\u5740\u76f8\u95dc",
+        "describe": "window.location.pathname\r\n\u53ef\u4ee5\u53d6\u5f97\u7db2\u5740\u8b8a\u6578"
+    },
+    {
+        "name": "useEffect",
+        "mean": "\u526f\u4f5c\u7528Hook",
+        "describe": "\u526f\u4f5c\u7528\u901a\u5e38\u662f\u6307\u8207\u6e32\u67d3 UI \u7121\u95dc\u7684\u64cd\u4f5c\uff0c\u4f8b\u5982\u6578\u64da\u52a0\u8f09\u3001\u8a02\u95b1\u5916\u90e8\u4e8b\u4ef6\u3001\u624b\u52d5\u4fee\u6539 DOM \u7b49\u3002\r\n\r\n\u4e7e\u6de8\u7bc4\u4f8b\uff1a\r\n\r\nuseEffect(() => {\r\n    \/\/ \u5728\u9019\u88e1\u8a2d\u7f6e\u526f\u4f5c\u7528\r\n\r\n    \/\/ \u8fd4\u56de\u4e00\u500b\u6e05\u7406\u51fd\u5f0f\r\n    return () => {\r\n        \/\/ \u5728\u9019\u88e1\u6e05\u7406\u526f\u4f5c\u7528\r\n    };\r\n}, []); \/\/ \u4f9d\u8cf4\u9805\u70ba\u7a7a\u8868\u793a\u53ea\u5728\u7d44\u4ef6\u9996\u6b21\u6e32\u67d3\u6642\u57f7\u884c\r\n\r\n\u4f8b\uff1a\r\n  \/\/ \u4f7f\u7528 useEffect \u8a2d\u7f6e\u526f\u4f5c\u7528\r\n  useEffect(() => {\r\n    \/\/ \u4e88\u5176\u64cd\u4f5c\u7684\u7de8\u78bc\u5beb\u5728\u9019\u908a\uff0c\u5728\u5207\u5165\u9801\u9762(\u6e32\u67d3)\u7576\u4e0b\u6703\u57f7\u884c\u4e00\u6b21\uff0c\u5f8c\u7e8c\u5247\u8981\u770b\u4f9d\u8cf4\u6578\u7d44\r\n    document.title = `You clicked ${count} times`;\r\n    \r\n    \/\/ \u8fd4\u56de\u4e00\u500b\u6e05\u9664\u51fd\u6578\uff0c\u7528\u65bc\u6e05\u7406\u526f\u4f5c\u7528\uff08\u53ef\u9078\uff09\r\n    return () => {\r\n      \/\/ \u4e00\u822c\u6703\u5728\u5207\u96e2\u9801\u9762\u6642\u57f7\u884c\uff0c\u6240\u4ee5\u901a\u5e38\u6703\u653e\u4e00\u4e9b\u6e05\u9664\u7de9\u5b58\u6216\u8b8a\u6578\u7684\u51fd\u6578\r\n    };\r\n  }, [count]); \/\/ \u5728\u9019\u88e1\u6307\u5b9a\u4f9d\u8cf4\u6578\u7d44\uff0c\u5982\u679c\u4f9d\u8cf4\u6578\u7d44\u4e2d\u7684\u503c\u767c\u751f\u8b8a\u5316\uff0c\u5247\u91cd\u65b0\u57f7\u884c\u526f\u4f5c\u7528\uff0c\u5982\u679c\u7701\u7565\uff0c\u5247\u5728\u6bcf\u6b21\u6e32\u67d3\u5b8c\u6210\u5f8c\u90fd\u57f7\u884c\u526f\u4f5c\u7528\r\n\r\n\r\n\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    },
+    {
+        "name": "useEffect ",
+        "mean": "API\u64f7\u53d6Hook",
+        "describe": "\u5176\u4e2d\u4e00\u7a2e\u53d6\u5f97API\u7684\u65b9\u5f0f\uff0c\u4f46\u9019\u500b\u4e0d\u662f\u5df2\u4f7f\u7528\/\u5b78\u7fd2\u904e\u7684\u9805\u76ee\uff0c\u53ef\u4ee5\u5148\u77e5\u9053\u5c31\u597d",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "useState",
+        "mean": "\u72c0\u614b\u66f4\u65b0\u51fd\u6578",
+        "describe": "\u9019\u500b\u51fd\u5f0f\u70bareact\u5c08\u7528\uff0c\u5176\u91cd\u9ede\u5728\u65bc\u6bcf\u4e00\u6b21\u6539\u52d5\u6642\u6703\u5c07\u503c\u50b3\u56de\u7d66react\uff0c\u82e5\u5f8c\u7e8c\u9700\u8981\u4ee5react\u70ba\u57fa\u790e\u9032\u884c\u984d\u5916\u7684\u6e32\u67d3\u6216\u8655\u7f6e\u6642\u624d\u80fd\u5920\u6b63\u5e38\u904b\u4f5c\uff0c\u9019\u662f\u548c\u4e00\u822c\u8b8a\u6578\u4e0d\u540c\u7684\u6700\u5927\u7684\u9ede\r\n\r\n\u7528const\u5b9a\u7fa9\uff0c\u7d66\u4e00\u500b\u8b8a\u6578\u540d\/\u4e00\u500b\u51fd\u5f0f\u540d\u548c\u4e00\u500b\u521d\u59cb\u6578\u503c\r\nconst [Var, functionName] = useState(0);\r\n\u5982\u4e0a\uff0cVar\u5c07\u662f\u7528\u65bc\u66f4\u65b0\u7684\u8b8a\u6578\uff0c\u800cfunctionName\u5c07\u662f\u5176\u540d\u7a31\uff0c\u6700\u5f8c\u7684\u62ec\u865f\u4e2d\u76840\u5247\u662f\u521d\u59cb\u503c\r\n\r\n\u6539\u52d5\u5176\u503c\u7684\u65b9\u5f0f\u5982\u4e0b\uff1a\r\nfunctionName(Var + 1 );\r\n\r\n\u8981\u4f7f\u7528\u7684\u8a71\u5247\u53ef\u76f4\u63a5\u4f7f\u7528\uff1a\r\nconsole.log(Var)",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    }
+]

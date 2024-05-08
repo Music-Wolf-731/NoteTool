@@ -1,0 +1,21 @@
+[
+    {
+        "Name": "Group",
+        "Data": [
+            "Linux \u4f7f\u7528\u8005\u53ca\u6b0a\u9650\u554f\u984c",
+            "\u6a94\u6848\u63a7\u88fd",
+            "\u57fa\u672c\u6307\u4ee4",
+            "MySql",
+            "GIT",
+            "AWS\u76f8\u95dc"
+        ],
+        "Id": {
+            "ID002": "Linux \u4f7f\u7528\u8005\u53ca\u6b0a\u9650\u554f\u984c",
+            "ID001": "\u6a94\u6848\u63a7\u88fd",
+            "ID003": "GIT",
+            "ID004": "AWS\u76f8\u95dc",
+            "ID005": "\u57fa\u672c\u6307\u4ee4",
+            "ID006": "MySql"
+        }
+    }
+]

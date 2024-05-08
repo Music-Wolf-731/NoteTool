@@ -1,12 +1,95 @@
+a , a p {text-decoration: none;}
+
+body{
+    margin: 0;
+    background: #2f3469;
+    width: calc(99vw - 5px);
+    height: calc(99vh - 5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#display{width:100%}
+
+#DataNameList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#DataNameList p{
+    color:white;
+}
+
+#BackBox{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:.5em auto;
+    max-width: 1000px;
+}
+
+#BackBox a{
+    background: #201b3e;
+    width: 47%;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:white;
+}
+
+form{
+    max-width: 1000px;
+    margin:auto;
+    width:calc(100% - 20px);
+    color:white;
+}
+
+input,select,textarea{
+    background:#5760c7;
+    color:white;
+    font-size: 1.2em;
+    display: flex;
+}
+
+textarea{
+    height:4em;
+    margin:0 0 8px;
+}
+
+button{
+    font-size: 1.5em;
+    margin:13px 10px 0;
+    width:calc(100% - 20px);
+    background: #201b3e;
+    color:white;
+}
+
+#BackBox p{margin:0;}
+
 #DataList{
     width:100%;
 }
-#ChangeData{
+#ItemChange{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-#ChangeData select , #ChangeData input {
+#ItemChange select , #ItemChange input {
     width:calc(50% - 5em);
+}
+
+#illustrate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
 }

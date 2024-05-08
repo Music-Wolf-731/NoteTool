@@ -1,0 +1,339 @@
+[
+    {
+        "name": "AWS_indexPlace",
+        "mean": "\u9996\u9801\u4f4d\u7f6e",
+        "describe": "\u4ee5ubuntu\u70ba\u4f8b\uff0c\u901a\u5e38\u6703\u65bc\u6839\u76ee\u9304\u7684\r\n\u6839\u76ee\u9304\uff1a\/.\r\n\u4e3b\u76ee\u9304\uff1a~\/\r\nindex\u4f4d\u7f6e\uff1avar\/www\/html",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    },
+    {
+        "name": "About Linux Group",
+        "mean": "\u7d44\u76f8\u95dc",
+        "describe": "groups\uff1a\u663e\u793a\u5f53\u524d\u7528\u6237\u6240\u5c5e\u7684\u7528\u6237\u7ec4\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "About Linux User",
+        "mean": "\u4f7f\u7528\u8005\u76f8\u95dc",
+        "describe": "whoami\uff1a\u663e\u793a\u5f53\u524d\u767b\u5f55\u7528\u6237\u7684\u7528\u6237\u540d\u3002\r\nid\uff1a\u663e\u793a\u5f53\u524d\u7528\u6237\u7684 UID\uff08\u7528\u6237\u6807\u8bc6\u7b26\uff09\u3001GID\uff08\u7ec4\u6807\u8bc6\u7b26\uff09\u4ee5\u53ca\u6240\u5c5e\u7684\u7528\u6237\u7ec4\u3002\r\ngroups\uff1a\u663e\u793a\u5f53\u524d\u7528\u6237\u6240\u5c5e\u7684\u7528\u6237\u7ec4\u3002",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "Add_Mysql_User",
+        "mean": "\u65b0\u589e\u4f7f\u7528\u8005",
+        "describe": "\u57fa\u672c\u6307\u4ee4\uff1a\r\nCREATE USER '\u7528\u6237\u540d'@'\u4e3b\u673a\u540d' IDENTIFIED BY '\u5bc6\u7801';\r\n\r\n\u7bc4\u4f8b\uff1a\r\nCREATE USER 'newuser'@'%' IDENTIFIED BY 'password';",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "Ctrl + C",
+        "mean": "\u4e2d\u65b7\u50b3\u8f38\u548c\u904b\u884c",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "Mysql_Login",
+        "mean": "\u767b\u5165Mysql",
+        "describe": "mysql -u root -p\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "Sql_First_password",
+        "mean": "\u4fee\u6539\u5bc6\u78bc",
+        "describe": "\u8acb\u5148\u53c3\u8003SQL\u5b89\u5168\u6027\u8a2d\u5b9a\u7684\u5167\u5bb9\uff0c\u57f7\u884c\u5b8c\u5f8c\u518d\u770b\u9019\r\n\r\nsudo mysql\r\n\u5148\u9032\u5165mysql\r\n\r\nALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Dark_Cat';\r\n\u4fee\u6539\u4f60\u7684root\u5bc6\u78bc\r\n\r\n\r\nSELECT user,authentication_string,plugin,host FROM mysql.user;\r\n\u9019\u53ef\u4ee5\u78ba\u8a8d\u4f7f\u7528\u8005\u8cc7\u6599",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "Sql_Security_Setting",
+        "mean": "SQL\u5b89\u5168\u6027\u8a2d\u5b9a",
+        "describe": "\u5b89\u88ddMySql\r\nsudo apt install mysql-server\r\n\u555f\u7528\u5b89\u5168\u6027\u8a2d\u5b9a\r\nsudo mysql_secure_installation\r\n\r\n\u5c07\u6703\u958b\u59cb\u8df3\u5167\u5bb9\uff0c\u9996\u5148\u6703\u554f\u4f60\u662f\u5426\u958b\u59cb\u8a2d\u5b9a\u5b89\u5168\u8a2d\u5b9a\uff0c\u9078Y\r\n\r\n\u7136\u5f8c\u53ef\u80fd\u6703\u51fa\u73fe\u5bc6\u78bc\u5f37\u5ea6\u7684\u8a2d\u8a08(\u5982\u679c\u6c92\u6709\u5c31\u90fd\u9078y)\r\n\u5bc6\u78bc\u5f37\u5ea6\u9078\u6700\u4f4e\uff0c\u771f\u7684\u8981\u5546\u7528\u518d\u8003\u616e\u5176\u5b83\u7684\r\n\r\n\u63a5\u8457\u518d\u7e7c\u7e8c\u9078Y\u5373\u53ef",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "Stop_MySql",
+        "mean": "\u7d42\u6b62mysql",
+        "describe": "sudo systemctl stop mysql\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "cat",
+        "mean": "\u6587\u4ef6\u5c55\u793a",
+        "describe": "cat [\u9009\u9879] [\u6587\u4ef6]\r\n\r\ncat example.txt\r\n\u8f38\u5165\u5f8c\u6703\u5c07\u6587\u4ef6\u76f4\u63a5\u8f38\u51fa",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "cd",
+        "mean": "\u79fb\u52d5",
+        "describe": "\u79fb\u52d5\u76ee\u524d\u89c0\u770b\u7684\u8cc7\u6599\u593e\u4f4d\u7f6e\r\n\r\ncd \/. \u524d\u5f80\u6700\u4e0a\u5c64",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "chgrp",
+        "mean": "\u4fee\u6539\u7269\u4ef6\u7684\u7d44",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "chomd",
+        "mean": "\u4fee\u6539\u7269\u4ef6\u6b0a\u9650",
+        "describe": "chmod \u8eab\u4efd+\u6b0a\u9650\u985e\u578b \u6587\u4ef6\u6216\u76ee\u5f55\r\n\u5982\uff1achmod u+rwx example.html\r\n\u6216\uff1achmod a+rx example.html\r\n\r\n\u8eab\u4efd\u6307\u5b9a\uff1a\r\nu \uff1a\u64c1\u6709\u8005 | g\uff1a\u7ec4 | o\uff1a\u5176\u5b83\u4f7f\u7528\u8005 | a\uff1a\u4e0a\u4e09\u9805\u7e3d\u5408(\u5168\u8eab\u4efd)\r\n\r\n\u6b0a\u9650\u985e\u578b\uff1a\r\nr\uff1a\u95b1\u8b80\u6b0a\u9650\u3001w\uff1a\u5beb\u5165\u6b0a\u9650\u3001x\uff1a\u57f7\u884c\u6b0a\u9650",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "chown",
+        "mean": "\u66f4\u63db\u7269\u4ef6\u64c1\u6709\u8005",
+        "describe": "\u66f4\u63db\u6587\u4ef6\u6240\u6709\u8005\r\n\r\n\u57fa\u672c\u6307\u4ee4\uff1a\r\nchown \u9078\u9805 \u65b0\u6240\u6709\u8005 \u6587\u4ef6\u6216\u76ee\u5f55\r\nsudo chown -R newuser example.txt\r\n-R\u662f\u5c07\u76ee\u6a19\u76ee\u9304\u53ca\u5176\u6240\u6709\u5b50\u5167\u5bb9\u90fd\u6b78\u70ba\u540c\u4e00\u7d44\u6b0a\u9650\u64c1\u6709\u8005\r\n\r\n\u52a0\u5165\u6b0a\u9650\u7fa4\u7d44\u7684\u6307\u4ee4\uff1a\r\nchown \u65b0\u6240\u6709\u8005:\u65b0\u7ec4 \u6587\u4ef6\u6216\u76ee\u5f55\r\nsudo chown newuser:newgroup example.txt\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "clear",
+        "mean": "\u6e05\u9664\u756b\u9762",
+        "describe": "",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "clone",
+        "mean": "\u8907\u88fd\u53d6\u5f97\u9060\u7aef\u8cc7\u6599\u5eab",
+        "describe": "\u6307\u4ee4\uff1a\r\nsudo git clone <Git\u5009\u5eaburl>\r\n\r\n\u5982\uff1a\r\nsudo git clone https:\/\/github.com\/Music-Wolf-731\/HarLerArt.git\r\n\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "echo",
+        "mean": "\u65b0\u589e\/\u4fee\u6539\u4e26\u5beb\u5165",
+        "describe": "echo \"\u4f60\u8981\u5199\u7684\u5185\u5bb9\" > \u6587\u4ef6\u540d\r\n\r\n\u5982\uff1a\r\necho \"<?php echo 'Hello World' ?>\" > index.php\r\n\r\n\u52a0\u5165\u6b0a\u9650\uff1a\r\necho \"<?php echo 'Hello World' ?>\" | sudo tee index.php\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "git init",
+        "mean": "\u5efa\u7acb\u8cc7\u6599\u5eab",
+        "describe": "\u5b8c\u6574\u6307\u4ee4\uff1a\r\ngit init\r\n\r\n\u5728\u76ee\u524d\u4f4d\u7f6e\u5efa\u7acb\u4e00\u500b\u8cc7\u6599\u5eab",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "git pull",
+        "mean": "\u4e0b\u8f09",
+        "describe": "\u5b8c\u6574\u6307\u4ee4\uff1a\r\ngit pull origin <\u5206\u652f\u540d\u7a31>\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "git push",
+        "mean": "\u63a8\u9001",
+        "describe": "\u5b8c\u6574\u6307\u4ee4\uff1a\r\ngit push -u origin <\u5206\u652f\u540d\u7a31>\r\n\r\n\u3000\u3000\u63a8\u9001\u4e3b\u8981\u5206\u652f\r\ngit push -u origin main\r\ngit push -u origin master\r\n\r\n\r\n\u3000\u3000\u63a8\u9001\u6240\u6709\u5206\u652f\r\ngit push --all\r\n\u5c07\u76ee\u524d\u672c\u5730\u5df2\u7d93\u6e96\u5099\u597d\u7684\u8cc7\u6599\u4e0a\u50b3\u81f3\u5df2\u95dc\u806f\u7684GitHub\r\n\uff0a\u9700\u5148\u4f7f\u7528remote\u95dc\u806f\u624d\u53ef\u4f7f\u7528\uff0a",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "git remote",
+        "mean": "\u95dc\u806f\u8cc7\u6599\u5eab",
+        "describe": "\u5b8c\u6574\u6307\u4ee4\uff1a\r\ngit remote add origin <\u8fdc\u7a0b\u4ed3\u5e93\u7684URL>\r\n\r\n\u5c07\u672c\u5730\u8cc7\u6599\u5eab\u548cGitHub\u4e0a\u9762\u7684\u8cc7\u6599\u5eab\u5efa\u7acb\u9023\u7e6b\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID003"
+            ]
+        }
+    },
+    {
+        "name": "ls",
+        "mean": "\u986f\u793a\u6a94\u6848\u5217\u8868",
+        "describe": "\u986f\u793a\u73fe\u5728\u4f4d\u7f6e\u7684\u6240\u6709\u6a94\u6848\r\n\r\n\u82e5\u8f38\u5165\r\nls -l\r\n\u6703\u53d6\u5f97\u6a94\u6848\u7684\u6b0a\u9650\u8a2d\u5b9a\u5982\u4ee5\u4e0b\uff1a\r\ndrwxr-xr-x 12 root root 4096 May 2 09:01 HarLerArt",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "mv",
+        "mean": "\u6587\u4ef6\u6539\u540d",
+        "describe": "mv [\u539f\u6587\u4ef6\u540d] [\u65b0\u6587\u4ef6\u540d]\r\n\r\n\u5982\uff1a\r\nsudo mv index.php index_.php\r\nsudo mv index.html index_.html\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "nano",
+        "mean": "nano\u7de8\u8f2f\u5668",
+        "describe": "nano \u6a94\u6848\u540d\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID005"
+            ]
+        }
+    },
+    {
+        "name": "permissions read",
+        "mean": "\u95b1\u8b80\u6a94\u6848\u6b0a\u9650",
+        "describe": "\u67e5\u770b\u6307\u4ee4\uff1a ls -l\r\n\r\n\u8f38\u5165\u5f8c\u6703\u53cd\u50b3\u6b0a\u9650\u8cc7\u6599\u5982\u4ee5\u4e0b\uff1a\r\ndrwxr-xr-x 12 root root 4096 May 2 09:01 HarLerArt\r\n\r\n\u95b1\u8b80\u65b9\u5f0f\uff1a\r\n\u4e00\u3001\u6700\u524d\u9762\u7684\u5341\u78bc\u62c6\u70ba\u56db\u500b\u90e8\u4efd\uff1a\r\nd | rwx | r-x | r-x\r\n\u7b2c\u4e00\u78bc\u6709\u5169\u7a2e\u7d50\u679c\uff0c'-'\u548c'd'\uff0c\u5206\u5225\u662f\u6307\u300c\u6a94\u6848\u300d\u548c\u300c\u76ee\u9304\u300d\r\n\u63a5\u4e0b\u4f86\u4e09\u7d44\u90fd\u662f\u4e00\u6a23\u7684\u5167\u5bb9\r\n\u4f9d\u5e8f\u4ee3\u8868\u7684\u662f\r\n\u6240\u6709\u8005\u6b0a\u9650 | \u6587\u4ef6\u6240\u5c6c\u7d44\u4e4b\u6b0a\u9650 | \u5176\u5b83\u7528\u6236\u4e4b\u6b0a\u9650\r\n\u4e09\u7d44\u5b57\u78bc\u4e2d\u7684\u4e09\u78bc\u5206\u5225\u662f\r\nr\uff1a\u95b1\u8b80\u6b0a\u9650\u3001w\uff1a\u5beb\u5165\u6b0a\u9650\u3001x\uff1a\u57f7\u884c\u6b0a\u9650\r\n\u4e0d\u88ab\u6388\u4e88\u7684\u6b0a\u9650\u6703\u5beb\u70ba - \r\n\r\n\u63a5\u4e0b\u4f86\u7684\u5169\u7d44\u540d\u7a31(\u7bc4\u4f8b\u70baroot)\u5206\u5225\u6307\u7684\u662f\r\n\u64c1\u6709\u8005 | \u64c1\u6709\u7d44\u5225\r\n\r\n\u4e0b\u4e00\u4e32\u6578\u5b57\u70ba\u6a94\u6848\u5927\u5c0f\r\n\u76ee\u9304\u901a\u5e38\u70ba4096 \u6a94\u6848\u5247\u70ba\u5be6\u969b\u5b57\u7b26\u6578\r\n\r\n\u63a5\u4e0b\u4f86\u7684\u65e5\u671f\u70ba\u6700\u5f8c\u4fee\u6539\u6642\u9593",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID002"
+            ]
+        }
+    },
+    {
+        "name": "reset_mysql",
+        "mean": "\u91cd\u8a2dmysql",
+        "describe": "sudo mysqld --initialize\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "restart apache",
+        "mean": "\u91cd\u555fapache",
+        "describe": "\u5b89\u88dd\u4efb\u4f55\u6771\u897f\u4e4b\u5f8c\u8981\u9032\u884c\u91cd\u555f\u624d\u884c\r\nsystemctl restart apache2\r\n",
+        "Top": false,
+        "Data": []
+    },
+    {
+        "name": "rm",
+        "mean": "\u522a\u9664",
+        "describe": "\u522a\u9664\u55ae\u500b\u6a94\u6848\r\nrm file.txt\r\n\r\n\u522a\u9664\u8cc7\u6599\u593e\u53ca\u5176\u5167\u6587\u4ef6\r\nrm -r directory\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID001"
+            ]
+        }
+    },
+    {
+        "name": "ssh_KeyPlace",
+        "mean": "ssh\u5bc6\u9470\u4f4d\u7f6e",
+        "describe": "ssh -i \"~\/.ssh\/HarLer_Net.pem\" ubuntu@ec2-3-112-68-121.ap-northeast-1.compute.amazonaws.com\r\n\r\nssh -i \"~\/.ssh\/HarLer_Net.pem\" ubuntu@ec2-13-231-107-26.ap-northeast-1.compute.amazonaws.com",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    },
+    {
+        "name": "start_mysql",
+        "mean": "\u555f\u52d5mysql",
+        "describe": "sudo systemctl start mysql\r\n",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID006"
+            ]
+        }
+    },
+    {
+        "name": "sudo",
+        "mean": "\u4e3b\u6b0a\u9650",
+        "describe": "\u57fa\u672c\u4e0a\u53ef\u4ee5\u901a\u904e\u6240\u6709\u7684\u5de5\u4f5c\uff0c\u505a\u4efb\u4f55\u4e8b\u60c5\uff0c\u901a\u884c\u7121\u963b",
+        "Top": false,
+        "Data": {
+            "Group": [
+                "ID004"
+            ]
+        }
+    }
+]
